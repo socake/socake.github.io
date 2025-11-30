@@ -1,0 +1,35 @@
+# .github/workflows/deploy.yml
+name: Deploy Hugo site to Pages # 1. 给这个工作流起个名字
+
+on: # 2. 定义触发条件
+  push:
+    branches:
+      - main # 当有代码被推送到 main 分支时，触发这个工作流
+
+jobs: # 3. 定义要执行的任务
+  deploy: # 任务的名字，叫 "deploy"
+    runs-on: ubuntu-latest # 4. 指定运行环境：在最新版的 Ubuntu 虚拟机上运行
+
+    steps: # 5. 定义这个任务要执行的详细步骤
+      # 步骤 1: 拉取代码
+      - uses: actions/checkout@v4 # 使用一个官方预设好的动作：获取你的仓库代码
+        with:
+          submodules: recursive # 如果你的 Hugo 主题是作为 Git submodule 的，这行会确保主题也被下载
+
+      # 步骤 2: 安装 Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3 # 使用社区大神做好的动作：一键安装 Hugo
+        with:
+          hugo-version: 'latest' # 安装最新版 Hugo
+          extended: true # 安装扩展版（支持 SCSS/SASS）
+
+      # 步骤 3: 构建网站
+      - name: Build
+        run: hugo --minify # 在虚拟机里运行 hugo 命令，生成静态网站到 public 目录
+
+      # 步骤 4: 部署网站
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4 # 使用另一位大神做好的动作：一键部署到 GitHub Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 授权：GitHub 自动提供的临时令牌，让机器人有权推送代码
+          publish_dir: ./public # 告诉机器人：要部署的文件在 public 目录里

@@ -1,0 +1,4 @@
+/public/
+# 其他常见文件
+.hugo_build.lock
+.DS_Store
