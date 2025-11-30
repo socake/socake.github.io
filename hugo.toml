@@ -5,4 +5,4 @@ theme = "ananke"
 
 [params]
   description = "这是我的 Hugo 站点描述"
-  author = "我的名字"
+  author = "我的名字-test"
