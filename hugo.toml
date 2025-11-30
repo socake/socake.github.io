@@ -1,0 +1,8 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "ananke"
+
+[params]
+  description = "这是我的 Hugo 站点描述"
+  author = "你的名字"
