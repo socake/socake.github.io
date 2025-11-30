@@ -5,6 +5,10 @@ on: # 2. 定义触发条件
   push:
     branches:
       - main # 当有代码被推送到 main 分支时，触发这个工作流
+permissions:
+  contents: write  
+  pages: write
+  id-token: write 
 
 jobs: # 3. 定义要执行的任务
   deploy: # 任务的名字，叫 "deploy"
