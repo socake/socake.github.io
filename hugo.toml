@@ -1,8 +1,0 @@
-baseURL = 'https://example.org/'
-languageCode = 'zh-cn'
-title = '我的 Hugo 站点'
-theme = "ananke"
-
-[params]
-  description = "这是我的 Hugo 站点描述"
-  author = "我的名字-test5555"

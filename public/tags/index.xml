@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 我的 Hugo 站点</title>
-    <link>https://example.org/tags/</link>
-    <description>Recent content in Tags on 我的 Hugo 站点</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags on Blowfish</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>17691281867@163.com (Wenzhuo Huang)</managingEditor>
+    <webMaster>17691281867@163.com (Wenzhuo Huang)</webMaster>
+    <copyright>© 2025 Wenzhuo Huang</copyright>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
   </channel>
 </rss>
