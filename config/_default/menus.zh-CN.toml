@@ -16,14 +16,26 @@
   weight = 10
 
 [[main]]
-  name = "文档"
-  pageRef = "docs"
+  name = "docker"
+  parent = "文档"
+  pageRef = "categories/docker"
   weight = 20
 
 [[main]]
-  name = "模板一"
-  parent = "模板"
-  pageRef = "posts"
+  name = "编程"
+  pageRef = "docs/languages"
+  weight = 20
+
+[[main]]
+  name = "模板"
+  parent = "资源"
+  pageRef = "tags/模板"
+  weight = 21
+
+[[main]]
+  name = "网站"
+  parent = "资源"
+  pageRef = "resources/网站"
   weight = 21
 
 [[main]]
@@ -64,13 +76,21 @@
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
+#[[footer]]
+#  name = "Privacy"
+#  url = "https://external-link"
 
-# [[footer]]
-#   name = "Tags"
-#   pageRef = "tags"
-#   weight = 10
+ [[footer]]
+   name = "标签"
+   pageRef = "tags"
+   weight = 10
 
-# [[footer]]
-#   name = "Categories"
-#   pageRef = "categories"
-#   weight = 20
+ [[footer]]
+   name = "分类"
+   pageRef = "categories"
+   weight = 20
+
+ [[footer]]
+   name = "作者"
+   pageRef = "posts/authors"
+   weight = 10

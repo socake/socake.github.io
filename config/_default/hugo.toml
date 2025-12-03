@@ -11,7 +11,7 @@ defaultContentLanguage = "zh-CN"
 enableRobotsTXT = true
 summaryLength = 0
 theme = "blowfish"
-buildDrafts = false
+buildDrafts = true
 buildFuture = false
 
 enableEmoji = true
@@ -19,7 +19,7 @@ enableEmoji = true
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-  pagerSize = 100
+  pagerSize = 10
 
 [imaging]
   anchor = 'Center'

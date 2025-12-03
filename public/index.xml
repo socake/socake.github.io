@@ -1,64 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blowfish</title>
+    <title>Startlight</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Blowfish</description>
+    <description>Recent content on Startlight</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>17691281867@163.com (Wenzhuo Huang)</managingEditor>
     <webMaster>17691281867@163.com (Wenzhuo Huang)</webMaster>
     <copyright>© 2025 Wenzhuo Huang</copyright>
-    <lastBuildDate>Mon, 01 Dec 2025 13:26:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Dec 2025 23:09:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>test</title>
-      <link>http://localhost:1313/posts/%E6%B5%8B%E8%AF%95%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD/</link>
-      <pubDate>Mon, 01 Dec 2025 13:26:14 +0800</pubDate>
+      <title>Authors</title>
+      <link>http://localhost:1313/posts/authors/</link>
+      <pubDate>Wed, 03 Dec 2025 23:09:20 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/posts/%E6%B5%8B%E8%AF%95%E7%9B%AE%E5%BD%95%E5%8A%9F%E8%83%BD/</guid>
+      <guid>http://localhost:1313/posts/authors/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/authors/featured.png" />
+    </item>
+    
+    <item>
+      <title>Docker模板</title>
+      <link>http://localhost:1313/docs/docker/docker%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Wed, 03 Dec 2025 22:57:03 +0800</pubDate>
+      <author>17691281867@163.com (Wenzhuo Huang)</author>
+      <guid>http://localhost:1313/docs/docker/docker%E6%A8%A1%E6%9D%BF/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/docker/docker%E6%A8%A1%E6%9D%BF/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>完整安装包下载</title>
+      <link>http://localhost:1313/docs/linux/linux%E5%91%BD%E4%BB%A4/%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/</link>
+      <pubDate>Wed, 03 Dec 2025 22:53:28 +0800</pubDate>
+      <author>17691281867@163.com (Wenzhuo Huang)</author>
+      <guid>http://localhost:1313/docs/linux/linux%E5%91%BD%E4%BB%A4/%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Cka Topic Skills 1</title>
-      <link>http://localhost:1313/docs/linux/cka/cka-topic-skills-1/</link>
-      <pubDate>Mon, 01 Dec 2025 11:23:54 +0800</pubDate>
+      <title>Docker存储及镜像制作</title>
+      <link>http://localhost:1313/docs/docker/docker%E5%AD%98%E5%82%A8%E5%8F%8A%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Wed, 03 Dec 2025 22:26:23 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/docs/linux/cka/cka-topic-skills-1/</guid>
+      <guid>http://localhost:1313/docs/docker/docker%E5%AD%98%E5%82%A8%E5%8F%8A%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/docker/docker%E5%AD%98%E5%82%A8%E5%8F%8A%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/featured.jpg" />
     </item>
     
     <item>
-      <title>My Second Post</title>
-      <link>http://localhost:1313/posts/my-second-post/</link>
-      <pubDate>Sun, 30 Nov 2025 23:06:26 +0800</pubDate>
+      <title>Docker基本使用</title>
+      <link>http://localhost:1313/docs/docker/docker%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 03 Dec 2025 22:26:23 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/posts/my-second-post/</guid>
+      <guid>http://localhost:1313/docs/docker/docker%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/docker/docker%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/featured.jpg" />
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Sun, 30 Nov 2025 20:57:00 +0800</pubDate>
+      <title>Docker简介</title>
+      <link>http://localhost:1313/docs/docker/docker%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Wed, 03 Dec 2025 22:26:23 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/docs/docker/docker%E7%AE%80%E4%BB%8B/</guid>
       <description></description>
-      
-    </item>
-    
-    <item>
-      <title>TOC Test Post</title>
-      <link>http://localhost:1313/posts/test-toc/</link>
-      <pubDate>Fri, 01 Dec 2023 15:00:00 +0800</pubDate>
-      <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/posts/test-toc/</guid>
-      <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/docker/docker%E7%AE%80%E4%BB%8B/featured.jpg" />
     </item>
     
   </channel>

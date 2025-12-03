@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Blowfish</title>
+    <title>Categories on Startlight</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Blowfish</description>
+    <description>Recent content in Categories on Startlight</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <managingEditor>17691281867@163.com (Wenzhuo Huang)</managingEditor>
     <webMaster>17691281867@163.com (Wenzhuo Huang)</webMaster>
     <copyright>© 2025 Wenzhuo Huang</copyright>
-    <lastBuildDate>Mon, 01 Dec 2025 13:26:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Dec 2025 22:57:03 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Posts</title>
-      <link>http://localhost:1313/categories/posts/</link>
-      <pubDate>Mon, 01 Dec 2025 13:26:14 +0800</pubDate>
+      <title>Docker</title>
+      <link>http://localhost:1313/categories/docker/</link>
+      <pubDate>Wed, 03 Dec 2025 22:57:03 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/categories/posts/</guid>
+      <guid>http://localhost:1313/categories/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Cka</title>
-      <link>http://localhost:1313/categories/cka/</link>
-      <pubDate>Mon, 01 Dec 2025 11:23:54 +0800</pubDate>
+      <title>Linux</title>
+      <link>http://localhost:1313/categories/linux/</link>
+      <pubDate>Wed, 03 Dec 2025 22:53:28 +0800</pubDate>
       <author>17691281867@163.com (Wenzhuo Huang)</author>
-      <guid>http://localhost:1313/categories/cka/</guid>
+      <guid>http://localhost:1313/categories/linux/</guid>
       <description></description>
       
     </item>

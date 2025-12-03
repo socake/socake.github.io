@@ -2,13 +2,13 @@ disabled = false
 languageCode = "zh-CN"
 languageName = "简体中文"
 weight = 1
-title = "Blowfish"
+title = "Startlight"
 
 [params]
   displayName = "简体中文"
   isoCode = "zh-CN"
   rtl = false
-  dateFormat = "2 January 2006"
+  dateFormat = "2006-01-02 15:04" 
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
@@ -17,10 +17,10 @@ title = "Blowfish"
  [params.author]
    name = "Wenzhuo Huang"
    email = "17691281867@163.com"
-   image = "img/blowfish_logo.png"
+   image = "img/111.png"
    imageQuality = 96
    headline = "个人文档管理"
-   bio = "A little bit about you"
+   bio = "幽默模块加载中...加载失败，请重新启动"
    links = [
      { email = "17691281867@163.com" },
 #     { link = "https://link-to-some-website.com/" },
