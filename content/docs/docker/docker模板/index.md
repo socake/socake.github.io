@@ -733,7 +733,7 @@ CMD ["bash", "-c",  "python /workspace/main_server.py>/workspace/app.log 2>&1 & 
 
 
 
-- #### ```Java (Spring Boot)
+- **Java (Spring Boot)**
 
 ```dockerfile
 # 使用 Maven 构建应用
@@ -779,7 +779,7 @@ CMD ["/opt/conda/bin/python", "application.py"]
 #CMD ["python", "application.py"]
 ```
 
-- ####  Go 应用
+- **Go 应用**
 
 ```dockerfile
 # 使用 Golang 作为基础镜像
@@ -836,7 +836,6 @@ RUN wget https://bootstrap.pypa.io/get-pip.py  && \
  
 RUN pip cache purge 
 ```
-
 
 
 

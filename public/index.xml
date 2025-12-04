@@ -71,5 +71,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/docs/docker/docker%E7%AE%80%E4%BB%8B/featured.jpg" />
     </item>
     
+    <item>
+      <title>我的数字书架</title>
+      <link>http://localhost:1313/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>17691281867@163.com (Wenzhuo Huang)</author>
+      <guid>http://localhost:1313/books/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

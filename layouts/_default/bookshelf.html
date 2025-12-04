@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .bookshelf {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* 头部区域 */
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* 统计信息 */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* 搜索和过滤器 */
+        .filters {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            background: #f8f9fa;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            outline: none;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+            background: white;
+        }
+
+        /* 书籍网格 */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* 书籍卡片 */
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0; /* 初始隐藏用于动画 */
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .book-cover-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .book-card:hover .book-cover {
+            transform: scale(1.1);
+        }
+
+        .book-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .book-content {
+            padding: 0.5rem;
+        }
+
+        .book-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .book-author {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .book-description {
+            color: var(--text-secondary);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .book-published {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .book-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-tag {
+            background: #e8f4fd;
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            background: linear-gradient(135deg, var(--primary-color), #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+        }
+
+        .file-size {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* 无结果状态 */
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .book-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); padding: 1rem 2rem; z-index: 999;">
+        <a href="/" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 500;">
+            🏠 回到首页
+        </a>
+    </nav>
+    <div class="bookshelf" style="padding-top: 80px;">
+        <!-- 头部区域 -->
+        <div class="header">
+            <h1 class="page-title">📚 我的数字书架</h1>
+            <p class="page-subtitle">探索知识，分享智慧</p>
+        </div>
+
+        <!-- 统计信息（修复：闭合 stat-item 和 stats） -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">{{ len .Params.books }}</span>
+                <span class="stat-label">藏书数量</span>
+            </div>
+        </div>
+
+        <!-- 搜索区域 -->
+        <div class="filters">
+            <input type="text" id="search" class="search-box" placeholder="🔍 搜索书籍标题、作者、分类或标签...">
+        </div>
+
+        <!-- 书籍网格 -->
+        <div class="books-grid" id="booksGrid">
+            {{ range $index, $book := .Params.books }}
+            <div class="book-card" data-search="{{ lower .title }} {{ lower .author }} {{ lower .category }} {{ if .tags }}{{ range .tags }}{{ lower . }} {{ end }}{{ end }}">
+                <div class="book-cover-container">
+                    {{ if .cover }}
+                    <img src="{{ .cover }}" alt="{{ .title }}" class="book-cover">
+                    {{ else }}
+                    <div style="width:100%;height:100%;background:#ecf0f1;display:flex;align-items:center;justify-content:center;font-size:48px;">📚</div>
+                    {{ end }}
+                    {{ if .category }}
+                    <div class="book-category">{{ .category }}</div>
+                    {{ end }}
+                </div>
+                
+                <div class="book-content">
+                    <h3 class="book-title">{{ .title }}</h3>
+                    <div class="book-author">作者：{{ .author }}</div>
+                    
+                    {{ if .description }}
+                    <p class="book-description">{{ .description }}</p>
+                    {{ end }}
+                    
+                    {{ if .tags }}
+                    <div class="book-tags">
+                        {{ range .tags }}
+                        <span class="book-tag">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                    
+                    <!-- 修复：闭合 if .file 条件 -->
+                    {{ if .file }}
+                    <div class="book-meta">
+                        <a href="{{ .file }}" class="download-btn" download>
+                            📥 下载
+                        </a>
+                        <span class="file-size">{{ .file_size }}</span>
+                    </div>
+                    {{ end }}
+
+                    <!-- 📝 🚧 注释掉出版日期，保留代码便于后续恢复
+                    {{ if .published }}
+                    <div class="book-published">出版年份：{{ .published }}</div>
+                    {{ end }}
+                    -->
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- 无结果提示 -->
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>🔍 没有找到匹配的书籍</h3>
+            <p>尝试搜索其他关键词</p>
+        </div>
+    </div>
+
+    <script>
+        // 实时搜索功能（添加防抖优化）
+        const debounce = (fn, delay = 300) => {
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn.apply(this, args), delay);
+            };
+        };
+
+        document.getElementById('search').addEventListener('input', debounce(function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const bookCards = document.querySelectorAll('.book-card');
+            const noResults = document.getElementById('noResults');
+            let visibleCount = 0;
+            
+            bookCards.forEach(card => {
+                const searchData = card.getAttribute('data-search');
+                if (searchTerm === '' || searchData.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 显示/隐藏无结果提示
+            noResults.style.display = (visibleCount === 0 && searchTerm !== '') ? 'block' : 'none';
+        }));
+
+        // 页面加载完成后添加动画延迟
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.book-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = (index * 0.1) + 's';
+            });
+        });
+    </script>
+</body>
+</html>
