@@ -25,9 +25,17 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* 替换原有渐变 → 新增背景图配置 */
+            background-image: url("/image/background2.png");  /* 路径对应static下的文件 */
+            background-size: cover;  /* 背景图覆盖整个页面，自动缩放 */
+            background-position: center;  /* 背景图居中显示 */
+            background-attachment: fixed;  /* 滚动页面时背景图固定（可选，取消则随页面滚动） */
+            background-repeat: no-repeat;  /* 禁止背景图重复 */
             min-height: 100vh;
             padding: 20px;
+            /* 可选：加一层半透明蒙版，让文字更清晰 */
+            background-color: rgba(0,0,0,0.5);
+            background-blend-mode: overlay;
         }
 
         .bookshelf {
@@ -294,15 +302,14 @@
     <div class="bookshelf" style="padding-top: 80px;">
         <!-- 头部区域 -->
         <div class="header">
-            <h1 class="page-title">📚 我的数字书架</h1>
+            <h1 class="page-title">📚 数字书架</h1>
             <p class="page-subtitle">探索知识，分享智慧</p>
         </div>
 
         <!-- 统计信息（修复：闭合 stat-item 和 stats） -->
         <div class="stats">
             <div class="stat-item">
-                <span class="stat-number">{{ len .Params.books }}</span>
-                <span class="stat-label">藏书数量</span>
+                <span class="stat-number">书籍总数：{{ len .Params.books }}本</span>
             </div>
         </div>
 

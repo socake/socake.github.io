@@ -9,7 +9,7 @@ title = "Startlight"
   isoCode = "zh-CN"
   rtl = false
   dateFormat = "2006-01-02 15:04" 
-  # logo = "img/logo.png"
+  logo = "img/emoji.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
@@ -17,7 +17,7 @@ title = "Startlight"
  [params.author]
    name = "Wenzhuo Huang"
    email = "17691281867@163.com"
-   image = "img/111.png"
+   image = "img/header.png"
    imageQuality = 96
    headline = "个人文档管理"
    bio = "幽默模块加载中...加载失败，请重新启动"
