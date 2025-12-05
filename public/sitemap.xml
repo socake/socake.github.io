@@ -57,7 +57,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/resources/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/books/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/resources/website/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

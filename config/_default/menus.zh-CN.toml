@@ -40,7 +40,13 @@
 [[main]]
   name = "网站"
   parent = "资源"
-  pageRef = "resources/网站"
+  pageRef = "tags/模板"
+  weight = 21
+
+[[main]]
+  name = "网站"
+  parent = "资源"
+  pageRef = "resources/website"
   weight = 21
 
 [[main]]
