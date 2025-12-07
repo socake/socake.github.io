@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    {{ with resources.Get "css/main.css" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ===== 基础重置与全局样式 ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333; /* 设置默认深色文字，确保可读性 */
+            line-height: 1.6;
+            overflow-x: hidden; /* 防止横向滚动 */
+        }
+
+        /* ===== 全屏背景图解决方案 ===== */
+        .fullscreen-bg {
+            position: fixed; /* 固定定位，使其脱离文档流 */
+            top: 0;
+            left: 0;
+            width: 100vw; /* 100% 视口宽度 */
+            height: 100vh; /* 100% 视口高度 */
+            z-index: -2; /* 置于最底层 */
+            background-image: url('/image/background.png'); /* 你的背景图路径 */
+            background-size: cover; /* 关键：确保图片覆盖整个区域 */
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* 可选：创建视差滚动效果 */
+        }
+
+        /* ===== 半透明遮罩层，提升文字可读性 ===== */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* 在背景图之上，内容之下 */
+            background-color: rgba(255, 255, 255, 0.85); /* 白色半透明遮罩 */
+            /* 如果想用深色遮罩，可改为：rgba(0, 0, 0, 0.5) */
+        }
+
+        /* ===== 主内容容器 ===== */
+        .sponsor-container {
+            position: relative; /* 确保内容在遮罩层之上 */
+            z-index: 10;
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.95); /* 内容区纯白微透 */
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* ===== 标题与正文样式 ===== */
+        .sponsor-container h1 {
+            color: #2c3e50; /* 深蓝色标题，清晰且专业 */
+            margin-bottom: 20px;
+            font-size: 2.8em;
+        }
+        .page-content {
+            color: #34495e; /* 深灰蓝色正文，对比度好 */
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        /* ===== 二维码区域样式 ===== */
+        .payment-qr-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px; /* 增大卡片间距 */
+            margin: 50px 0;
+        }
+        .qr-card {
+            text-align: center;
+            padding: 25px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            flex: 1;
+            min-width: 250px; /* 确保在小屏幕上不会过窄 */
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .qr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        .qr-card h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .qr-card img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            display: block;
+            margin: 0 auto;
+        }
+        .qr-card p {
+            color: #7f8c8d; /* 辅助文字用灰色 */
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+
+        /* ===== 返回按钮样式 ===== */
+        .btn-home {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 30px;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+            text-decoration: none;
+        }
+
+        /* ===== 移动端响应式优化 ===== */
+        @media (max-width: 768px) {
+            .sponsor-container {
+                width: 95%;
+                padding: 25px 20px;
+                margin: 20px auto;
+            }
+            .sponsor-container h1 {
+                font-size: 2.2em;
+            }
+            .payment-qr-cards {
+                flex-direction: column;
+                align-items: center;
+                gap: 35px;
+            }
+            .qr-card {
+                width: 100%;
+                max-width: 280px;
+            }
+            .btn-home {
+                padding: 14px 35px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 全屏背景层 -->
+    <div class="fullscreen-bg" role="img" aria-label="网站背景装饰图"></div>
+    <!-- 半透明遮罩层，增强可读性 -->
+    <div class="bg-overlay"></div>
+
+    <!-- 主内容区 -->
+    <main class="sponsor-container">
+        <h1>{{ .Title | default "感谢您的支持" }}</h1>
+        
+        <div class="page-content">
+            {{ .Content | default "您的每一份支持都是我持续创作的动力。请选择您喜欢的支付方式。" }}
+        </div>
+        
+        <div class="payment-qr-cards">
+            <div class="qr-card">
+                <h3>推荐使用微信支付</h3>
+                <img src="/image/pay/wx.jpg" alt="微信支付赞助二维码" loading="lazy">
+                <p>长按识别二维码</p>
+            </div>
+            
+            <div class="qr-card">
+                <h3>推荐使用支付宝</h3>
+                <img src="/image/pay/zfb.jpg" alt="支付宝赞助二维码" loading="lazy">
+                <p>长按识别二维码</p>
+            </div>
+        </div>
+        
+        <a href="/" class="btn-home" aria-label="返回网站首页">✨ 点击返回首页</a>
+    </main>
+</body>
+</html>

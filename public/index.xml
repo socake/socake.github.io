@@ -91,5 +91,15 @@
       
     </item>
     
+    <item>
+      <title>支持我们</title>
+      <link>http://localhost:1313/sponsor-diy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>17691281867@163.com (Wenzhuo Huang)</author>
+      <guid>http://localhost:1313/sponsor-diy/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

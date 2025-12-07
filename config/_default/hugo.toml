@@ -65,5 +65,5 @@ enableEmoji = true
     [[related.indices]]
       applyFilter = false
       name = 'fragmentrefs'
-      type = 'fragments'
+      #type = 'fragments'
       weight = 10

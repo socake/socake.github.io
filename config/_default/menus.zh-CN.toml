@@ -105,3 +105,8 @@
    name = "作者"
    pageRef = "posts/authors"
    weight = 10
+
+ [[footer]]
+   name = "赞助"
+   pageRef = "sponsor-diy"
+   weight = 99
