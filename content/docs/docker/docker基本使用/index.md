@@ -6,6 +6,7 @@ tags: ["Docker"]
 categories: ["Docker"]
 author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
 description: ""
+summary: "本文涵盖日常最常用的Docker命令。从拉取镜像、启动容器，到查看日志、进入容器内部调试，你将掌握容器生命周期的基本管理操作"
 featured_image: ""
 toc: true
 math: false

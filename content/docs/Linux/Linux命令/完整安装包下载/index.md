@@ -6,6 +6,7 @@ tags: []
 categories: ["Linux"]
 author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
 description: ""
+summary: "在生产环境或内网服务器中，直接联网安装软件往往不可行。本文将详细介绍在Linux环境下离线下载软件包及其完整依赖的几种核心方法"
 featured_image: ""
 toc: true
 math: false

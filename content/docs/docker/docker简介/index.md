@@ -6,6 +6,7 @@ tags: ["Docker"]
 categories: ["Docker"]
 author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
 description: ""
+summary: "Docker是一个开源的容器化平台。它彻底改变了软件的打包、分发和运行方式，使应用及其运行环境成为一个轻量级、可移植的“容器”，从而解决了“在本地环境能运行，在其他环境却失败”的经典难题"
 featured_image: ""
 toc: true
 math: false

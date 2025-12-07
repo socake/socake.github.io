@@ -6,6 +6,7 @@ tags: ["模板"]
 categories: ["Docker"]
 author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
 description: ""
+summary: "Docker模板（如Dockerfile和docker-compose.yml）是容器化应用的蓝图。它们将应用的环境、依赖和配置代码化，实现了一次编写、处处运行的自动化部署"
 featured_image: ""
 toc: true
 math: false

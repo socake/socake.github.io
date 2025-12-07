@@ -6,6 +6,7 @@ tags: ["Docker"]
 categories: ["Docker"]
 author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
 description: "docker存储测试"
+summary: "数据持久化和自定义镜像是Docker进阶使用的关键。本文将介绍如何通过卷(Volumes)和绑定挂载(Bind Mounts)管理数据，以及如何从零开始编写Dockerfile来构建符合自己需求的应用镜像"
 featured_image: ""
 toc: true
 math: false
