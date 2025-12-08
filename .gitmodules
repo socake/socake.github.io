@@ -1,15 +1,3 @@
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke
-[submodule "themes/hugo-theme-stack"]
-	path = themes/hugo-theme-stack
-	url = https://github.com/CaiJimmy/hugo-theme-stack
-[submodule "themes/LoveIt"]
-	path = themes/LoveIt
-	url = https://github.com/dillonzq/LoveIt.git
-[submodule "themes/eureka"]
-	path = themes/eureka
-	url = https://github.com/wangchucheng/hugo-eureka.git
 [submodule "themes/blowfish"]
 	path = themes/blowfish
 	url = https://github.com/nunocoracao/blowfish.git
