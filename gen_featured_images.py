@@ -27,6 +27,32 @@ POSTS = [
     ("故障排查方法论",           "Debugging",        "🔍", [(40,20,20),  (150,50,50)]),
     ("运维工程师AI工具实践",     "AI × Ops",         "🤖", [(10,40,50),  (20,120,150)]),
     ("零信任网络实践",           "Zero Trust",       "🔒", [(30,30,10),  (100,100,20)]),
+    # New articles - ELK Stack
+    ("filebeat-logstash-pipeline", "Filebeat/Logstash","📥", [(20,40,60),  (30,120,180)]),
+    ("kibana-visualization-guide", "Kibana",           "📈", [(50,10,50),  (160,40,160)]),
+    ("elasticsearch-dsl-query",    "ES DSL",           "🔎", [(10,40,50),  (20,130,160)]),
+    ("elk-prometheus-monitoring",  "ELK Monitor",      "🔭", [(40,20,50),  (130,50,160)]),
+    # New articles - Prometheus Advanced
+    ("prometheus-process-monitoring","Process Exporter","📡",[(20,40,20),  (50,150,50)]),
+    ("alertmanager-webhook-api",   "Alert Webhook",    "📮", [(50,20,20),  (180,50,50)]),
+    ("prometheus-alert-with-image","Alert Image",      "🖼", [(40,30,10),  (160,100,20)]),
+    ("elastic-agent-fleet",        "Elastic Fleet",    "🚢", [(10,30,60),  (20,90,180)]),
+    # New articles - Python + Database
+    ("python-elasticsearch-client","Python ES",        "🐍", [(10,30,40),  (20,100,140)]),
+    ("python-prometheus-monitoring","Python Metrics",  "📊", [(20,40,20),  (60,140,60)]),
+    ("celery-async-tasks",         "Celery",           "⚙",  [(50,30,10),  (180,100,20)]),
+    ("mongodb-ops-practice",       "MongoDB",          "🍃", [(10,40,20),  (20,140,60)]),
+    ("aliyun-sdk-ops",             "Aliyun SDK",       "☁",  [(10,20,50),  (20,60,180)]),
+    # New articles - 2026 Trending
+    ("ollama-kubernetes-llm",      "Ollama K8s",       "🦙", [(30,10,50),  (100,30,180)]),
+    ("mcp-protocol-devops",        "MCP Protocol",     "🔗", [(20,30,50),  (50,100,180)]),
+    # New articles - Security + Infra + Career
+    ("vault-external-secrets",     "Vault ESO",        "🔐", [(30,20,10),  (120,70,10)]),
+    ("trivy-cosign-supply-chain",  "Trivy/Cosign",     "🛡", [(20,40,10),  (60,150,30)]),
+    ("victoriametrics-prometheus",  "VictoriaMetrics", "📉", [(10,30,50),  (20,90,170)]),
+    ("opentofu-terraform-practice","OpenTofu",         "🏗", [(30,20,40),  (100,60,150)]),
+    ("nginx-ops-complete",         "Nginx",            "⚡",  [(10,40,30),  (20,150,80)]),
+    ("devops-senior-interview",    "Sr. Interview",    "💼", [(40,10,30),  (150,30,110)]),
 ]
 
 W, H = 1200, 630
