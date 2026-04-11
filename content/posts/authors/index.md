@@ -68,11 +68,11 @@ showTableOfContents: true
 
 ## 🚀 做过什么
 
-- **多集群 K8s 管理**：维护 US/CN/QA/PRE 多套 Kubernetes 集群，覆盖 AWS EKS 与阿里云 ACK，管理数百个服务的发布与稳定性
-- **GitOps 体系建设**：基于 ArgoCD + Kustomize 落地完整的 GitOps 工作流，实现环境配置版本化管理
-- **降本优化**：通过 Karpenter 弹性节点 + 资源规格治理，持续推进云资源成本优化，单月节省超 $2,000
-- **CI/CD 流水线**：设计并维护云效 Flow 发版体系，覆盖 5 种流水线场景，打通 US/CN 差异化部署链路
-- **可观测性**：基于 Grafana + Loki 构建跨集群统一日志查询，覆盖 6 套环境
+- **多集群 K8s 管理**：维护多套生产/预发/测试 Kubernetes 集群，覆盖 AWS EKS 与阿里云 ACK，管理大量微服务的发布与稳定性
+- **GitOps 体系建设**：基于 ArgoCD + Kustomize 落地完整的 GitOps 工作流，实现多环境配置版本化管理
+- **降本优化**：通过 Karpenter 弹性节点 + 资源规格治理，系统性降低云资源成本，持续推进 FinOps 落地
+- **CI/CD 流水线**：设计并维护 CI/CD 发版体系，覆盖多种发版场景，支持多云多区域差异化部署链路
+- **可观测性**：基于 Grafana + Loki 构建跨集群统一日志查询与监控，覆盖多套生产与非生产环境
 - **网络安全治理**：推进零信任网络改造，整理公网暴露资产清单，规划 Headscale VPN 收敛方案
 - **沙箱隔离**：调研并落地基于 gVisor (runsc) 的容器网络隔离方案
 
