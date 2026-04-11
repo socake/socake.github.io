@@ -53,6 +53,10 @@ POSTS = [
     ("opentofu-terraform-practice","OpenTofu",         "🏗", [(30,20,40),  (100,60,150)]),
     ("nginx-ops-complete",         "Nginx",            "⚡",  [(10,40,30),  (20,150,80)]),
     ("devops-senior-interview",    "Sr. Interview",    "💼", [(40,10,30),  (150,30,110)]),
+    # Wave 2 - Trending
+    ("ebpf-observability",         "eBPF",             "🔬", [(10,30,50),  (20,100,180)]),
+    ("kubernetes-gateway-api",     "Gateway API",      "🌐", [(20,40,30),  (60,150,90)]),
+    ("crossplane-gitops-cloud",    "Crossplane",       "☁",  [(30,20,50),  (100,60,180)]),
 ]
 
 W, H = 1200, 630
