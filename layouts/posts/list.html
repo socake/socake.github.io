@@ -1,0 +1,92 @@
+{{ define "main" }}
+{{ .Scratch.Set "scope" "list" }}
+
+{{/* Hero */}}
+{{ if site.Params.list.showHero | default false }}
+  {{ $heroStyle := print "hero/" site.Params.list.heroStyle ".html" }}
+  {{ if templates.Exists (printf "partials/%s" $heroStyle) }}
+    {{ partial $heroStyle . }}
+  {{ else }}
+    {{ partial "hero/basic.html" . }}
+  {{ end }}
+{{ end }}
+
+{{/* Header */}}
+<header class="mt-5 mb-8">
+  <h1 class="text-4xl font-extrabold text-neutral-900 dark:text-neutral">博客文章</h1>
+  <p class="mt-2 text-base text-neutral-500 dark:text-neutral-400">
+    共 {{ len .Pages }} 篇 · 记录真实实践，不水文章
+  </p>
+</header>
+
+{{/* ── Category Filter Tabs ── */}}
+{{ $allCats := slice }}
+{{ range .Pages }}
+  {{ range .Params.categories }}
+    {{ $allCats = $allCats | append . }}
+  {{ end }}
+{{ end }}
+{{ $uniqueCats := $allCats | uniq | sort }}
+
+<div class="filter-bar" id="filter-bar">
+  <button class="filter-btn active" data-filter="all">全部</button>
+  {{ range $uniqueCats }}
+  <button class="filter-btn" data-filter="{{ . | urlize }}">{{ . }}</button>
+  {{ end }}
+</div>
+
+{{/* ── Article Grid — render ALL pages so client-side filter covers everything ── */}}
+<div id="posts-grid">
+{{ range (.Pages.GroupByDate "2006") }}
+  <div class="year-group" data-year="{{ .Key }}">
+    <h2 class="year-label">{{ .Key }}</h2>
+    <section class="posts-card-grid">
+      {{ range .Pages }}
+        {{ partial "article-link/card.html" . }}
+      {{ end }}
+    </section>
+  </div>
+{{ end }}
+</div>
+
+{{/* No results */}}
+<div id="no-results" class="hidden py-16 text-center text-neutral-400">
+  <p class="text-lg">该分类下暂无文章</p>
+</div>
+
+{{/* ── Filter JS ── */}}
+<script>
+(function() {
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.post-card');
+  var yearGroups = document.querySelectorAll('.year-group');
+  var noResults = document.getElementById('no-results');
+
+  function applyFilter(filter) {
+    btns.forEach(function(b) { b.classList.toggle('active', b.dataset.filter === filter); });
+
+    var visible = 0;
+    cards.forEach(function(card) {
+      var cat = (card.dataset.cat || '').toLowerCase().replace(/\s+/g, '-');
+      var show = filter === 'all' || cat === filter;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    // hide empty year groups
+    yearGroups.forEach(function(group) {
+      var hasVisible = Array.from(group.querySelectorAll('.post-card')).some(function(c) {
+        return c.style.display !== 'none';
+      });
+      group.style.display = hasVisible ? '' : 'none';
+    });
+
+    noResults.classList.toggle('hidden', visible > 0);
+  }
+
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() { applyFilter(btn.dataset.filter); });
+  });
+})();
+</script>
+{{ end }}

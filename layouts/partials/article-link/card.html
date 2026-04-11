@@ -1,0 +1,106 @@
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+{{ $page := .Page }}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ if not .Params.hideFeatureImage }}
+  {{ with $page }}
+    {{ with .Params.featureimage }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ if site.Params.hotlinkFeatureImage }}
+          {{ $featuredURL = . }}
+        {{ else }}
+          {{ $featured = resources.GetRemote . }}
+        {{ end }}
+      {{ else }}
+        {{ $featured = resources.Get . }}
+      {{ end }}
+    {{ end }}
+    {{ if not (or $featured $featuredURL) }}
+      {{ $images := .Resources.ByType "image" }}
+      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+        {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if not (or $featured $featuredURL) }}
+      {{ $default := site.Store.Get "defaultFeaturedImage" }}
+      {{ if $default.url }}
+        {{ $featuredURL = $default.url }}
+      {{ else if $default.obj }}
+        {{ $featured = $default.obj }}
+      {{ end }}
+    {{ end }}
+    {{ if not $featuredURL }}
+      {{ with $featured }}
+        {{ $featuredURL = .RelPermalink }}
+        {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
+          {{ $featuredURL = (.Resize "600x").RelPermalink }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $cat := "" }}
+{{ with $page.Params.categories }}{{ $cat = index . 0 }}{{ end }}
+
+<article
+  class="post-card relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700/60 shadow-md bg-white dark:bg-neutral-900 transition-all duration-300"
+  data-cat="{{ $cat }}">
+
+  {{/* Image */}}
+  {{ with $featuredURL }}
+  <a href="{{ $page.RelPermalink }}" class="block relative overflow-hidden post-card-img-wrap" tabindex="-1" aria-hidden="true">
+    <img
+      src="{{ . }}"
+      alt="{{ $page.Title | plainify }}"
+      loading="lazy"
+      decoding="async"
+      class="not-prose w-full object-cover post-card-img">
+    <div class="post-card-img-overlay"></div>
+  </a>
+  {{ end }}
+
+  {{/* Draft label */}}
+  {{ if and .Draft .Site.Params.article.showDraftLabel }}
+    <span class="absolute top-2 right-2">
+      {{ partial "badge.html" (i18n "article.draft" | emojify) }}
+    </span>
+  {{ end }}
+
+  <div class="p-4 flex flex-col gap-2">
+    {{/* Category badge */}}
+    {{ with $cat }}
+    <a href="{{ printf "/categories/%s" (. | urlize) | relLangURL }}"
+       class="post-card-cat w-fit" onclick="event.stopPropagation()">
+      {{ . }}
+    </a>
+    {{ end }}
+
+    {{/* Title */}}
+    <a
+      href="{{ $page.RelPermalink }}"
+      class="not-prose before:absolute before:inset-0 post-card-title-link">
+      <h2 class="post-card-title">
+        {{ .Title | emojify }}
+      </h2>
+    </a>
+
+    {{/* Summary */}}
+    {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
+      <p class="post-card-summary">{{ .Summary | plainify | truncate 80 }}</p>
+    {{ end }}
+
+    {{/* Meta */}}
+    <div class="post-card-meta flex items-center gap-2 text-xs text-neutral-400 mt-auto pt-1">
+      <time>{{ $page.Date.Format "2006-01-02" }}</time>
+      {{ with $page.ReadingTime }}
+        <span class="opacity-40">·</span>
+        <span>{{ . }} 分钟</span>
+      {{ end }}
+      {{ with $page.WordCount }}
+        <span class="opacity-40">·</span>
+        <span>{{ . }} 字</span>
+      {{ end }}
+    </div>
+  </div>
+</article>

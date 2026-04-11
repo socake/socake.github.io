@@ -1,0 +1,103 @@
+{{ if .Site.Params.homepage.showRecent | default false }}
+{{ $recentCount := .Site.Params.homepage.showRecentItems | default 8 }}
+{{ $pages := first $recentCount (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
+{{ $showMoreDest := .Site.Params.homepage.showMoreLinkDest | default "/posts/" }}
+
+<section class="recent-section mt-12">
+  <div class="recent-header flex items-center justify-between mb-6">
+    <h2 class="text-xl font-bold tracking-tight text-neutral-800 dark:text-neutral-100">
+      最近更新
+    </h2>
+    <a href="{{ $showMoreDest | relLangURL }}"
+       class="recent-more-link text-sm font-medium text-primary-500 hover:text-primary-400 flex items-center gap-1 transition-colors">
+      全部文章
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  {{ $allPages := $pages | first $recentCount }}
+  {{ $featured := index $allPages 0 }}
+  {{ $rest := after 1 $allPages }}
+
+  {{/* ── Featured (首篇大卡) ── */}}
+  {{ with $featured }}
+    {{ $img := "" }}
+    {{ $imgURL := "" }}
+    {{ $images := .Resources.ByType "image" }}
+    {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+      {{ if not $img }}{{ $img = $images.GetMatch . }}{{ end }}
+    {{ end }}
+    {{ with $img }}
+      {{ $imgURL = (.Resize "900x").RelPermalink }}
+    {{ end }}
+
+    <a href="{{ .RelPermalink }}" class="featured-card group block mb-6 rounded-xl overflow-hidden relative bg-neutral-900">
+      {{ with $imgURL }}
+      <div class="featured-card-img">
+        <img src="{{ . }}" alt="{{ $featured.Title | plainify }}"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+        <div class="featured-overlay"></div>
+      </div>
+      {{ end }}
+      <div class="featured-card-body">
+        {{ with $featured.Params.categories }}
+        <span class="card-cat-badge">{{ index . 0 }}</span>
+        {{ end }}
+        <h3 class="featured-title">{{ $featured.Title | emojify }}</h3>
+        <p class="featured-summary">{{ $featured.Summary | plainify | truncate 120 }}</p>
+        <div class="featured-meta">
+          <time>{{ $featured.Date.Format "2006-01-02" }}</time>
+          {{ with $featured.ReadingTime }}
+          <span class="mx-2 opacity-40">·</span>
+          <span>{{ . }} 分钟阅读</span>
+          {{ end }}
+        </div>
+      </div>
+    </a>
+  {{ end }}
+
+  {{/* ── Rest cards grid ── */}}
+  {{ if $rest }}
+  <div class="mini-cards-grid">
+    {{ range $rest }}
+      {{ $img2 := "" }}
+      {{ $imgURL2 := "" }}
+      {{ $images2 := .Resources.ByType "image" }}
+      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+        {{ if not $img2 }}{{ $img2 = $images2.GetMatch . }}{{ end }}
+      {{ end }}
+      {{ with $img2 }}
+        {{ $imgURL2 = (.Resize "400x").RelPermalink }}
+      {{ end }}
+
+      <a href="{{ .RelPermalink }}" class="mini-card group">
+        {{ with $imgURL2 }}
+        <div class="mini-card-img">
+          <img src="{{ . }}" alt="{{ $.Title | plainify }}"
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+        </div>
+        {{ else }}
+        <div class="mini-card-img mini-card-img--placeholder"></div>
+        {{ end }}
+        <div class="mini-card-body">
+          {{ with .Params.categories }}
+          <span class="card-cat-badge card-cat-badge--sm">{{ index . 0 }}</span>
+          {{ end }}
+          <h4 class="mini-card-title">{{ .Title | emojify }}</h4>
+          <div class="mini-card-meta">
+            <time>{{ .Date.Format "01-02" }}</time>
+            {{ with .ReadingTime }}
+            <span class="mx-1 opacity-40">·</span>
+            <span>{{ . }}min</span>
+            {{ end }}
+          </div>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</section>
+{{ end }}
