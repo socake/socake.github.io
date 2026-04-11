@@ -1,59 +1,107 @@
 ---
-title: "Authors"
+title: "关于我"
 date: 2025-12-03T23:09:20+08:00
 draft: false
-tags: []
-author: "map[bio:幽默模块加载中...加载失败，请重新启动 email:17691281867@163.com headline:个人文档管理 image:img/111.png imagequality:96 links:[map[email:17691281867@163.com]] name:Wenzhuo Huang]"
-description: ""
-featured_image: ""
-toc: true
-math: false
-diagram: false
-keywords: []
-params:
-  reading_time: true                 
+description: "DevOps Engineer，专注 Kubernetes、AWS 与 GitOps 的运维工程师"
+showDate: false
+showReadingTime: false
+showWordCount: false
+showAuthor: false
+showPagination: false
+showRelatedContent: false
+showTableOfContents: true
 ---
-## 🎭 关于这位神秘作者
 
 {{< typeit >}}
-你好！我是本站的"专业"内容创作者——至少我自己是这么认为的。
+你好，我是黄文卓 / Wenzhuo Huang —— 一名运维工程师，专注云原生基础设施与研发效能。
 {{< /typeit >}}
 
-
-### 🎪 我的"辉煌"履历：
-- **资深熬夜专家**：拥有连续48小时不睡觉只为了改一个标点符号的"丰富"经验
-- **咖啡品鉴大师**：精通各种品牌咖啡与黑眼圈之间的微妙关系
-- **键盘敲击艺术家**：擅长把完整的想法敲成天书，连自己都看不懂
-- **拖延症患者协会会长**：专业 procrastinator，deadline 是我的创作灵感源泉
-
-### 🛠️ 我的"专业"技能：
-- 把简单问题复杂化，复杂问题...更复杂化
-- 用1000字解释一个小学数学题
-- 在写作时突然想整理桌面、洗衣服、浇花...就是不想写文章
-- 创造性地使用各种借口逃避写作，比如"今天月亮不够圆"
-
-### 🎯 创作理念：
-> "如果一篇文章不能让读者产生'作者是不是在开玩笑'的疑问，那它就还没有完成。"
-
-### ⚠️ 重要提醒：
-由于本人具有以下"特殊能力"，阅读前请做好心理准备：
-- 在严肃话题中突然插入冷笑话
-- 用表情符号代替部分文字
-- 把比喻用得让人摸不着头脑
-- 跑题技能满级
-
-### 📝 最后声明：
-本人仍在努力学习如何在不失趣味性的前提下把文章写得像样一点。如果发现内容过于"精彩"，请理解这可能是我最后一次挣扎。
-
----
-*P.S. 如果你读到这里还没关掉页面，说明我的"才华"还是有点用的？🤔*
-
 ---
 
-**内容待完善区域：**
-- [ ] 实际的专业背景介绍
-- [ ] 真正有用的创作经验分享
-- [ ] 不那么"自黑"的个人描述
-- [ ] 能让读者认真对待的内容概述
+## 🛠️ 技术栈
 
-*（待续...也许吧 😅）*
+### 容器与编排
+{{< badge >}}Kubernetes{{< /badge >}}
+{{< badge >}}Docker{{< /badge >}}
+{{< badge >}}Helm{{< /badge >}}
+{{< badge >}}Karpenter{{< /badge >}}
+{{< badge >}}ArgoCD{{< /badge >}}
+{{< badge >}}Kustomize{{< /badge >}}
+
+### 云平台
+{{< badge >}}AWS (EKS · EC2 · EFS · S3 · IAM){{< /badge >}}
+{{< badge >}}阿里云 (ACK · RDS · OSS){{< /badge >}}
+
+### CI/CD & GitOps
+{{< badge >}}GitHub Actions{{< /badge >}}
+{{< badge >}}云效 Flow{{< /badge >}}
+{{< badge >}}GitOps{{< /badge >}}
+{{< badge >}}Argo Rollouts{{< /badge >}}
+
+### 中间件 & 存储
+{{< badge >}}Kafka{{< /badge >}}
+{{< badge >}}RabbitMQ{{< /badge >}}
+{{< badge >}}Redis / Valkey{{< /badge >}}
+{{< badge >}}MySQL{{< /badge >}}
+{{< badge >}}PostgreSQL{{< /badge >}}
+{{< badge >}}OpenSearch{{< /badge >}}
+{{< badge >}}Neo4j{{< /badge >}}
+{{< badge >}}Milvus{{< /badge >}}
+
+### 可观测性
+{{< badge >}}Grafana{{< /badge >}}
+{{< badge >}}Loki{{< /badge >}}
+{{< badge >}}Prometheus{{< /badge >}}
+
+### 编程语言
+{{< badge >}}Go{{< /badge >}}
+{{< badge >}}Python{{< /badge >}}
+{{< badge >}}Shell / Bash{{< /badge >}}
+
+### 网络 & 安全
+{{< badge >}}Cilium{{< /badge >}}
+{{< badge >}}Terway{{< /badge >}}
+{{< badge >}}gVisor{{< /badge >}}
+{{< badge >}}Headscale{{< /badge >}}
+
+---
+
+## 🚀 做过什么
+
+- **多集群 K8s 管理**：维护 US/CN/QA/PRE 多套 Kubernetes 集群，覆盖 AWS EKS 与阿里云 ACK，管理数百个服务的发布与稳定性
+- **GitOps 体系建设**：基于 ArgoCD + Kustomize 落地完整的 GitOps 工作流，实现环境配置版本化管理
+- **降本优化**：通过 Karpenter 弹性节点 + 资源规格治理，持续推进云资源成本优化，单月节省超 $2,000
+- **CI/CD 流水线**：设计并维护云效 Flow 发版体系，覆盖 5 种流水线场景，打通 US/CN 差异化部署链路
+- **可观测性**：基于 Grafana + Loki 构建跨集群统一日志查询，覆盖 6 套环境
+- **网络安全治理**：推进零信任网络改造，整理公网暴露资产清单，规划 Headscale VPN 收敛方案
+- **沙箱隔离**：调研并落地基于 gVisor (runsc) 的容器网络隔离方案
+
+---
+
+## 📝 关于这个博客
+
+这个博客有两个用途：
+
+1. **技术笔记本** — 把踩过的坑、研究过的方案、写过的脚本都沉淀下来，方便自己日后翻查。毕竟人的记忆是不可靠的，尤其是凌晨两点刚解完故障之后。
+
+2. **技术展示** — 记录真实的工作内容，证明这些年没白过。如果你是 HR 或 Hiring Manager，这里有比简历更详细的东西。
+
+内容方向主要是：**Kubernetes 运维**、**云原生实践**、**CI/CD 工程化**、**基础设施降本**、**踩坑实录**。
+
+---
+
+## 🎪 一些真实信息
+
+- 有在深夜为一行 YAML 缩进而抓狂的经历 ✅
+- 相信好的基础设施应该像空气一样，存在但不被感知 ✅  
+- 对 `kubectl get pods | grep CrashLoop` 有条件反射 ✅
+- 坚信 `--dry-run=client` 是世界上最好的安全网之一 ✅
+
+---
+
+## 📬 联系方式
+
+- **GitHub**：[github.com/socake](https://github.com/socake)
+- **Email**：17691281867@163.com
+
+> *如果你读到这里还没关掉页面，说明我们大概率可以聊得来。*

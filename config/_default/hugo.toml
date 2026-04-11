@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 # theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://your_domain.com/"
+baseURL = "https://socake.github.io/"
 defaultContentLanguage = "zh-CN"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
@@ -11,7 +11,7 @@ defaultContentLanguage = "zh-CN"
 enableRobotsTXT = true
 summaryLength = 0
 theme = "blowfish"
-buildDrafts = true
+buildDrafts = false
 buildFuture = false
 
 enableEmoji = true

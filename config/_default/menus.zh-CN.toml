@@ -1,112 +1,98 @@
 # -- Main Menu --
-# The main menu is displayed in the header at the top of the page.
-# Acceptable parameters are name, pageRef, page, url, title, weight.
-# 
-# The simplest menu configuration is to provide:
-#   name = The name to be displayed for this menu link
-#   pageRef = The identifier of the page or section to link to
-#
-# By default the menu is ordered alphabetically. This can be
-# overridden by providing a weight value. The menu will then be
-# ordered by weight from lowest to highest.
+
+[[main]]
+  name = "关于"
+  pageRef = "posts/authors"
+  weight = 5
 
 [[main]]
   name = "博客"
   pageRef = "posts"
   weight = 10
 
+# 运维笔记 父菜单
 [[main]]
-  name = "书籍"
-  pageRef = "books"
-  weight = 11
-
-[[main]]
-  name = "docker"
-  parent = "文档"
-  pageRef = "categories/docker"
-  weight = 20
-
-[[main]]
-  name = "编程"
-  pageRef = "docs/languages"
-  weight = 20
-
-[[main]]
-  name = "模板"
-  parent = "资源"
-  pageRef = "tags/模板"
+  name = "Linux"
+  parent = "运维"
+  pageRef = "categories/linux"
   weight = 21
 
 [[main]]
-  name = "网站"
-  parent = "资源"
-  pageRef = "tags/模板"
-  weight = 21
+  name = "Docker"
+  parent = "运维"
+  pageRef = "docs/docker"
+  weight = 22
 
 [[main]]
-  name = "网站"
+  name = "Kubernetes"
+  parent = "运维"
+  pageRef = "docs/kubernetes"
+  weight = 23
+
+[[main]]
+  name = "CI/CD"
+  parent = "运维"
+  pageRef = "docs/cicd"
+  weight = 24
+
+# 编程
+[[main]]
+  name = "Go"
+  parent = "编程"
+  pageRef = "docs/languages/go"
+  weight = 31
+
+[[main]]
+  name = "Python"
+  parent = "编程"
+  pageRef = "docs/languages/python"
+  weight = 32
+
+[[main]]
+  name = "Shell"
+  parent = "编程"
+  pageRef = "docs/languages/shell"
+  weight = 33
+
+# 资源
+[[main]]
+  name = "网站导航"
   parent = "资源"
   pageRef = "resources/website"
-  weight = 21
+  weight = 41
 
-#[[main]]
-#  pre = "github"
-#  name = "GitHub"
-#  url = "https://github.com/socake"
-#  weight = 30
+[[main]]
+  name = "书单"
+  parent = "资源"
+  pageRef = "books"
+  weight = 42
 
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
-
-#[[subnavigation]]
-#  name = "An interesting topic"
-#  pageRef = "tags/interesting-topic"
-#  weight = 10
-
-#[[subnavigation]]
-#  name = "My Awesome Category"
-#  pre = "github"
-#  pageRef = "categories/awesome"
-#  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
+# GitHub 外链
+[[main]]
+  pre = "github"
+  name = "GitHub"
+  url = "https://github.com/socake"
+  weight = 99
 
 
 # -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
 
-#[[footer]]
-#  name = "Privacy"
-#  url = "https://external-link"
+[[footer]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 10
 
- [[footer]]
-   name = "标签"
-   pageRef = "tags"
-   weight = 10
+[[footer]]
+  name = "分类"
+  pageRef = "categories"
+  weight = 20
 
- [[footer]]
-   name = "分类"
-   pageRef = "categories"
-   weight = 20
+[[footer]]
+  name = "RSS"
+  url = "/index.xml"
+  weight = 30
 
- [[footer]]
-   name = "作者"
-   pageRef = "posts/authors"
-   weight = 10
-
- [[footer]]
-   name = "赞助"
-   pageRef = "sponsor-diy"
-   weight = 99
+[[footer]]
+  name = "赞助"
+  pageRef = "sponsor-diy"
+  weight = 99
