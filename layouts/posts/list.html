@@ -20,17 +20,18 @@
 </header>
 
 {{/* ── Category Filter Tabs ── */}}
-{{ $allCats := slice }}
+{{/* 只收集"第一个分类"作为主分类 tab，避免多分类文章导致 tab 有名无实 */}}
+{{ $primaryCats := slice }}
 {{ range .Pages }}
-  {{ range .Params.categories }}
-    {{ $allCats = $allCats | append . }}
+  {{ with .Params.categories }}
+    {{ $primaryCats = $primaryCats | append (index . 0) }}
   {{ end }}
 {{ end }}
-{{ $uniqueCats := $allCats | uniq | sort }}
+{{ $uniquePrimaryCats := $primaryCats | uniq | sort }}
 
 <div class="filter-bar" id="filter-bar">
-  <button class="filter-btn active" data-filter="all">全部</button>
-  {{ range $uniqueCats }}
+  <button class="filter-btn active" data-filter="all">全部 <span class="filter-count">{{ len .Pages }}</span></button>
+  {{ range $uniquePrimaryCats }}
   <button class="filter-btn" data-filter="{{ . | urlize }}">{{ . }}</button>
   {{ end }}
 </div>
@@ -67,8 +68,9 @@
 
     var visible = 0;
     cards.forEach(function(card) {
-      var cat = (card.dataset.cat || '').toLowerCase().replace(/\s+/g, '-');
-      var show = filter === 'all' || cat === filter;
+      // data-cat contains space-separated slugs of ALL categories
+      var cats = (card.dataset.cat || '').split(' ');
+      var show = filter === 'all' || cats.indexOf(filter) !== -1;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
     });

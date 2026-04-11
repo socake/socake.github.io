@@ -41,11 +41,17 @@
 {{ end }}
 
 {{ $cat := "" }}
-{{ with $page.Params.categories }}{{ $cat = index . 0 }}{{ end }}
+{{ $allCatSlugs := slice }}
+{{ with $page.Params.categories }}
+  {{ $cat = index . 0 }}
+  {{ range . }}
+    {{ $allCatSlugs = $allCatSlugs | append (. | urlize) }}
+  {{ end }}
+{{ end }}
 
 <article
   class="post-card relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700/60 shadow-md bg-white dark:bg-neutral-900 transition-all duration-300"
-  data-cat="{{ $cat }}">
+  data-cat="{{ delimit $allCatSlugs " " }}">
 
   {{/* Image */}}
   {{ with $featuredURL }}

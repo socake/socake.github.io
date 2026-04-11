@@ -755,3 +755,16 @@ button[title="Copy"] {
   margin-top: auto;
 }
 
+
+/* filter count badge */
+.filter-count {
+  display: inline-block;
+  font-size: 0.65rem;
+  background: rgba(99,102,241,0.25);
+  color: rgba(165,180,252,0.9);
+  border-radius: 99px;
+  padding: 0 5px;
+  margin-left: 3px;
+  vertical-align: middle;
+  line-height: 1.6;
+}
