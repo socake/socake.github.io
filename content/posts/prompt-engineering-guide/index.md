@@ -9,6 +9,7 @@ summary: "Prompt Engineering 不是玄学，而是有规律可循的工程实践
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Prompt Engineering", "Chain-of-Thought", "Few-shot", "结构化输出", "JSON mode", "提示词工程", "LLM应用"]
 params:
   reading_time: true

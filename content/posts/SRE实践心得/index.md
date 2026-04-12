@@ -9,6 +9,7 @@ summary: "SRE 不是换了个头衔的运维，而是一套用软件工程思维
 toc: true
 math: false
 diagram: false
+series: ["SRE 实战手册"]
 keywords: ["SRE", "SLO", "SLA", "错误预算", "Toil", "Blameless"]
 params:
   reading_time: true

@@ -9,6 +9,7 @@ summary: "Alertmanager 内置的通知渠道不支持钉钉、飞书等国内工
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["Alertmanager", "Webhook", "告警推送", "钉钉", "Silence API", "Python Flask"]
 params:
   reading_time: true

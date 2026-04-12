@@ -9,6 +9,7 @@ summary: "Kibana 内置的 Stack Monitoring 免费功能有限，告警媒介也
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["Elasticsearch", "Prometheus", "elasticsearch-exporter", "Grafana", "监控告警"]
 params:
   reading_time: true

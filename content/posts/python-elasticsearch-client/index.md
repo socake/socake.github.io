@@ -9,6 +9,7 @@ summary: "从客户端初始化到批量操作、scroll 查询、聚合统计，
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["Python", "Elasticsearch", "elasticsearch-py", "bulk", "scroll", "聚合查询", "索引管理"]
 params:
   reading_time: true

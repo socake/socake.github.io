@@ -9,6 +9,7 @@ summary: "OpenAI API 是大多数 LLM 应用开发者的起点，但从 Hello Wo
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["OpenAI API", "Function Calling", "Structured Output", "Batch API", "Embeddings", "Chat Completions", "GPT-5.4", "成本优化"]
 params:
   reading_time: true

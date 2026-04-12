@@ -9,6 +9,7 @@ summary: "记录 Istio Service Mesh 从零落地的完整过程，包括 sidecar
 toc: true
 math: false
 diagram: false
+series: ["K8s 完全指南"]
 keywords: ["Istio", "Service Mesh", "VirtualService", "DestinationRule", "mTLS", "灰度发布", "熔断"]
 params:
   reading_time: true

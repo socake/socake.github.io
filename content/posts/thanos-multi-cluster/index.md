@@ -9,6 +9,7 @@ summary: "记录我们将三套 EKS 集群的独立 Prometheus 迁移到 Thanos 
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["Thanos", "Prometheus", "多集群监控", "S3长期存储", "Kubernetes可观测性"]
 params:
   reading_time: true

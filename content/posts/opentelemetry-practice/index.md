@@ -9,6 +9,7 @@ summary: "从为什么选 OpenTelemetry 讲起，给出 DaemonSet + Gateway 的 
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["OpenTelemetry", "OTel Collector", "Tempo", "Loki", "Grafana", "可观测性", "Traces", "Kubernetes"]
 params:
   reading_time: true

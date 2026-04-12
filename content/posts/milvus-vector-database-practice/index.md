@@ -9,6 +9,7 @@ summary: "覆盖向量数据库选型对比（Milvus/Qdrant/Weaviate/pgvector）
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Milvus", "向量数据库", "ANN搜索", "HNSW", "RAG", "语义搜索"]
 params:
   reading_time: true

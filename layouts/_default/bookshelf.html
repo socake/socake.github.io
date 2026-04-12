@@ -252,6 +252,25 @@
             font-weight: 500;
         }
 
+        .douban-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.8rem;
+            background: linear-gradient(135deg, #1a73e8, #1558b0);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+        }
+
+        .douban-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
+        }
+
         /* 无结果状态 */
         .no-results {
             text-align: center;
@@ -349,15 +368,19 @@
                     </div>
                     {{ end }}
                     
-                    <!-- 修复：闭合 if .file 条件 -->
-                    {{ if .file }}
                     <div class="book-meta">
+                        {{ if .file }}
                         <a href="{{ .file }}" class="download-btn" download>
                             📥 下载
                         </a>
                         <span class="file-size">{{ .file_size }}</span>
+                        {{ end }}
+                        {{ if .link }}
+                        <a href="{{ .link }}" class="douban-btn" target="_blank">
+                            📖 豆瓣书评
+                        </a>
+                        {{ end }}
                     </div>
-                    {{ end }}
 
                     <!-- 📝 🚧 注释掉出版日期，保留代码便于后续恢复
                     {{ if .published }}

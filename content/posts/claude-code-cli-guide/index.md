@@ -9,6 +9,7 @@ summary: "Claude Code是Anthropic推出的终端AI编程助手，不同于编辑
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Claude Code", "CLI", "代码库分析", "CLAUDE.md", "K8s调试", "运维自动化"]
 params:
   reading_time: true

@@ -9,6 +9,7 @@ summary: "从 SLI 指标选取到 Error Budget 消耗速率告警，系统讲解
 toc: true
 math: false
 diagram: false
+series: ["SRE 实战手册"]
 keywords: ["SLO", "SLI", "Error Budget", "SRE", "Prometheus", "burn rate", "可靠性工程"]
 params:
   reading_time: true

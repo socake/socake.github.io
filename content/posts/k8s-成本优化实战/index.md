@@ -9,6 +9,7 @@ summary: "真实的降本案例：从发现成本异常到分析根因，通过 
 toc: true
 math: false
 diagram: false
+series: ["K8s 完全指南"]
 keywords: ["kubernetes", "成本优化", "karpenter", "finops", "aws eks"]
 params:
   reading_time: true

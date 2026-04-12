@@ -9,6 +9,7 @@ summary: "ES 查询是每个运维必须掌握的技能。这篇文章从 URI Se
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["Elasticsearch", "DSL", "Query", "Aggregation", "_cat API", "搜索"]
 params:
   reading_time: true

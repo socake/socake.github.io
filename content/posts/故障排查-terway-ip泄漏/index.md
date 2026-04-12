@@ -9,6 +9,7 @@ summary: "一次真实的连锁故障：节点磁盘告警 → Pod 被驱逐 →
 toc: true
 math: false
 diagram: false
+series: ["SRE 实战手册"]
 keywords: ["terway", "ipam", "kubernetes", "阿里云", "ip泄漏", "故障排查"]
 params:
   reading_time: true

@@ -9,6 +9,7 @@ summary: "大流量日志场景下，Fleet 直写 ES 会出现严重写入堆积
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["Filebeat", "Logstash", "Kafka", "日志采集", "ELK", "grok"]
 params:
   reading_time: true

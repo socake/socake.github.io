@@ -9,6 +9,7 @@ summary: "从 Cluster Autoscaler 迁移到 Karpenter 之后，集群扩容速度
 toc: true
 math: false
 diagram: false
+series: ["K8s 完全指南"]
 keywords: ["Karpenter", "NodePool", "EC2NodeClass", "Spot 中断", "Consolidation", "Disruption Budget"]
 params:
   reading_time: true

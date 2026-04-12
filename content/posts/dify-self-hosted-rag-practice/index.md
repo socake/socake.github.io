@@ -9,6 +9,7 @@ summary: "Dify是当前私有化部署最成熟的LLM应用构建平台。本文
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Dify", "RAG", "知识库", "私有化部署", "工作流", "LLM应用平台"]
 params:
   reading_time: true

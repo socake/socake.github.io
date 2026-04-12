@@ -9,6 +9,7 @@ summary: "讲清楚为什么要 Fluent Bit + Fluentd 两层架构，给出可直
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["EFK", "Fluent Bit", "Fluentd", "Elasticsearch", "Kubernetes 日志", "日志采集", "Kibana"]
 params:
   reading_time: true

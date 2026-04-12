@@ -9,6 +9,7 @@ summary: "Claude API 的设计哲学和 OpenAI 有些不同，但一旦理解其
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Claude API", "Anthropic SDK", "Tool Use", "Prompt Caching", "Vision", "流式输出", "Messages API"]
 params:
   reading_time: true

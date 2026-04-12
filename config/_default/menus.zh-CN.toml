@@ -10,6 +10,16 @@
   pageRef = "posts"
   weight = 10
 
+[[main]]
+  name = "路线图"
+  pageRef = "roadmap"
+  weight = 15
+
+[[main]]
+  name = "更新日志"
+  pageRef = "changelog"
+  weight = 16
+
 # 运维笔记 父菜单
 [[main]]
   name = "Linux"

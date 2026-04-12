@@ -9,6 +9,7 @@ summary: "GitHub Copilot不只是Tab补全。Copilot Chat的/fix /explain /tests
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["GitHub Copilot", "代码补全", "Copilot Chat", "Terraform", "Kubernetes YAML", "DevOps"]
 params:
   reading_time: true

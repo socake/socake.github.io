@@ -9,6 +9,7 @@ summary: "基于生产踩坑经验，系统梳理 Helm Chart 结构设计、_hel
 toc: true
 math: false
 diagram: false
+series: ["K8s 完全指南"]
 keywords: ["Helm", "Chart", "Kubernetes", "values", "Harbor", "helm upgrade", "回滚"]
 params:
   reading_time: true

@@ -9,6 +9,7 @@ summary: "Prometheus 撑不住了？本文对比 VictoriaMetrics 与 Prometheus 
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["VictoriaMetrics", "Prometheus 替代", "监控存储", "MetricsQL", "remote_write"]
 params:
   reading_time: true

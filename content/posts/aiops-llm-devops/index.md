@@ -9,6 +9,7 @@ summary: "LLM 不能替代运维工程师，但确实能把重复性、低价值
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["AIOPS", "LLM", "Claude", "大模型", "运维自动化", "告警摘要", "日志分析", "Anthropic SDK"]
 params:
   reading_time: true

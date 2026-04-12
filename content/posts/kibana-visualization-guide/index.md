@@ -9,6 +9,7 @@ summary: "Kibana 是我们 ELK 体系里使用频率最高的工具。这篇文�
 toc: true
 math: false
 diagram: false
+series: ["ELK Stack 完全手册"]
 keywords: ["Kibana", "KQL", "Dashboard", "Lens", "ELK", "日志可视化"]
 params:
   reading_time: true

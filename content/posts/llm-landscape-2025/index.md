@@ -9,6 +9,7 @@ summary: "GPT-5.4、Claude Opus 4.6、Gemini 2.5 Pro、Llama 4 Scout、DeepSeek 
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["大模型", "LLM", "GPT-5.4", "Claude 4", "Gemini 2.5", "Llama 4", "DeepSeek V3", "推理模型", "模型选型", "Agent"]
 params:
   reading_time: true

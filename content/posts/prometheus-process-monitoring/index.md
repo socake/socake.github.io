@@ -9,6 +9,7 @@ summary: "K8s 有完善的 Pod 监控体系，但裸机和 VM 上运行的进程
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["process-exporter", "Prometheus", "进程监控", "告警", "DaemonSet", "Linux"]
 params:
   reading_time: true

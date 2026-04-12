@@ -9,6 +9,7 @@ summary: "讲清楚为什么LLM应用必须要可观测性，以及如何用Lang
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Langfuse", "LLM可观测性", "Prompt管理", "LangChain集成", "成本追踪"]
 params:
   reading_time: true

@@ -9,6 +9,7 @@ summary: "从写 Shell 脚本、解读错误信息到辅助故障排查，分享
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["AI工具", "运维效率", "Claude", "Cursor", "GitHub Copilot", "Prompt工程", "故障排查"]
 params:
   reading_time: true

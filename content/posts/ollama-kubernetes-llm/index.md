@@ -9,6 +9,7 @@ summary: "在 Kubernetes 上部署 Ollama 运行本地大模型，从 GPU 调度
 toc: true
 math: false
 diagram: false
+series: ["AI 工程化实战"]
 keywords: ["Ollama", "LLM", "Kubernetes", "GPU", "本地大模型", "AI运维"]
 params:
   reading_time: true

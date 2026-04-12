@@ -9,6 +9,7 @@ summary: "告警太多和告警太少一样有害。Alertmanager 的路由、抑
 toc: true
 math: false
 diagram: false
+series: ["可观测性实战"]
 keywords: ["Alertmanager", "告警路由", "抑制规则", "钉钉告警", "PagerDuty", "高可用"]
 params:
   reading_time: true
