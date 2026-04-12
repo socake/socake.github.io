@@ -1,15 +1,26 @@
 /* ================================================================
    Midnight Indigo — Custom Theme Enhancements
    socake.github.io
+
+   结构说明：
+   - 基础样式 = light mode（白底、深色文字，对比度高）
+   - .dark 前缀 = dark mode 覆盖（午夜蓝、浅色文字）
+   - html:not(.dark) 只用于无法用 .dark 表达的特殊覆盖
    ================================================================ */
 
-/* ---- Base Typography ---- */
+/* ================================================================
+   BASE TYPOGRAPHY
+   ================================================================ */
 body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system,
     "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.01em;
+  background-color: #ffffff;
+}
+.dark body {
+  background-color: rgb(9, 14, 36);
 }
 
 code, pre, kbd, samp {
@@ -18,27 +29,23 @@ code, pre, kbd, samp {
   font-variant-ligatures: contextual;
 }
 
-/* ---- Custom Scrollbar ---- */
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
+/* ================================================================
+   SCROLLBAR
+   ================================================================ */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.25);
   border-radius: 99px;
   transition: background 0.2s;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.65);
+  background: rgba(99, 102, 241, 0.5);
 }
+.dark ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.35); }
+.dark ::-webkit-scrollbar-thumb:hover { background: rgba(99, 102, 241, 0.65); }
 
-/* ---- Smooth Scroll ---- */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 /* ================================================================
    HEADER — Glass Navigation
@@ -46,58 +53,72 @@ html {
 header {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.08);
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+.dark header {
+  background: rgba(9, 14, 36, 0.88) !important;
+  border-bottom-color: rgba(99, 102, 241, 0.1) !important;
+  box-shadow: none;
 }
 
 /* Header nav links: fade-up underline */
 .main-menu nav a p,
-.main-menu nav a span:not(.icon) {
-  position: relative;
-}
+.main-menu nav a span:not(.icon) { position: relative; }
 .main-menu nav a p::after,
 .main-menu a > p::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
+  left: 0; bottom: -2px;
+  width: 0; height: 2px;
   background: linear-gradient(90deg, rgb(99,102,241), rgb(34,211,238));
   border-radius: 2px;
   transition: width 0.25s ease;
 }
 .main-menu nav a:hover p::after,
-.main-menu a:hover > p::after {
-  width: 100%;
-}
+.main-menu a:hover > p::after { width: 100%; }
 
 /* ================================================================
-   HOMEPAGE PROFILE — Refined Avatar + Headline
+   HOMEPAGE PROFILE — Avatar + Headline
    ================================================================ */
 
-/* Avatar glow ring animation */
+/* Avatar glow ring */
 article header img.rounded-full {
   box-shadow:
-    0 0 0 3px rgba(99, 102, 241, 0.3),
-    0 0 0 6px rgba(34, 211, 238, 0.1),
-    0 8px 32px rgba(99, 102, 241, 0.25);
+    0 0 0 3px rgba(79, 70, 229, 0.15),
+    0 0 0 6px rgba(79, 70, 229, 0.05),
+    0 6px 24px rgba(79, 70, 229, 0.12);
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 article header img.rounded-full:hover {
   box-shadow:
+    0 0 0 4px rgba(79, 70, 229, 0.25),
+    0 0 0 8px rgba(79, 70, 229, 0.08),
+    0 10px 32px rgba(79, 70, 229, 0.2);
+  transform: scale(1.04);
+}
+.dark article header img.rounded-full {
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.3),
+    0 0 0 6px rgba(34, 211, 238, 0.1),
+    0 8px 32px rgba(99, 102, 241, 0.25);
+}
+.dark article header img.rounded-full:hover {
+  box-shadow:
     0 0 0 4px rgba(99, 102, 241, 0.5),
     0 0 0 8px rgba(34, 211, 238, 0.2),
     0 12px 40px rgba(99, 102, 241, 0.4);
-  transform: scale(1.04);
 }
 
-/* Profile name: gradient text — light mode default */
+/* Profile name gradient — light mode: darker indigo */
 article header h1 {
-  background: linear-gradient(135deg, #3730a3 0%, #0369a1 55%, #6d28d9 100%);
+  background: linear-gradient(135deg, #4338ca 0%, #0369a1 55%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+/* dark mode: light pastel */
 .dark article header h1 {
   background: linear-gradient(135deg, #a5b4fc 0%, #67e8f9 60%, #c4b5fd 100%);
   -webkit-background-clip: text;
@@ -105,40 +126,42 @@ article header h1 {
   background-clip: text;
 }
 
-/* Profile headline: softer */
-article header h2 {
-  font-weight: 400;
-  letter-spacing: 0.01em;
-}
+article header h2 { font-weight: 400; letter-spacing: 0.01em; }
 
 /* ================================================================
-   ARTICLE CARDS — Glassmorphism Hover
+   ARTICLE CARDS — Hover Effects
    ================================================================ */
-
-/* Article list cards */
 .article-grid .article,
 article.relative {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   border-radius: 12px;
 }
-
 .article-grid .article:hover,
 article.relative:hover {
   transform: translateY(-4px);
   box-shadow:
-    0 12px 40px rgba(9, 14, 36, 0.45),
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(79, 70, 229, 0.08);
+}
+.dark .article-grid .article:hover,
+.dark article.relative:hover {
+  box-shadow:
+    0 12px 40px rgba(9, 14, 36, 0.5),
     0 0 0 1px rgba(99, 102, 241, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-/* Recent articles card hover glow */
 .recent-article-card,
-.card-link {
-  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
-}
+.card-link { transition: transform 0.25s ease, box-shadow 0.25s ease !important; }
 .recent-article-card:hover,
 .card-link:hover {
   transform: translateY(-3px) !important;
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(79, 70, 229, 0.08) !important;
+}
+.dark .recent-article-card:hover,
+.dark .card-link:hover {
   box-shadow:
     0 8px 32px rgba(99, 102, 241, 0.2),
     0 0 0 1px rgba(99, 102, 241, 0.12) !important;
@@ -148,14 +171,11 @@ article.relative:hover {
    PROSE — Article Reading Experience
    ================================================================ */
 
-/* Animated gradient underline for inline links */
+/* Inline links — light mode */
 .prose a:not([class]) {
+  color: #4338ca;
   text-decoration: none !important;
-  background-image: linear-gradient(
-    90deg,
-    rgb(99, 102, 241) 0%,
-    rgb(34, 211, 238) 100%
-  );
+  background-image: linear-gradient(90deg, #4338ca 0%, #0369a1 100%);
   background-size: 0% 1.5px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -164,29 +184,39 @@ article.relative:hover {
 }
 .prose a:not([class]):hover {
   background-size: 100% 1.5px;
+  color: #3730a3;
+}
+/* dark mode */
+.dark .prose a:not([class]) {
   color: rgba(var(--color-primary-400), 1);
+  background-image: linear-gradient(90deg, rgb(99, 102, 241) 0%, rgb(34, 211, 238) 100%);
+}
+.dark .prose a:not([class]):hover {
+  color: rgba(var(--color-primary-300), 1);
 }
 
-/* Headings: subtle left indicator */
+/* Heading left borders */
 .prose h2 {
-  border-left: 3px solid rgba(99, 102, 241, 0.7);
+  border-left: 3px solid rgba(79, 70, 229, 0.6);
   padding-left: 0.75rem;
   margin-left: -0.75rem;
 }
 .prose h3 {
-  border-left: 2px solid rgba(34, 211, 238, 0.5);
+  border-left: 2px solid rgba(7, 89, 133, 0.4);
   padding-left: 0.6rem;
   margin-left: -0.6rem;
 }
+.dark .prose h2 { border-left-color: rgba(99, 102, 241, 0.7); }
+.dark .prose h3 { border-left-color: rgba(34, 211, 238, 0.5); }
 
-/* Blockquote — gradient left border */
+/* Blockquote */
 .prose blockquote {
   border-left: none !important;
   position: relative;
   padding-left: 1.25rem !important;
   font-style: normal !important;
-  color: rgba(var(--color-neutral-400), 1) !important;
-  background: rgba(99, 102, 241, 0.04);
+  color: #4b5563 !important;
+  background: #f8fafc;
   border-radius: 0 8px 8px 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -194,49 +224,28 @@ article.relative:hover {
 .prose blockquote::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 0; top: 0; bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, rgb(99,102,241) 0%, rgb(34,211,238) 100%);
+  background: linear-gradient(180deg, rgb(79,70,229) 0%, rgb(7,89,133) 100%);
   border-radius: 3px;
 }
-
-/* Strong in dark mode */
-.dark .prose strong {
-  color: rgba(var(--color-primary-300), 1);
+.dark .prose blockquote {
+  color: rgba(var(--color-neutral-400), 1) !important;
+  background: rgba(99, 102, 241, 0.04);
+}
+.dark .prose blockquote::before {
+  background: linear-gradient(180deg, rgb(99,102,241) 0%, rgb(34,211,238) 100%);
 }
 
-/* ================================================================
-   CODE BLOCKS — Language Label + Enhanced Styling
-   ================================================================ */
+/* Strong */
+.prose strong { color: #111827; }
+.dark .prose strong { color: rgba(var(--color-primary-300), 1); }
 
-/* Code block container */
-.highlight {
-  border-radius: 10px !important;
-  overflow: hidden;
-  border: 1px solid rgba(99, 102, 241, 0.12);
-  box-shadow: 0 4px 24px rgba(9, 14, 36, 0.4);
-}
-
-/* Show language label on code blocks */
-.highlight-wrapper {
-  position: relative;
-}
-.highlight > .chroma {
-  border-radius: 10px;
-}
-
-/* Code block top bar — extracted from data-lang if available */
-.highlight::before {
-  display: none; /* Requires JS, handled separately */
-}
-
-/* Inline code */
+/* Inline code — light mode */
 .prose code:not(pre code) {
-  background: rgba(99, 102, 241, 0.12) !important;
-  color: rgba(var(--color-primary-300), 1) !important;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: #f1f5f9 !important;
+  color: #6d28d9 !important;
+  border: 1px solid #e2e8f0;
   border-radius: 5px;
   padding: 0.1em 0.4em !important;
   font-size: 0.88em;
@@ -244,31 +253,62 @@ article.relative:hover {
 .dark .prose code:not(pre code) {
   background: rgba(99, 102, 241, 0.15) !important;
   color: #a5b4fc !important;
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
-/* ================================================================
-   TABLE — Refined Styling
-   ================================================================ */
+/* Tables */
 .prose table {
   border-collapse: collapse;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid #e5e7eb;
 }
+.dark .prose table { border-color: rgba(99, 102, 241, 0.15); }
 .prose thead th {
-  background: rgba(99, 102, 241, 0.1);
+  background: #f8fafc;
+  color: #374151;
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 0.85em;
   text-transform: uppercase;
 }
-.prose tbody tr:hover {
-  background: rgba(99, 102, 241, 0.04);
-}
 .dark .prose thead th {
   background: rgba(99, 102, 241, 0.18);
   color: rgba(var(--color-primary-200), 1);
+}
+.prose tbody tr:hover { background: #f1f5f9; }
+.dark .prose tbody tr:hover { background: rgba(99, 102, 241, 0.04); }
+
+/* ================================================================
+   CODE BLOCKS
+   ================================================================ */
+.highlight {
+  border-radius: 10px !important;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.dark .highlight {
+  border-color: rgba(99, 102, 241, 0.12);
+  box-shadow: 0 4px 24px rgba(9, 14, 36, 0.4);
+}
+.highlight-wrapper { position: relative; }
+.highlight > .chroma { border-radius: 10px; }
+.highlight::before { display: none; }
+
+.copy-button,
+button[title="Copy"] {
+  transition: all 0.2s ease !important;
+  border-radius: 6px !important;
+}
+.copy-button:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+  color: #4338ca !important;
+}
+.dark .copy-button:hover {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: rgba(var(--color-primary-300), 1) !important;
 }
 
 /* ================================================================
@@ -276,9 +316,7 @@ article.relative:hover {
    ================================================================ */
 .badge,
 a[href^="/tags/"],
-a[href^="/categories/"] {
-  transition: all 0.2s ease !important;
-}
+a[href^="/categories/"] { transition: all 0.2s ease !important; }
 a[href^="/tags/"]:hover,
 a[href^="/categories/"]:hover {
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.35) !important;
@@ -286,7 +324,7 @@ a[href^="/categories/"]:hover {
 }
 
 /* ================================================================
-   TABLE OF CONTENTS — Left indicator on active
+   TABLE OF CONTENTS
    ================================================================ */
 #TableOfContents a {
   transition: color 0.2s ease, padding-left 0.2s ease;
@@ -295,13 +333,17 @@ a[href^="/categories/"]:hover {
   padding: 2px 6px;
 }
 #TableOfContents a:hover {
+  color: #4338ca !important;
+  background: rgba(79, 70, 229, 0.06);
+  padding-left: 10px;
+}
+.dark #TableOfContents a:hover {
   color: rgba(var(--color-primary-400), 1) !important;
   background: rgba(99, 102, 241, 0.08);
-  padding-left: 10px;
 }
 
 /* ================================================================
-   HERO SECTION — Enhanced Blur Overlay
+   HERO SECTION
    ================================================================ */
 .hero-image-container::after,
 [class*="hero"] .overlay {
@@ -312,7 +354,6 @@ a[href^="/categories/"]:hover {
   ) !important;
 }
 
-/* Article hero metadata overlay */
 .thumbAndBackground-meta,
 .article-meta-overlay {
   backdrop-filter: blur(8px);
@@ -321,7 +362,7 @@ a[href^="/categories/"]:hover {
 }
 
 /* ================================================================
-   PAGINATION — Refined Buttons
+   PAGINATION
    ================================================================ */
 .pagination a,
 [data-pagination] a {
@@ -329,109 +370,84 @@ a[href^="/categories/"]:hover {
   border-radius: 8px;
 }
 .pagination a:hover {
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
   transform: translateX(-2px);
 }
-.pagination a:last-child:hover {
-  transform: translateX(2px);
-}
+.pagination a:last-child:hover { transform: translateX(2px); }
 
 /* ================================================================
-   FOOTER — Refined
+   FOOTER
    ================================================================ */
 footer {
-  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+.dark footer {
+  border-top-color: rgba(99, 102, 241, 0.1);
+  background: transparent;
 }
 
 /* ================================================================
-   SCROLL TO TOP BUTTON — Glow on Hover
+   SCROLL TO TOP
    ================================================================ */
-#scroll-to-top {
-  transition: all 0.25s ease !important;
-}
+#scroll-to-top { transition: all 0.25s ease !important; }
 #scroll-to-top:hover {
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.45) !important;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
   transform: translateY(-2px) !important;
 }
 
 /* ================================================================
-   SEARCH MODAL — Glass Effect
+   SEARCH MODAL
    ================================================================ */
 #search-modal,
-#search-wrapper {
-  backdrop-filter: blur(20px);
-}
-
-/* ================================================================
-   BODY BACKGROUND
-   ================================================================ */
-body {
-  background-color: #eef1f8;
-}
-.dark body {
-  background-color: rgb(9, 14, 36);
-}
+#search-wrapper { backdrop-filter: blur(20px); }
 
 /* ================================================================
    SELECTION COLOR
    ================================================================ */
-::selection {
-  background: rgba(99, 102, 241, 0.3);
-  color: inherit;
-}
+::selection { background: rgba(99, 102, 241, 0.15); color: inherit; }
+.dark ::selection { background: rgba(99, 102, 241, 0.3); }
 
 /* ================================================================
-   FOCUS RING — Accessible + Styled
+   FOCUS RING
    ================================================================ */
 :focus-visible {
-  outline: 2px solid rgba(99, 102, 241, 0.6);
+  outline: 2px solid rgba(79, 70, 229, 0.5);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 /* ================================================================
-   IMAGE ZOOM OVERLAY — Refined
+   IMAGE ZOOM OVERLAY
    ================================================================ */
 .medium-zoom-overlay {
-  background: rgba(9, 14, 36, 0.9) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: blur(8px);
 }
+.dark .medium-zoom-overlay { background: rgba(9, 14, 36, 0.9) !important; }
 
 /* ================================================================
-   READING PROGRESS — Optional Gradient Line
+   ANIMATION
    ================================================================ */
 @keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-/* Subtle entrance for article content */
-.prose {
-  animation: fadeInDown 0.4s ease both;
-}
+.prose { animation: fadeInDown 0.4s ease both; }
 
 /* ================================================================
-   MOBILE MENU — Glass Panel
+   MOBILE MENU
    ================================================================ */
-#menu-wrapper {
-  backdrop-filter: blur(20px) saturate(150%) !important;
+#menu-wrapper { backdrop-filter: blur(20px) saturate(150%) !important; }
+html:not(.dark) #menu-wrapper {
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+.dark #menu-wrapper {
+  background: rgba(9, 14, 36, 0.96) !important;
 }
 
 /* ================================================================
-   CODE COPY BUTTON — Refined
-   ================================================================ */
-.copy-button,
-button[title="Copy"] {
-  transition: all 0.2s ease !important;
-  border-radius: 6px !important;
-}
-.copy-button:hover {
-  background: rgba(99, 102, 241, 0.2) !important;
-  color: rgba(var(--color-primary-300), 1) !important;
-}
-
-/* ================================================================
-   POSTS LIST — Category Filter Bar
+   POSTS LIST — Filter Bar
    ================================================================ */
 .filter-bar {
   display: flex;
@@ -439,32 +455,31 @@ button[title="Copy"] {
   gap: 8px;
   margin-bottom: 2rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.12);
+  border-bottom: 1px solid #e5e7eb;
 }
+.dark .filter-bar { border-bottom-color: rgba(99, 102, 241, 0.12); }
 
 .filter-btn {
   padding: 5px 14px;
   border-radius: 99px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(79, 70, 229, 0.2);
-  color: #4b5563;
+  border: 1px solid #d1d5db;
+  color: #374151;
   background: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 .dark .filter-btn {
   border-color: rgba(99, 102, 241, 0.25);
   color: rgba(148, 163, 210, 1);
   background: transparent;
-  box-shadow: none;
 }
 .filter-btn:hover {
-  border-color: rgba(67, 56, 202, 0.4);
-  color: #3730a3;
-  background: rgba(79, 70, 229, 0.05);
+  color: #4338ca;
+  background: #eef2ff;
+  border-color: #a5b4fc;
 }
 .dark .filter-btn:hover {
   border-color: rgba(99, 102, 241, 0.6);
@@ -472,16 +487,33 @@ button[title="Copy"] {
   background: rgba(99, 102, 241, 0.08);
 }
 .filter-btn.active {
-  background: rgba(79, 70, 229, 0.09);
-  border-color: rgba(67, 56, 202, 0.45);
-  color: #3730a3;
-  box-shadow: 0 0 8px rgba(79, 70, 229, 0.1);
+  color: #4338ca;
+  background: #eef2ff;
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 .dark .filter-btn.active {
   background: rgba(99, 102, 241, 0.18);
   border-color: rgba(99, 102, 241, 0.6);
   color: rgba(165, 180, 252, 1);
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+/* filter count badge */
+.filter-count {
+  display: inline-block;
+  font-size: 0.65rem;
+  background: #e0e7ff;
+  color: #4338ca;
+  border-radius: 99px;
+  padding: 0 5px;
+  margin-left: 3px;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+.dark .filter-count {
+  background: rgba(99, 102, 241, 0.25);
+  color: rgba(165, 180, 252, 0.9);
 }
 
 /* ================================================================
@@ -495,27 +527,36 @@ button[title="Copy"] {
 }
 
 .year-label {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #6b7280;
-  letter-spacing: 0.06em;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin: 2rem 0 0.75rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(79, 70, 229, 0.08);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6;
 }
 .dark .year-label {
-  color: rgba(100, 120, 175, 1);
-  border-bottom-color: rgba(99, 102, 241, 0.1);
+  color: rgba(100, 120, 175, 0.7);
+  border-bottom-color: rgba(99, 102, 241, 0.08);
 }
 
 /* ================================================================
-   POST CARD — Redesigned
+   POST CARD — Redesigned (Light-first)
    ================================================================ */
 .post-card {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+.dark .post-card {
+  background: rgb(15, 20, 48);
+  border-color: rgba(99, 102, 241, 0.12);
+  box-shadow: none;
 }
 
 .post-card-img-wrap {
@@ -528,32 +569,30 @@ button[title="Copy"] {
   object-fit: cover;
   transition: transform 0.45s ease;
 }
-.post-card:hover .post-card-img {
-  transform: scale(1.06);
-}
+.post-card:hover .post-card-img { transform: scale(1.06); }
+
 .post-card-img-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 40%,
-    rgba(9, 14, 36, 0.55) 100%
-  );
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3) 100%);
   pointer-events: none;
+}
+.dark .post-card-img-overlay {
+  background: linear-gradient(to bottom, transparent 40%, rgba(9, 14, 36, 0.55) 100%);
 }
 
 /* Category badge on card */
 .post-card-cat {
   display: inline-block;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 2px 8px;
   border-radius: 99px;
-  background: rgba(79, 70, 229, 0.07);
-  color: #3730a3;
-  border: 1px solid rgba(79, 70, 229, 0.18);
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
   text-decoration: none !important;
   background-image: none !important;
   transition: background 0.2s, border-color 0.2s;
@@ -564,8 +603,8 @@ button[title="Copy"] {
   border-color: rgba(99, 102, 241, 0.25);
 }
 .post-card-cat:hover {
-  background: rgba(79, 70, 229, 0.14) !important;
-  border-color: rgba(79, 70, 229, 0.35) !important;
+  background: #e0e7ff !important;
+  border-color: #a5b4fc !important;
   background-size: 0 !important;
 }
 .dark .post-card-cat:hover {
@@ -578,22 +617,16 @@ button[title="Copy"] {
   background-image: none !important;
 }
 .post-card-title {
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.45;
   color: #111827;
   margin: 0;
   transition: color 0.2s;
 }
-.dark .post-card-title {
-  color: rgba(var(--color-neutral-100), 1);
-}
-.post-card:hover .post-card-title {
-  color: #3730a3;
-}
-.dark .post-card:hover .post-card-title {
-  color: rgba(var(--color-primary-300), 1);
-}
+.dark .post-card-title { color: rgba(228, 234, 250, 1); }
+.post-card:hover .post-card-title { color: #4338ca; }
+.dark .post-card:hover .post-card-title { color: rgba(165, 180, 252, 1); }
 
 .post-card-summary {
   font-size: 0.8rem;
@@ -605,45 +638,31 @@ button[title="Copy"] {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.dark .post-card-summary {
-  color: rgba(var(--color-neutral-400), 1);
-}
+.dark .post-card-summary { color: rgba(var(--color-neutral-400), 1); }
 
-.post-card-meta {
-  font-size: 0.72rem;
-  color: #9ca3af;
-}
-.dark .post-card-meta {
-  color: rgba(100, 120, 175, 0.8);
-}
+.post-card-meta { font-size: 0.72rem; color: #9ca3af; }
+.dark .post-card-meta { color: rgba(100, 120, 175, 0.8); }
 
 /* Card hover state */
 .post-card:hover {
   transform: translateY(-3px);
-  box-shadow:
-    0 8px 28px rgba(79, 70, 229, 0.12),
-    0 0 0 1px rgba(79, 70, 229, 0.14);
-  border-color: rgba(79, 70, 229, 0.18) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px #c7d2fe;
+  border-color: #c7d2fe !important;
 }
 .dark .post-card:hover {
-  box-shadow:
-    0 8px 32px rgba(9, 14, 36, 0.5),
-    0 0 0 1px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 8px 32px rgba(9, 14, 36, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.2);
   border-color: rgba(99, 102, 241, 0.25) !important;
 }
 
 /* ================================================================
    HOMEPAGE RECENT — Editorial Layout
    ================================================================ */
-.recent-section {
-  padding-top: 0.5rem;
-}
-
+.recent-section { padding-top: 0.5rem; }
 .recent-header {
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  border-bottom: 1px solid #f3f4f6;
   padding-bottom: 0.75rem;
 }
-
+.dark .recent-header { border-bottom-color: rgba(99, 102, 241, 0.1); }
 .recent-more-link {
   text-decoration: none !important;
   background-image: none !important;
@@ -656,72 +675,62 @@ button[title="Copy"] {
   background-image: none !important;
   position: relative;
   min-height: 320px;
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.dark .featured-card {
+  border-color: rgba(99, 102, 241, 0.15);
+  box-shadow: none;
 }
 .featured-card:hover {
-  border-color: rgba(99, 102, 241, 0.35);
-  box-shadow: 0 16px 48px rgba(9, 14, 36, 0.6), 0 0 0 1px rgba(99, 102, 241, 0.2);
+  border-color: #c7d2fe;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px #c7d2fe;
   transform: translateY(-2px);
 }
+.dark .featured-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 16px 48px rgba(9, 14, 36, 0.6), 0 0 0 1px rgba(99, 102, 241, 0.2);
+}
 
-.featured-card-img {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-.featured-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.featured-card-img { position: absolute; inset: 0; overflow: hidden; }
+.featured-card-img img { width: 100%; height: 100%; object-fit: cover; }
 .featured-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(9, 14, 36, 0.75) 0%,
-    rgba(9, 14, 36, 0.35) 50%,
-    rgba(9, 14, 36, 0.7) 100%
+    rgba(9, 14, 36, 0.7) 0%,
+    rgba(9, 14, 36, 0.25) 50%,
+    rgba(9, 14, 36, 0.6) 100%
   );
 }
 
 .featured-card-body {
-  position: relative;
-  z-index: 1;
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative; z-index: 1;
+  padding: 2rem; height: 100%;
+  display: flex; flex-direction: column;
   justify-content: flex-end;
   min-height: 320px;
 }
-
 .featured-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.3;
-  margin: 0.5rem 0 0.5rem;
+  font-size: 1.5rem; font-weight: 700;
+  color: #fff; line-height: 1.3;
+  margin: 0.5rem 0;
   text-shadow: 0 2px 8px rgba(9,14,36,0.5);
 }
-
 .featured-summary {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+  font-size: 0.875rem; color: rgba(255,255,255,0.75);
+  line-height: 1.6; margin-bottom: 0.75rem;
   max-width: 600px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
-.featured-meta {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
-}
+.featured-meta { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
 
 /* Mini cards grid */
 .mini-cards-grid {
@@ -735,66 +744,58 @@ button[title="Copy"] {
   flex-direction: column;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
   background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   text-decoration: none !important;
   background-image: none !important;
   transition: all 0.25s ease;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 2px 8px rgba(79,70,229,0.03);
 }
 .dark .mini-card {
   border-color: rgba(99, 102, 241, 0.12);
-  background: rgba(18, 26, 54, 0.5);
+  background: rgb(15, 20, 48);
   box-shadow: none;
 }
 .mini-card:hover {
-  border-color: rgba(79, 70, 229, 0.22);
+  border-color: #c7d2fe;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.1), 0 0 0 1px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px #c7d2fe;
 }
 .dark .mini-card:hover {
   border-color: rgba(99, 102, 241, 0.3);
   box-shadow: 0 8px 24px rgba(9, 14, 36, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.15);
 }
 
-.mini-card-img {
-  height: 120px;
-  overflow: hidden;
-  position: relative;
-}
+.mini-card-img { height: 120px; overflow: hidden; position: relative; }
 .mini-card-img--placeholder {
+  background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(7,89,133,0.06));
+}
+.dark .mini-card-img--placeholder {
   background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(34,211,238,0.1));
 }
 .mini-card-img img {
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.45s ease;
 }
-.mini-card:hover .mini-card-img img {
-  transform: scale(1.08);
-}
+.mini-card:hover .mini-card-img img { transform: scale(1.08); }
 
 .mini-card-body {
   padding: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  flex: 1;
+  display: flex; flex-direction: column;
+  gap: 0.35rem; flex: 1;
 }
 
 .card-cat-badge {
   display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.62rem; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
   padding: 2px 7px;
   border-radius: 99px;
-  background: rgba(79, 70, 229, 0.07);
-  color: #3730a3;
-  border: 1px solid rgba(79, 70, 229, 0.15);
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
   width: fit-content;
 }
 .dark .card-cat-badge {
@@ -802,230 +803,59 @@ button[title="Copy"] {
   color: rgba(165, 180, 252, 0.9);
   border-color: rgba(99, 102, 241, 0.2);
 }
-.card-cat-badge--sm {
-  font-size: 0.6rem;
-}
+.card-cat-badge--sm { font-size: 0.58rem; }
 
 .mini-card-title {
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.875rem; font-weight: 600;
   color: #111827;
-  line-height: 1.4;
-  margin: 0;
+  line-height: 1.4; margin: 0;
   transition: color 0.2s;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.dark .mini-card-title {
-  color: rgba(228, 234, 250, 1);
-}
-.mini-card:hover .mini-card-title {
-  color: #3730a3;
-}
-.dark .mini-card:hover .mini-card-title {
-  color: rgba(165, 180, 252, 1);
-}
+.dark .mini-card-title { color: rgba(228, 234, 250, 1); }
+.mini-card:hover .mini-card-title { color: #4338ca; }
+.dark .mini-card:hover .mini-card-title { color: rgba(165, 180, 252, 1); }
 
-.mini-card-meta {
-  font-size: 0.7rem;
-  color: #9ca3af;
-  margin-top: auto;
-}
-.dark .mini-card-meta {
-  color: rgba(100, 120, 175, 0.7);
-}
-
-
-/* filter count badge */
-.filter-count {
-  display: inline-block;
-  font-size: 0.65rem;
-  background: rgba(79, 70, 229, 0.1);
-  color: #3730a3;
-  border-radius: 99px;
-  padding: 0 5px;
-  margin-left: 3px;
-  vertical-align: middle;
-  line-height: 1.6;
-}
-.dark .filter-count {
-  background: rgba(99,102,241,0.25);
-  color: rgba(165,180,252,0.9);
-}
-
+.mini-card-meta { font-size: 0.7rem; color: #9ca3af; margin-top: auto; }
+.dark .mini-card-meta { color: rgba(100, 120, 175, 0.7); }
 
 /* ================================================================
    LIGHT MODE — 针对性覆盖
-   只处理 Blowfish 自身或需要特殊处理的部分；
-   自定义组件颜色已通过 base + .dark 前缀方式处理。
+   只处理 Blowfish 自身变量/类导致的问题，
+   自定义组件颜色已通过 base + .dark 前缀处理。
    ================================================================ */
 
-/* ── Hero 渐变白块修复（thumbAndBackground light mode）── */
+/* 覆盖 Blowfish body 上的 text-neutral-700（午夜方案下为蓝紫色）*/
+html:not(.dark) body {
+  color: #111827 !important;
+}
+
+/* Hero 渐变白块修复 — thumbAndBackground light mode */
 html:not(.dark) .single_hero_background > div:nth-child(2) {
   background-image: linear-gradient(
     to top,
-    rgba(15, 18, 40, 0.80) 0%,
-    rgba(15, 18, 40, 0.2) 50%,
+    rgba(15, 18, 40, 0.82) 0%,
+    rgba(15, 18, 40, 0.25) 55%,
     transparent 100%
   ) !important;
 }
 html:not(.dark) .single_hero_background > div:nth-child(3) {
   background-image: none !important;
-  opacity: 0.15 !important;
-  background-color: rgba(15, 18, 40, 0.1) !important;
+  opacity: 0.12 !important;
 }
 
-/* ── Header ── */
-html:not(.dark) header {
-  background: rgba(238, 241, 248, 0.88);
-  border-bottom: 1px solid rgba(79, 70, 229, 0.1);
-  box-shadow: 0 1px 10px rgba(79, 70, 229, 0.05);
-}
-
-/* ── Scrollbar ── */
-html:not(.dark) ::-webkit-scrollbar-thumb {
-  background: rgba(79, 70, 229, 0.2);
-}
-html:not(.dark) ::-webkit-scrollbar-thumb:hover {
-  background: rgba(79, 70, 229, 0.4);
-}
-
-/* ── Avatar shadow ── */
-html:not(.dark) article header img.rounded-full {
-  box-shadow:
-    0 0 0 3px rgba(79, 70, 229, 0.18),
-    0 0 0 6px rgba(7, 89, 133, 0.06),
-    0 6px 20px rgba(79, 70, 229, 0.12);
-}
-html:not(.dark) article header img.rounded-full:hover {
-  box-shadow:
-    0 0 0 4px rgba(79, 70, 229, 0.3),
-    0 0 0 8px rgba(7, 89, 133, 0.1),
-    0 10px 28px rgba(79, 70, 229, 0.2);
-}
-
-/* ── Prose 内容区（覆盖 midnight 变量导致的低对比度）── */
+/* Prose 内容（覆盖 midnight 变量导致的低对比度）*/
 html:not(.dark) .prose {
-  color: #1a1d2e;
+  color: #1e293b;
 }
 html:not(.dark) .prose h1,
 html:not(.dark) .prose h2,
 html:not(.dark) .prose h3,
-html:not(.dark) .prose h4 {
-  color: #111827;
-}
-html:not(.dark) .prose h2 {
-  border-left-color: rgba(79, 70, 229, 0.55);
-}
-html:not(.dark) .prose h3 {
-  border-left-color: rgba(7, 89, 133, 0.45);
-}
-html:not(.dark) .prose strong {
-  color: #111827;
-}
-html:not(.dark) .prose a:not([class]) {
-  background-image: linear-gradient(90deg, #4338ca, #0284c7);
-  color: #4338ca;
-}
-html:not(.dark) .prose a:not([class]):hover {
-  color: #3730a3;
-}
-html:not(.dark) .prose blockquote {
-  background: rgba(79, 70, 229, 0.04);
-  color: #374151 !important;
-}
-html:not(.dark) .prose code:not(pre code) {
-  background: rgba(79, 70, 229, 0.07) !important;
-  color: #3730a3 !important;
-  border-color: rgba(79, 70, 229, 0.15);
-}
-html:not(.dark) .prose table {
-  border-color: rgba(79, 70, 229, 0.1);
-}
-html:not(.dark) .prose thead th {
-  background: rgba(79, 70, 229, 0.06);
-  color: #111827;
-}
-html:not(.dark) .prose tbody tr:hover {
-  background: rgba(79, 70, 229, 0.03);
-}
-
-/* ── Code Blocks ── */
-html:not(.dark) .highlight {
-  border-color: rgba(79, 70, 229, 0.08);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0,0,0,0.04);
-}
-
-/* ── Blowfish 原生 article cards hover ── */
-html:not(.dark) .article-grid .article:hover,
-html:not(.dark) article.relative:hover {
-  box-shadow:
-    0 6px 24px rgba(79, 70, 229, 0.1),
-    0 0 0 1px rgba(79, 70, 229, 0.1),
-    0 2px 6px rgba(0, 0, 0, 0.04);
-}
-html:not(.dark) .recent-article-card:hover,
-html:not(.dark) .card-link:hover {
-  box-shadow:
-    0 4px 20px rgba(79, 70, 229, 0.1),
-    0 0 0 1px rgba(79, 70, 229, 0.08) !important;
-}
-
-/* ── Post Card base style (light bg) ── */
-html:not(.dark) .post-card {
-  border-color: rgba(0, 0, 0, 0.05) !important;
-}
-
-/* ── Featured Card ── */
-html:not(.dark) .featured-card {
-  border-color: rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-html:not(.dark) .featured-card:hover {
-  border-color: rgba(79, 70, 229, 0.18);
-  box-shadow: 0 10px 32px rgba(79, 70, 229, 0.1), 0 0 0 1px rgba(79, 70, 229, 0.12);
-}
-html:not(.dark) .featured-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(12, 14, 30, 0.7) 0%,
-    rgba(12, 14, 30, 0.2) 50%,
-    rgba(12, 14, 30, 0.55) 100%
-  );
-}
-
-/* ── TOC ── */
-html:not(.dark) #TableOfContents a:hover {
-  background: rgba(79, 70, 229, 0.05);
-  color: #3730a3 !important;
-}
-
-/* ── Footer ── */
-html:not(.dark) footer {
-  border-top-color: rgba(79, 70, 229, 0.08);
-  background: rgba(238, 241, 248, 0.9);
-}
-
-/* ── Mobile Menu ── */
-html:not(.dark) #menu-wrapper {
-  background: rgba(238, 241, 248, 0.96) !important;
-}
-
-/* ── Scroll to Top ── */
-html:not(.dark) #scroll-to-top:hover {
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25) !important;
-}
-
-/* ── Article Meta Overlay (hero 下方元数据条) ── */
-html:not(.dark) .thumbAndBackground-meta,
-html:not(.dark) .article-meta-overlay {
-  background: rgba(12, 14, 30, 0.55) !important;
-}
-
-/* ── Selection ── */
-html:not(.dark) ::selection {
-  background: rgba(79, 70, 229, 0.18);
-  color: #111827;
+html:not(.dark) .prose h4,
+html:not(.dark) .prose h5,
+html:not(.dark) .prose h6 {
+  color: #0f172a;
 }
