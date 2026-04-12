@@ -2,14 +2,14 @@
 title: "用 Go 写 K8s 运维工具：client-go 实战"
 date: 2025-08-25T09:08:00+08:00
 draft: false
-tags: ["golang", "kubernetes", "client-go", "devops-tools", "informer"]
+tags: ["golang", "Kubernetes", "client-go", "devops-tools", "informer"]
 categories: ["编程"]
 description: "从 client-go 初始化、List/Watch、Informer 机制到实战运维工具开发的完整 Go K8s 编程指南。"
 summary: "kubectl 能解决 80% 的日常问题，剩下 20% 需要你自己写工具。本文用实际可运行的 Go 代码，展示如何用 client-go 构建批量重启 Deployment、Pod 资源报告、过期 ConfigMap 清理等运维工具，并用 cobra 封装成 CLI。"
 toc: true
 math: false
 diagram: false
-keywords: ["client-go", "golang", "kubernetes", "controller", "informer", "运维工具"]
+keywords: ["client-go", "golang", "Kubernetes", "controller", "informer", "运维工具"]
 params:
   reading_time: true
 ---

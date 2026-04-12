@@ -88,7 +88,7 @@ Mapping 定义了字段的数据类型和索引行为，提前设计好可以避
           "duration_ms": { "type": "float" }
         }
       },
-      "kubernetes": {
+      "Kubernetes": {
         "properties": {
           "namespace": { "type": "keyword" },
           "pod_name": { "type": "keyword" },

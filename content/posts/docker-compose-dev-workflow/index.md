@@ -2,7 +2,7 @@
 title: "Docker Compose 本地开发工作流：多服务环境搭建最佳实践"
 date: 2024-09-27T12:36:00+08:00
 draft: false
-tags: ["Docker", "Docker Compose", "开发环境", "DevOps", "容器", "本地开发"]
+tags: ["Docker", "Docker Compose", "开发环境", "DevOps", "容器化", "本地开发"]
 categories: ["Docker"]
 series: ["DevOps 工程师成长路径"]
 description: 'Docker Compose 本地开发工作流最佳实践：多服务依赖管理、healthcheck 启动顺序、代码热更新配置、网络隔离，打造高效的本地开发环境'

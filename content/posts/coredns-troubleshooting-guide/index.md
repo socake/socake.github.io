@@ -2,7 +2,7 @@
 title: "CoreDNS 深度排障：K8s DNS 问题完全指南"
 date: 2025-10-29T09:30:00+08:00
 draft: false
-tags: ["coredns", "kubernetes", "dns", "troubleshooting", "networking"]
+tags: ["coredns", "Kubernetes", "dns", "troubleshooting", "networking"]
 categories: ["Kubernetes"]
 description: "K8s DNS 解析链路、ndots=5 的坑、CoreDNS 调优配置，以及常见 DNS 超时和 5 秒延迟问题的完整排障指南。"
 summary: "DNS 问题是 K8s 中最难定位的问题之一，因为它的失败往往是间歇性的、有延迟的，看起来像网络问题，实际上是 DNS 超时。本文记录了我在生产环境排查过的多类 DNS 故障，附详细的抓包分析和调优配置。"

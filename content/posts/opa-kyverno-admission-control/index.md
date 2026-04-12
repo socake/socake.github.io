@@ -2,7 +2,7 @@
 title: "OPA/Kyverno：K8s 准入控制策略实战"
 date: 2025-09-11T13:36:00+08:00
 draft: false
-tags: ["kyverno", "opa", "kubernetes", "policy", "security", "admission-control"]
+tags: ["kyverno", "opa", "Kubernetes", "policy", "security", "admission-control"]
 categories: ["Kubernetes"]
 description: "用 Kyverno 和 OPA Gatekeeper 在 K8s 中实施准入控制策略，从安装到常用策略的完整实战。"
 summary: "没有准入控制的 K8s 集群就像一个没有门卫的机房——任何人都能随意进出。本文记录了我在多个生产集群部署 Kyverno 策略的实战经验，涵盖资源限制强制、镜像来源白名单、标签规范、以及与 OPA Gatekeeper 的对比选型思路。"

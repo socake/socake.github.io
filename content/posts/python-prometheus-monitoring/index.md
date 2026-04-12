@@ -183,7 +183,7 @@ def build_daily_report(client: PrometheusClient, jobs: list[str]) -> str:
     lines = [f"== 服务可用率日报 {datetime.now().strftime('%Y-%m-%d')} ==\n"]
     for job in jobs:
         avail = calc_availability(client, job)
-        emoji = "正常" if avail >= 99.9 else ("降级" if avail >= 95 else "故障")
+        emoji = "正常" if avail >= 99.9 else ("降级" if avail >= 95 else "故障排查")
         lines.append(f"[{emoji}] {job}: {avail:.2f}%")
     return "\n".join(lines)
 ```

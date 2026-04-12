@@ -2,7 +2,7 @@
 title: "混沌工程实战：Chaos Mesh 在 K8s 中注入故障"
 date: 2025-09-13T09:56:00+08:00
 draft: false
-tags: ["chaos-engineering", "chaos-mesh", "kubernetes", "resilience", "SRE"]
+tags: ["chaos-engineering", "chaos-mesh", "Kubernetes", "resilience", "SRE"]
 categories: ["Kubernetes"]
 description: "从混沌工程理念出发，用 Chaos Mesh 实战演示 PodChaos、NetworkChaos、IOChaos 及 Workflow 编排。"
 summary: "混沌工程不是破坏系统，而是在可控环境中提前暴露脆弱点。本文记录了我用 Chaos Mesh 在生产级 K8s 集群中设计并执行混沌演练的完整过程，包括安装、实验配置、Workflow 编排和游戏日流程设计。"
@@ -10,7 +10,7 @@ toc: true
 math: false
 diagram: false
 series: ["K8s 完全指南"]
-keywords: ["chaos mesh", "混沌工程", "kubernetes", "故障注入", "弹性测试"]
+keywords: ["chaos mesh", "混沌工程", "Kubernetes", "故障注入", "弹性测试"]
 params:
   reading_time: true
 ---

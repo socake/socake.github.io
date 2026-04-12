@@ -2,7 +2,7 @@
 title: "Kubernetes 从零开始：工程师视角的入门指南"
 date: 2024-10-20T09:17:00+08:00
 draft: false
-tags: ["Kubernetes", "容器", "云原生", "Docker", "入门"]
+tags: ["Kubernetes", "容器化", "云原生", "Docker", "入门"]
 categories: ["Kubernetes"]
 series: ["K8s 完全指南"]
 description: "用工程师的视角讲清楚 Kubernetes 核心概念，覆盖从 Docker Compose 到 K8s 的动机、核心对象类比、kubectl 常用命令、第一个完整应用部署，以及常见报错解读。"

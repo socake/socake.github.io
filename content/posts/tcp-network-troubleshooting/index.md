@@ -2,7 +2,7 @@
 title: "TCP/IP 网络排障：抓包与连接问题诊断"
 date: 2025-10-21T11:44:00+08:00
 draft: false
-tags: ["tcp", "tcpdump", "network", "troubleshooting", "linux", "kubernetes"]
+tags: ["tcp", "tcpdump", "network", "troubleshooting", "linux", "Kubernetes"]
 categories: ["Linux"]
 description: "从 tcpdump 抓包、三次握手分析、TIME_WAIT 处理到 K8s 跨节点网络排障的完整 TCP/IP 诊断指南。"
 summary: "网络问题排查的核心是「眼见为实」，没有抓包的排障都是猜测。本文系统梳理了 tcpdump 的实战用法、TCP 连接状态机分析、conntrack 追踪，以及 Kubernetes 中 NodePort/LoadBalancer 的典型网络故障定位方法。"

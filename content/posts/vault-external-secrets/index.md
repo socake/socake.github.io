@@ -176,7 +176,7 @@ server:
             leader_api_addr = "http://vault-2.vault-internal:8200"
           }
         }
-        service_registration "kubernetes" {}
+        service_registration "Kubernetes" {}
 
   dataStorage:
     enabled: true
@@ -244,7 +244,7 @@ spec:
       version: "v2"
       auth:
         kubernetes:
-          mountPath: "kubernetes"
+          mountPath: "Kubernetes"
           role: "myapp"
           serviceAccountRef:
             name: "myapp-sa"

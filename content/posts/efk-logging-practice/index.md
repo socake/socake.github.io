@@ -223,7 +223,7 @@ data:
       enable_ruby true
       <record>
         # 将 kubernetes.labels 里的 app 标签提取出来作为一级字段
-        app_name ${record.dig("kubernetes", "labels", "app") || record.dig("kubernetes", "labels", "app.kubernetes.io/name") || "unknown"}
+        app_name ${record.dig("Kubernetes", "labels", "app") || record.dig("Kubernetes", "labels", "app.kubernetes.io/name") || "unknown"}
         # 统一时间戳格式
         @timestamp ${time.strftime('%Y-%m-%dT%H:%M:%S.%3NZ')}
       </record>
@@ -354,7 +354,7 @@ data:
         "message":          { "type": "text", "analyzer": "standard" },
         "trace_id":         { "type": "keyword" },
         "span_id":          { "type": "keyword" },
-        "kubernetes": {
+        "Kubernetes": {
           "properties": {
             "namespace_name": { "type": "keyword" },
             "pod_name":        { "type": "keyword" },
