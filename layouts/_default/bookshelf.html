@@ -1,441 +1,143 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-primary: #2c3e50;
-            --text-secondary: #7f8c8d;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 py-8">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  {{/* Page Header */}}
+  <div class="mb-8 text-center">
+    <h1 class="text-4xl font-extrabold text-neutral-900 dark:text-neutral mb-3">
+      📚 {{ .Title }}
+    </h1>
+    <p class="text-neutral-500 dark:text-neutral-400 text-lg">
+      已收录 <span class="font-bold text-primary-500 dark:text-primary-400">{{ len .Params.books }}</span> 本书
+    </p>
+  </div>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* 替换原有渐变 → 新增背景图配置 */
-            background-image: url("/image/background.png");  /* 路径对应static下的文件 */
-            background-size: cover;  /* 背景图覆盖整个页面，自动缩放 */
-            background-position: center;  /* 背景图居中显示 */
-            background-attachment: fixed;  /* 滚动页面时背景图固定（可选，取消则随页面滚动） */
-            background-repeat: no-repeat;  /* 禁止背景图重复 */
-            min-height: 100vh;
-            padding: 20px;
-            /* 可选：加一层半透明蒙版，让文字更清晰 */
-            background-color: rgba(0,0,0,0.5);
-            background-blend-mode: overlay;
-        }
-
-        .bookshelf {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* 头部区域 */
-        .header {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .page-title {
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .page-subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-
-        /* 统计信息 */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            color: white;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* 搜索和过滤器 */
-        .filters {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-            border-radius: 20px;
-            margin-bottom: 1rem;
-            box-shadow: var(--shadow);
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            background: #f8f9fa;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .search-box:focus {
-            outline: none;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
-            background: white;
-        }
-
-        /* 书籍网格 */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* 书籍卡片 */
-        .book-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            opacity: 0; /* 初始隐藏用于动画 */
-        }
-
-        .book-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .book-cover-container {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .book-cover {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .book-card:hover .book-cover {
-            transform: scale(1.1);
-        }
-
-        .book-category {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--accent-color);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .book-content {
-            padding: 0.5rem;
-        }
-
-        .book-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-
-        .book-author {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            font-size: 1rem;
-        }
-
-        .book-description {
-            color: var(--text-secondary);
-            line-height: 1.3;
-            margin-bottom: 1rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .book-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .book-published {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .book-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .book-tag {
-            background: #e8f4fd;
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.8rem;
-            background: linear-gradient(135deg, var(--primary-color), #2980b9);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
-        }
-
-        .file-size {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .douban-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.4rem 0.8rem;
-            background: linear-gradient(135deg, #1a73e8, #1558b0);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
-        }
-
-        .douban-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
-        }
-
-        /* 无结果状态 */
-        .no-results {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: white;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .page-title {
-                font-size: 1.5rem;
-            }
-            
-            .stats {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-        }
-
-        /* 动画效果 */
-        @keyframes fadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(20px); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
-        }
-
-        .book-card {
-            animation: fadeIn 0.6s ease forwards;
-        }
-    </style>
-</head>
-<body>
-    <nav style="position: fixed; top: 0; left: 0; right: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(10px); padding: 1rem 2rem; z-index: 999;">
-        <a href="/" style="color: white; text-decoration: none; font-size: 1.1rem; font-weight: 500;">
-            🏠 回到首页
-        </a>
-    </nav>
-    <div class="bookshelf" style="padding-top: 80px;">
-        <!-- 头部区域 -->
-        <div class="header">
-            <h1 class="page-title">📚 数字书架</h1>
-            <p class="page-subtitle">探索知识，分享智慧</p>
-        </div>
-
-        <!-- 统计信息（修复：闭合 stat-item 和 stats） -->
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">书籍总数：{{ len .Params.books }}本</span>
-            </div>
-        </div>
-
-        <!-- 搜索区域 -->
-        <div class="filters">
-            <input type="text" id="search" class="search-box" placeholder="🔍 搜索书籍标题、作者、分类或标签...">
-        </div>
-
-        <!-- 书籍网格 -->
-        <div class="books-grid" id="booksGrid">
-            {{ range $index, $book := .Params.books }}
-            <div class="book-card" data-search="{{ lower .title }} {{ lower .author }} {{ lower .category }} {{ if .tags }}{{ range .tags }}{{ lower . }} {{ end }}{{ end }}">
-                <div class="book-cover-container">
-                    {{ if .cover }}
-                    <img src="{{ .cover }}" alt="{{ .title }}" class="book-cover">
-                    {{ else }}
-                    <div style="width:100%;height:100%;background:#ecf0f1;display:flex;align-items:center;justify-content:center;font-size:48px;">📚</div>
-                    {{ end }}
-                    {{ if .category }}
-                    <div class="book-category">{{ .category }}</div>
-                    {{ end }}
-                </div>
-                
-                <div class="book-content">
-                    <h3 class="book-title">{{ .title }}</h3>
-                    <div class="book-author">作者：{{ .author }}</div>
-                    
-                    {{ if .description }}
-                    <p class="book-description">{{ .description }}</p>
-                    {{ end }}
-                    
-                    {{ if .tags }}
-                    <div class="book-tags">
-                        {{ range .tags }}
-                        <span class="book-tag">{{ . }}</span>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                    
-                    <div class="book-meta">
-                        {{ if .file }}
-                        <a href="{{ .file }}" class="download-btn" download>
-                            📥 下载
-                        </a>
-                        <span class="file-size">{{ .file_size }}</span>
-                        {{ end }}
-                        {{ if .link }}
-                        <a href="{{ .link }}" class="douban-btn" target="_blank">
-                            📖 豆瓣书评
-                        </a>
-                        {{ end }}
-                    </div>
-
-                    <!-- 📝 🚧 注释掉出版日期，保留代码便于后续恢复
-                    {{ if .published }}
-                    <div class="book-published">出版年份：{{ .published }}</div>
-                    {{ end }}
-                    -->
-                </div>
-            </div>
-            {{ end }}
-        </div>
-
-        <!-- 无结果提示 -->
-        <div id="noResults" class="no-results" style="display: none;">
-            <h3>🔍 没有找到匹配的书籍</h3>
-            <p>尝试搜索其他关键词</p>
-        </div>
+  {{/* Search Bar */}}
+  <div class="mb-8 max-w-xl mx-auto">
+    <div class="relative">
+      <input
+        type="text"
+        id="book-search"
+        placeholder="搜索书名、作者、分类或标签…"
+        class="w-full px-5 py-3 rounded-2xl border border-neutral-200 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary-400 dark:focus:ring-primary-500 shadow-sm text-base"
+      />
+      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none">🔍</span>
     </div>
+  </div>
 
-    <script>
-        // 实时搜索功能（添加防抖优化）
-        const debounce = (fn, delay = 300) => {
-            let timer;
-            return (...args) => {
-                clearTimeout(timer);
-                timer = setTimeout(() => fn.apply(this, args), delay);
-            };
-        };
+  {{/* Books Grid */}}
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="books-grid">
+    {{ range $index, $book := .Params.books }}
+    <div
+      class="book-card group flex flex-col rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+      data-search="{{ lower .title }} {{ lower .author }} {{ lower .category }} {{ if .tags }}{{ range .tags }}{{ lower . }} {{ end }}{{ end }}"
+      style="animation-delay: {{ mul $index 60 }}ms"
+    >
+      {{/* Cover */}}
+      <div class="relative h-44 overflow-hidden bg-neutral-100 dark:bg-neutral-700 flex-shrink-0">
+        {{ if .cover }}
+        <img src="{{ .cover }}" alt="{{ .title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        {{ else }}
+        <div class="w-full h-full flex items-center justify-center text-5xl">📚</div>
+        {{ end }}
+        {{ if .category }}
+        <span class="absolute top-3 right-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-primary-500 text-white shadow">
+          {{ .category }}
+        </span>
+        {{ end }}
+      </div>
 
-        document.getElementById('search').addEventListener('input', debounce(function(e) {
-            const searchTerm = e.target.value.toLowerCase().trim();
-            const bookCards = document.querySelectorAll('.book-card');
-            const noResults = document.getElementById('noResults');
-            let visibleCount = 0;
-            
-            bookCards.forEach(card => {
-                const searchData = card.getAttribute('data-search');
-                if (searchTerm === '' || searchData.includes(searchTerm)) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            // 显示/隐藏无结果提示
-            noResults.style.display = (visibleCount === 0 && searchTerm !== '') ? 'block' : 'none';
-        }));
+      {{/* Content */}}
+      <div class="flex flex-col flex-1 p-4 gap-2">
+        <h3 class="font-bold text-base text-neutral-900 dark:text-neutral leading-snug line-clamp-2">
+          {{ .title }}
+        </h3>
+        <p class="text-sm font-medium text-primary-500 dark:text-primary-400">{{ .author }}</p>
 
-        // 页面加载完成后添加动画延迟
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.book-card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = (index * 0.1) + 's';
-            });
-        });
-    </script>
-</body>
-</html>
+        {{ if .description }}
+        <p class="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-3 flex-1">
+          {{ .description }}
+        </p>
+        {{ end }}
+
+        {{ if .tags }}
+        <div class="flex flex-wrap gap-1.5 mt-auto pt-2">
+          {{ range .tags }}
+          <span class="text-xs px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-600">
+            {{ . }}
+          </span>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        {{/* Actions */}}
+        <div class="flex items-center gap-2 mt-3 pt-3 border-t border-neutral-100 dark:border-neutral-700">
+          {{ if .file }}
+          <a
+            href="{{ .file }}"
+            download
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold bg-primary-500 hover:bg-primary-600 text-white transition-colors shadow-sm"
+          >
+            📥 下载
+          </a>
+          {{ if .file_size }}
+          <span class="text-xs text-neutral-400 dark:text-neutral-500">{{ .file_size }}</span>
+          {{ end }}
+          {{ end }}
+          {{ if .link }}
+          <a
+            href="{{ .link }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 text-neutral-700 dark:text-neutral-200 transition-colors border border-neutral-200 dark:border-neutral-600"
+          >
+            📖 豆瓣
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  {{/* No Results */}}
+  <div id="no-results" class="hidden text-center py-20 text-neutral-400 dark:text-neutral-500">
+    <p class="text-4xl mb-3">🔍</p>
+    <p class="text-lg">没有找到匹配的书籍，换个关键词试试</p>
+  </div>
+</div>
+
+<style>
+  .book-card { animation: fadeSlideUp 0.5s ease both; }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>
+
+<script>
+(function () {
+  const input = document.getElementById('book-search');
+  const grid  = document.getElementById('books-grid');
+  const none  = document.getElementById('no-results');
+  const cards = Array.from(grid.querySelectorAll('.book-card'));
+
+  let timer;
+  input.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      const q = input.value.toLowerCase().trim();
+      let shown = 0;
+      cards.forEach(function (card) {
+        const match = !q || card.dataset.search.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) shown++;
+      });
+      none.classList.toggle('hidden', shown > 0 || !q);
+      grid.classList.toggle('hidden', shown === 0 && !!q);
+    }, 250);
+  });
+})();
+</script>
+{{ end }}
