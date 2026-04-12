@@ -1,11 +1,6 @@
 # -- Main Menu --
 
 [[main]]
-  name = "关于"
-  pageRef = "posts/authors"
-  weight = 5
-
-[[main]]
   name = "博客"
   pageRef = "posts"
   weight = 10
@@ -13,101 +8,115 @@
 [[main]]
   name = "路线图"
   pageRef = "roadmap"
-  weight = 15
+  weight = 20
 
+# 运维笔记 父菜单（显式定义 weight 控制顶栏位置）
 [[main]]
-  name = "更新日志"
-  pageRef = "changelog"
-  weight = 16
+  name = "运维"
+  weight = 30
 
-# 运维笔记 父菜单
 [[main]]
   name = "Linux"
   parent = "运维"
   pageRef = "docs/Linux"
-  weight = 21
+  weight = 31
 
 [[main]]
   name = "Docker"
   parent = "运维"
   pageRef = "docs/docker"
-  weight = 22
+  weight = 32
 
 [[main]]
   name = "Kubernetes"
   parent = "运维"
   pageRef = "docs/kubernetes"
-  weight = 23
+  weight = 33
 
 [[main]]
   name = "CI/CD"
   parent = "运维"
   pageRef = "docs/cicd"
-  weight = 24
+  weight = 34
 
-# 编程
+# AI 模块（显式定义 weight 控制顶栏位置）
 [[main]]
-  name = "Go"
-  parent = "编程"
-  pageRef = "docs/languages/go"
-  weight = 31
+  name = "AI"
+  weight = 40
 
-[[main]]
-  name = "Python"
-  parent = "编程"
-  pageRef = "docs/languages/python"
-  weight = 32
-
-[[main]]
-  name = "Shell"
-  parent = "编程"
-  pageRef = "docs/languages/shell"
-  weight = 33
-
-# AI 模块
 [[main]]
   name = "大模型"
   parent = "AI"
   pageRef = "categories/大模型"
-  weight = 51
+  weight = 41
 
 [[main]]
   name = "AI 工具"
   parent = "AI"
   pageRef = "categories/ai工具"
-  weight = 52
+  weight = 42
 
 [[main]]
   name = "AI 应用"
   parent = "AI"
   pageRef = "categories/ai应用"
-  weight = 53
+  weight = 43
 
 [[main]]
-  name = "AIOPS"
+  name = "AIOps"
   parent = "AI"
   pageRef = "categories/aiops"
-  weight = 54
+  weight = 44
 
-# 资源
+# 编程（显式定义 weight 控制顶栏位置）
+[[main]]
+  name = "编程"
+  weight = 50
+
+[[main]]
+  name = "Go"
+  parent = "编程"
+  pageRef = "docs/languages/go"
+  weight = 51
+
+[[main]]
+  name = "Python"
+  parent = "编程"
+  pageRef = "docs/languages/python"
+  weight = 52
+
+[[main]]
+  name = "Shell"
+  parent = "编程"
+  pageRef = "docs/languages/shell"
+  weight = 53
+
+# 资源（显式定义 weight 控制顶栏位置）
+[[main]]
+  name = "资源"
+  weight = 60
+
 [[main]]
   name = "网站导航"
   parent = "资源"
   pageRef = "resources/website"
-  weight = 41
+  weight = 61
 
 [[main]]
   name = "书单"
   parent = "资源"
   pageRef = "books"
-  weight = 42
+  weight = 62
 
-# GitHub 外链（隐藏）
-# [[main]]
-#   pre = "github"
-#   name = "GitHub"
-#   url = "https://github.com/socake"
-#   weight = 99
+[[main]]
+  name = "关于"
+  pageRef = "posts/authors"
+  weight = 70
+
+[[main]]
+  name = "更新日志"
+  pageRef = "changelog"
+  weight = 80
 
 
 # -- Footer Menu --
