@@ -717,6 +717,272 @@ websites:
     category: "技术博客"
     tags: ["Kubernetes", "云原生", "源码解析", "中文"]
     icon: "rss"
+
+  - name: "Grafana Alloy"
+    url: "https://github.com/grafana/alloy"
+    desc: "Grafana 下一代可观测性采集器，整合 Prometheus Agent + OTel Collector，基于 River 语言编排采集管道"
+    category: "可观测性"
+    tags: ["可观测性", "采集器", "OpenTelemetry", "Grafana"]
+    icon: "chart-bar"
+
+  - name: "OpenObserve"
+    url: "https://github.com/openobserve/openobserve"
+    desc: "Rust 编写的全栈可观测平台，覆盖 Logs/Metrics/Traces，存储成本比 Elasticsearch 低 140 倍"
+    category: "可观测性"
+    tags: ["可观测性", "日志", "Rust", "Elasticsearch替代"]
+    icon: "chart-bar"
+
+  - name: "Signoz"
+    url: "https://github.com/SigNoz/signoz"
+    desc: "OpenTelemetry 原生 APM + 日志平台，ClickHouse 存储，Datadog/NewRelic 开源替代"
+    category: "可观测性"
+    tags: ["APM", "OpenTelemetry", "日志", "ClickHouse"]
+    icon: "chart-bar"
+
+  - name: "Netdata"
+    url: "https://github.com/netdata/netdata"
+    desc: "实时系统性能监控，1 秒粒度采集 2000+ 指标，内置 ML 异常检测，安装即用"
+    category: "可观测性"
+    tags: ["监控", "实时", "eBPF", "异常检测"]
+    icon: "chart-bar"
+
+  - name: "Coroot"
+    url: "https://github.com/coroot/coroot"
+    desc: "基于 eBPF 的服务可观测性平台，自动构建服务依赖拓扑，内置根因分析，无需修改代码"
+    category: "可观测性"
+    tags: ["eBPF", "服务拓扑", "根因分析", "无侵入"]
+    icon: "chart-bar"
+
+  - name: "Grafana Mimir"
+    url: "https://github.com/grafana/mimir"
+    desc: "水平可扩展 Prometheus 长期存储，可支撑每秒 10 亿+ samples，Cortex 的继任者"
+    category: "可观测性"
+    tags: ["Prometheus", "长期存储", "高可用", "多租户"]
+    icon: "server"
+
+  - name: "Pyroscope"
+    url: "https://github.com/grafana/pyroscope"
+    desc: "持续性能剖析平台，支持 Go/Python/Java/eBPF，与 Grafana 深度集成，关联 Traces 和 Profiles"
+    category: "可观测性"
+    tags: ["性能剖析", "火焰图", "Go", "eBPF"]
+    icon: "chart-bar"
+
+  - name: "karma"
+    url: "https://github.com/prymitive/karma"
+    desc: "Alertmanager 增强 Web UI，支持多实例聚合、批量静默、告警分组，解决告警风暴难操作问题"
+    category: "可观测性"
+    tags: ["告警", "Alertmanager", "告警管理", "运维"]
+    icon: "bell"
+
+  - name: "Prometheus Operator"
+    url: "https://github.com/prometheus-operator/prometheus-operator"
+    desc: "K8s 原生方式管理 Prometheus，通过 ServiceMonitor/PodMonitor CRD 声明式配置监控"
+    category: "可观测性"
+    tags: ["Prometheus", "Kubernetes", "CRD", "监控"]
+    icon: "kubernetes"
+
+  - name: "Grafana OnCall"
+    url: "https://github.com/grafana/oncall"
+    desc: "开源值班管理与告警路由系统，PagerDuty 开源替代，支持告警去重、升级策略、排班日历"
+    category: "可观测性"
+    tags: ["OnCall", "告警", "值班管理", "PagerDuty替代"]
+    icon: "bell"
+
+  - name: "Crossplane"
+    url: "https://github.com/crossplane/crossplane"
+    desc: "用 K8s CRD 管理云基础设施，将 Terraform 能力引入 K8s，通过 Composition 实现基础设施抽象"
+    category: "Kubernetes生态"
+    tags: ["Kubernetes", "云原生", "IaC", "平台工程"]
+    icon: "kubernetes"
+
+  - name: "Argo Rollouts"
+    url: "https://github.com/argoproj/argo-rollouts"
+    desc: "K8s 高级发布控制器，支持蓝绿、金丝雀、自动分析（接 Prometheus 指标验证）发布策略"
+    category: "Kubernetes生态"
+    tags: ["Kubernetes", "金丝雀发布", "蓝绿部署", "ArgoCD"]
+    icon: "kubernetes"
+
+  - name: "Falco"
+    url: "https://github.com/falcosecurity/falco"
+    desc: "云原生运行时安全监控，基于 eBPF 检测容器逃逸、特权提升、文件篡改等异常行为"
+    category: "Kubernetes生态"
+    tags: ["安全", "eBPF", "运行时检测", "容器安全"]
+    icon: "shield"
+
+  - name: "Kubescape"
+    url: "https://github.com/kubescape/kubescape"
+    desc: "K8s 安全合规扫描，覆盖 NSA/MITRE/CIS 框架，支持 CI/CD 集成和准入控制"
+    category: "Kubernetes生态"
+    tags: ["安全", "合规", "K8s", "扫描"]
+    icon: "shield"
+
+  - name: "Headlamp"
+    url: "https://github.com/headlamp-k8s/headlamp"
+    desc: "现代化 K8s Web UI，比 Dashboard 更美观，支持插件扩展、多集群管理、OIDC 认证"
+    category: "Kubernetes生态"
+    tags: ["Kubernetes", "Web UI", "多集群", "插件"]
+    icon: "kubernetes"
+
+  - name: "Renovate"
+    url: "https://github.com/renovatebot/renovate"
+    desc: "自动化依赖更新机器人，支持 500+ 依赖管理器，比 Dependabot 功能更强，可配置自动合并"
+    category: "CI/CD与GitOps"
+    tags: ["依赖更新", "自动化", "CI/CD", "安全"]
+    icon: "github"
+
+  - name: "Woodpecker CI"
+    url: "https://github.com/woodpecker-ci/woodpecker"
+    desc: "轻量级 Drone CI 开源分叉，单二进制部署，YAML 配置简洁，与 Gitea/Forgejo 深度集成"
+    category: "CI/CD与GitOps"
+    tags: ["CI/CD", "轻量级", "Gitea", "自托管"]
+    icon: "terminal"
+
+  - name: "Earthly"
+    url: "https://github.com/earthly/earthly"
+    desc: "结合 Makefile 和 Dockerfile 优点的构建工具，Earthfile 语法直观，构建结果可重现"
+    category: "CI/CD与GitOps"
+    tags: ["构建工具", "可重现构建", "CI/CD", "容器"]
+    icon: "terminal"
+
+  - name: "OpenTofu"
+    url: "https://github.com/opentofu/opentofu"
+    desc: "Terraform 真正开源分叉（MPL 2.0），CNCF 项目，与 Terraform 高度兼容，新增 State 加密特性"
+    category: "基础设施即代码"
+    tags: ["IaC", "Terraform替代", "开源", "CNCF"]
+    icon: "code-bracket"
+
+  - name: "Pulumi"
+    url: "https://github.com/pulumi/pulumi"
+    desc: "用真实编程语言（Go/Python/TypeScript）写基础设施，比 HCL 表达力更强，支持单元测试"
+    category: "基础设施即代码"
+    tags: ["IaC", "Go", "Python", "TypeScript"]
+    icon: "code-bracket"
+
+  - name: "Terragrunt"
+    url: "https://github.com/gruntwork-io/terragrunt"
+    desc: "Terraform 封装工具，解决多环境 DRY 问题，支持依赖管理、并行 apply、自动 backend 初始化"
+    category: "基础设施即代码"
+    tags: ["Terraform", "IaC", "多环境", "DRY"]
+    icon: "code-bracket"
+
+  - name: "Ansible"
+    url: "https://github.com/ansible/ansible"
+    desc: "无 Agent 配置管理与自动化，SSH 直连执行，YAML Playbook 可读性强，适合批量节点配置"
+    category: "基础设施即代码"
+    tags: ["配置管理", "自动化", "SSH", "幂等"]
+    icon: "terminal"
+
+  - name: "Vector"
+    url: "https://github.com/vectordotdev/vector"
+    desc: "Rust 编写高性能可观测性数据管道，采集/转换/路由日志指标，性能比 Logstash 高 10 倍"
+    category: "日志与数据管道"
+    tags: ["日志", "数据管道", "Rust", "高性能"]
+    icon: "chart-bar"
+
+  - name: "ClickHouse"
+    url: "https://github.com/ClickHouse/ClickHouse"
+    desc: "列式 OLAP 数据库，日志/事件分析场景性能极强，PB 级数据秒级查询，Signoz/PostHog 的底层"
+    category: "日志与数据管道"
+    tags: ["数据库", "OLAP", "日志分析", "高性能"]
+    icon: "database"
+
+  - name: "Redpanda"
+    url: "https://github.com/redpanda-data/redpanda"
+    desc: "Kafka API 兼容的现代消息队列，C++ 编写无 JVM，无需 ZooKeeper，单节点延迟 <1ms"
+    category: "日志与数据管道"
+    tags: ["消息队列", "Kafka替代", "低延迟", "C++"]
+    icon: "server"
+
+  - name: "OpenBao"
+    url: "https://github.com/openbao/openbao"
+    desc: "HashiCorp Vault 真正开源分叉（MPL 2.0），提供密钥管理、动态凭证、K8s Auth、加密即服务"
+    category: "安全工具"
+    tags: ["密钥管理", "安全", "动态凭证", "Vault替代"]
+    icon: "shield"
+
+  - name: "Trivy"
+    url: "https://github.com/aquasecurity/trivy"
+    desc: "全面安全扫描工具，覆盖容器镜像/文件系统/K8s 集群/Git 仓库，SBOM 生成，一个工具替代多个扫描器"
+    category: "安全工具"
+    tags: ["安全扫描", "容器", "漏洞", "SBOM"]
+    icon: "shield"
+
+  - name: "cert-manager"
+    url: "https://github.com/cert-manager/cert-manager"
+    desc: "K8s 原生证书管理，自动申请/续期 Let's Encrypt 证书，支持通配符证书，与 Ingress 深度集成"
+    category: "安全工具"
+    tags: ["证书", "TLS", "Kubernetes", "Let's Encrypt"]
+    icon: "shield"
+
+  - name: "SOPS"
+    url: "https://github.com/getsops/sops"
+    desc: "加密文件敏感字段，只加密值不加密键（diff 友好），使用 AWS KMS/PGP/age 加密，GitOps 存储 Secret 标准方案"
+    category: "安全工具"
+    tags: ["加密", "Secret管理", "GitOps", "KMS"]
+    icon: "lock-closed"
+
+  - name: "Caddy"
+    url: "https://github.com/caddyserver/caddy"
+    desc: "自动 HTTPS 的 Web 服务器，内置 Let's Encrypt 自动证书申请续期，配置语法极简，HTTP/3 支持"
+    category: "网络工具"
+    tags: ["Web服务器", "HTTPS", "反向代理", "HTTP/3"]
+    icon: "globe-alt"
+
+  - name: "Traefik"
+    url: "https://github.com/traefik/traefik"
+    desc: "云原生反向代理，自动发现 Docker/K8s 服务并配置路由，内置 Dashboard 和 Let's Encrypt"
+    category: "网络工具"
+    tags: ["反向代理", "Ingress", "Kubernetes", "自动发现"]
+    icon: "globe-alt"
+
+  - name: "Headscale"
+    url: "https://github.com/juanfont/headscale"
+    desc: "Tailscale 控制平面的开源自托管实现，基于 WireGuard，构建零信任网络，适合跨云内网打通"
+    category: "网络工具"
+    tags: ["VPN", "零信任", "WireGuard", "自托管"]
+    icon: "shield"
+
+  - name: "frp"
+    url: "https://github.com/fatedier/frp"
+    desc: "高性能内网穿透工具，支持 TCP/UDP/HTTP/HTTPS，配置极简，适合跨防火墙暴露内网服务"
+    category: "网络工具"
+    tags: ["内网穿透", "代理", "NAT", "运维"]
+    icon: "globe-alt"
+
+  - name: "Bytebase"
+    url: "https://github.com/bytebase/bytebase"
+    desc: "数据库 DevOps 平台，提供变更审批、版本控制、数据脱敏、慢查询分析，支持 MySQL/PostgreSQL/TiDB"
+    category: "数据库与存储"
+    tags: ["数据库", "DevOps", "变更管理", "审批"]
+    icon: "database"
+
+  - name: "Rclone"
+    url: "https://github.com/rclone/rclone"
+    desc: "云存储同步工具，支持 70+ 云存储（S3/OSS/GCS 等），加密传输，mount 挂载，适合数据迁移备份"
+    category: "数据库与存储"
+    tags: ["存储", "同步", "S3", "备份"]
+    icon: "server"
+
+  - name: "Longhorn"
+    url: "https://github.com/longhorn/longhorn"
+    desc: "CNCF K8s 分布式块存储，无需额外存储基础设施，支持卷快照/备份到 S3、跨节点副本"
+    category: "数据库与存储"
+    tags: ["Kubernetes", "存储", "PV", "分布式"]
+    icon: "server"
+
+  - name: "MinIO"
+    url: "https://github.com/minio/minio"
+    desc: "S3 兼容高性能对象存储，私有化部署替代 AWS S3，纠删码高可用，Loki/Mimir/Thanos 存储后端"
+    category: "数据库与存储"
+    tags: ["对象存储", "S3兼容", "私有化", "高性能"]
+    icon: "server"
+
+  - name: "Backstage"
+    url: "https://github.com/backstage/backstage"
+    desc: "Spotify 开源内部开发者平台框架，Software Catalog + TechDocs + Templates，大型工程团队服务目录标配"
+    category: "平台工程"
+    tags: ["平台工程", "开发者门户", "服务目录", "文档"]
+    icon: "building-office"
 ---
 **数字书架**
 
@@ -732,4 +998,4 @@ websites:
 
 ---
 
-*最后更新时间：2026年4月*
+*最后更新时间：2026年4月（新增开源运维工具推荐，含可观测性/K8s/IaC/安全/网络/存储/平台工程共 38 项）*
