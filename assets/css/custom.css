@@ -48,19 +48,19 @@ code, pre, kbd, samp {
 html { scroll-behavior: smooth; }
 
 /* ================================================================
-   HEADER — Glass Navigation
+   NAV BAR — Glass Navigation
+   Blowfish 的导航栏容器是 #menu-blur <div>，不是 <header> 标签
+   用 #menu-blur 精准定位，避免污染文章/列表页的 <header> 内容区
    ================================================================ */
-header {
+#menu-blur {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background: rgba(255, 255, 255, 0.88) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
 }
-.dark header {
-  background: rgba(9, 14, 36, 0.88) !important;
-  border-bottom-color: rgba(99, 102, 241, 0.1) !important;
-  box-shadow: none;
+html:not(.dark) #menu-blur {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+.dark #menu-blur {
+  background: rgba(9, 14, 36, 0.9) !important;
 }
 
 /* Header nav links: fade-up underline */
@@ -833,18 +833,11 @@ html:not(.dark) body {
   color: #111827 !important;
 }
 
-/* Hero 渐变白块修复 — thumbAndBackground light mode */
-html:not(.dark) .single_hero_background > div:nth-child(2) {
-  background-image: linear-gradient(
-    to top,
-    rgba(15, 18, 40, 0.82) 0%,
-    rgba(15, 18, 40, 0.25) 55%,
-    transparent 100%
-  ) !important;
-}
+/* Hero 第二层遮罩修复
+   Blowfish 光照模式下 nth-child(2) 是自然白色淡出（底部→透明），需保留
+   nth-child(3) 是 opacity-60 的全区域白色覆盖，这才是"白色大块"根因，压低它 */
 html:not(.dark) .single_hero_background > div:nth-child(3) {
-  background-image: none !important;
-  opacity: 0.12 !important;
+  opacity: 0.08 !important;
 }
 
 /* Prose 内容（覆盖 midnight 变量导致的低对比度）*/
