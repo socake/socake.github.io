@@ -119,6 +119,27 @@ POSTS = [
     ("python-async-programming",   "Python Async",     "⚡",  [(10,40,20),  (20,170,80)]),
     ("rag-evaluation-ragas",       "RAG 评估",         "📐", [(30,10,50),  (130,30,200)]),
     ("multi-cluster-k8s-management","多集群运维",      "🌐", [(10,30,60),  (20,100,230)]),
+    # Wave 6 - 对标顶级博客补充
+    ("bpftrace-performance-debug", "bpftrace",         "🔬", [(10,20,50),  (20,60,200)]),
+    ("linux-flame-graph-practice", "Flame Graph",      "🔥", [(50,10,10),  (210,50,10)]),
+    ("istio-ambient-mesh-practice","Istio Ambient",    "🕸",  [(20,10,50),  (80,30,200)]),
+    ("webassembly-cloud-native",   "WebAssembly",      "🦀", [(30,10,50),  (120,30,200)]),
+    ("kubernetes-multitenancy-deep-dive","K8s 多租户", "🏢", [(20,30,50),  (50,110,200)]),
+    ("kubernetes-operator-development","K8s Operator", "⚙",  [(10,30,50),  (20,100,180)]),
+    ("postgresql-ha-patroni",      "PostgreSQL HA",    "🐘", [(10,30,50),  (20,100,180)]),
+    ("mysql-ha-mgr-proxysql",      "MySQL HA",         "🐬", [(20,40,10),  (60,170,30)]),
+    ("finops-kubernetes-cost-governance","FinOps",     "💰", [(10,40,20),  (20,170,70)]),
+    ("headscale-zero-trust-vpn",   "Headscale VPN",    "🔒", [(30,20,40),  (120,60,170)]),
+    ("ingress-to-gateway-api-migration","Gateway API", "🌐", [(10,30,50),  (20,100,200)]),
+    ("kubernetes-cgroup-v2-migration","cgroup v2",     "⚙",  [(20,30,40),  (70,120,170)]),
+    ("grpc-microservices-practice","gRPC",             "⚡",  [(30,10,50),  (130,20,200)]),
+    ("argo-workflows-practice",    "Argo Workflows",   "🔄", [(20,30,50),  (60,110,200)]),
+    ("service-mesh-comparison",    "Service Mesh",     "🕸",  [(10,20,50),  (30,70,210)]),
+    ("use-method-performance-analysis","USE Method",   "📊", [(40,20,10),  (170,70,20)]),
+    ("container-image-build-optimization","镜像优化",  "🐳", [(10,30,60),  (20,90,200)]),
+    ("linux-kernel-network-tuning","网络调优",         "🌐", [(10,20,50),  (20,60,200)]),
+    ("kubernetes-v133-features",   "K8s v1.33",        "☸",  [(10,30,60),  (20,100,230)]),
+    ("opencost-kubernetes-cost-visibility","OpenCost", "💸", [(20,40,10),  (70,170,40)]),
 ]
 
 W, H = 1200, 630

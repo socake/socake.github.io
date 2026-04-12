@@ -3,1168 +3,1168 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://socake.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-04-07T09:54:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5-terway-ip%E6%B3%84%E6%BC%8F/</loc>
+    <loc>http://localhost:1313/posts/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5-terway-ip%E6%B3%84%E6%BC%8F/</loc>
     <lastmod>2026-04-07T09:54:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-04-07T09:54:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88ai%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://localhost:1313/posts/%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88ai%E5%B7%A5%E5%85%B7%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2026-04-03T11:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/ollama-kubernetes-llm/</loc>
+    <loc>http://localhost:1313/posts/ollama-kubernetes-llm/</loc>
     <lastmod>2026-03-30T09:08:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/github-copilot-engineering/</loc>
+    <loc>http://localhost:1313/posts/github-copilot-engineering/</loc>
     <lastmod>2026-03-28T12:51:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/cursor-ai-editor-guide/</loc>
+    <loc>http://localhost:1313/posts/cursor-ai-editor-guide/</loc>
     <lastmod>2026-03-25T13:07:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/comfyui-stable-diffusion-workflow/</loc>
+    <loc>http://localhost:1313/posts/comfyui-stable-diffusion-workflow/</loc>
     <lastmod>2026-03-23T12:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/fastgpt-knowledge-base-practice/</loc>
+    <loc>http://localhost:1313/posts/fastgpt-knowledge-base-practice/</loc>
     <lastmod>2026-03-20T09:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/dify-self-hosted-rag-practice/</loc>
+    <loc>http://localhost:1313/posts/dify-self-hosted-rag-practice/</loc>
     <lastmod>2026-03-12T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/multimodal-llm-vision-practice/</loc>
+    <loc>http://localhost:1313/posts/multimodal-llm-vision-practice/</loc>
     <lastmod>2026-03-09T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prompt-engineering-guide/</loc>
+    <loc>http://localhost:1313/posts/prompt-engineering-guide/</loc>
     <lastmod>2026-03-09T11:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/openai-api-engineering/</loc>
+    <loc>http://localhost:1313/posts/openai-api-engineering/</loc>
     <lastmod>2026-03-03T11:41:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/mcp-protocol-devops/</loc>
+    <loc>http://localhost:1313/posts/mcp-protocol-devops/</loc>
     <lastmod>2026-02-27T09:52:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/claude-code-cli-guide/</loc>
+    <loc>http://localhost:1313/posts/claude-code-cli-guide/</loc>
     <lastmod>2026-02-26T12:27:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/claude-api-development-guide/</loc>
+    <loc>http://localhost:1313/posts/claude-api-development-guide/</loc>
     <lastmod>2026-02-24T11:26:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/embedding-model-selection-guide/</loc>
+    <loc>http://localhost:1313/posts/embedding-model-selection-guide/</loc>
     <lastmod>2026-02-21T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/langgraph-workflow-orchestration/</loc>
+    <loc>http://localhost:1313/posts/langgraph-workflow-orchestration/</loc>
     <lastmod>2026-02-15T12:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/langfuse-llm-observability/</loc>
+    <loc>http://localhost:1313/posts/langfuse-llm-observability/</loc>
     <lastmod>2026-02-14T11:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/langchain-practical-guide/</loc>
+    <loc>http://localhost:1313/posts/langchain-practical-guide/</loc>
     <lastmod>2026-02-09T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/rag-evaluation-ragas/</loc>
+    <loc>http://localhost:1313/posts/rag-evaluation-ragas/</loc>
     <lastmod>2026-02-05T10:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/advanced-rag-techniques/</loc>
+    <loc>http://localhost:1313/posts/advanced-rag-techniques/</loc>
     <lastmod>2026-02-04T11:33:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/aiops-llm-devops/</loc>
+    <loc>http://localhost:1313/posts/aiops-llm-devops/</loc>
     <lastmod>2026-01-31T12:06:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/ai-agent-design-patterns/</loc>
+    <loc>http://localhost:1313/posts/ai-agent-design-patterns/</loc>
     <lastmod>2026-01-29T09:17:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-security-guardrails/</loc>
+    <loc>http://localhost:1313/posts/llm-security-guardrails/</loc>
     <lastmod>2026-01-23T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-cost-optimization/</loc>
+    <loc>http://localhost:1313/posts/llm-cost-optimization/</loc>
     <lastmod>2026-01-19T13:03:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-tool-use-function-calling/</loc>
+    <loc>http://localhost:1313/posts/llm-tool-use-function-calling/</loc>
     <lastmod>2026-01-18T12:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-finetuning-lora-practice/</loc>
+    <loc>http://localhost:1313/posts/llm-finetuning-lora-practice/</loc>
     <lastmod>2026-01-14T09:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-production-serving-vllm/</loc>
+    <loc>http://localhost:1313/posts/llm-production-serving-vllm/</loc>
     <lastmod>2026-01-13T13:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-landscape-2025/</loc>
+    <loc>http://localhost:1313/posts/llm-landscape-2025/</loc>
     <lastmod>2026-01-09T13:50:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prometheus-error-budget-alerting/</loc>
+    <loc>http://localhost:1313/posts/prometheus-error-budget-alerting/</loc>
     <lastmod>2025-12-25T10:40:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prometheus-alert-with-image/</loc>
+    <loc>http://localhost:1313/posts/prometheus-alert-with-image/</loc>
     <lastmod>2025-12-23T09:54:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prometheus-process-monitoring/</loc>
+    <loc>http://localhost:1313/posts/prometheus-process-monitoring/</loc>
     <lastmod>2025-12-18T11:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kibana-visualization-guide/</loc>
+    <loc>http://localhost:1313/posts/kibana-visualization-guide/</loc>
     <lastmod>2025-12-13T09:08:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/devops-senior-interview/</loc>
+    <loc>http://localhost:1313/posts/devops-senior-interview/</loc>
     <lastmod>2025-12-11T12:51:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/dockerfile%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://localhost:1313/docs/cicd/dockerfile%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2025-12-09T17:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AD%98%E5%82%A8%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2025-12-09T17:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/aws-iam%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/aws-iam%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-09T16:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/%E5%8F%91%E7%89%88%E5%9B%9E%E6%BB%9Asop/</loc>
+    <loc>http://localhost:1313/docs/cicd/%E5%8F%91%E7%89%88%E5%9B%9E%E6%BB%9Asop/</loc>
     <lastmod>2025-12-09T16:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/aws-eks%E5%AE%9E%E6%88%98/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/aws-eks%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2025-12-09T15:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%8F%91%E7%89%88%E7%AD%96%E7%95%A5/</loc>
+    <loc>http://localhost:1313/docs/cicd/%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%8F%91%E7%89%88%E7%AD%96%E7%95%A5/</loc>
     <lastmod>2025-12-09T15:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/docker%E9%95%9C%E5%83%8F%E4%BC%98%E5%8C%96/</loc>
+    <loc>http://localhost:1313/docs/cicd/docker%E9%95%9C%E5%83%8F%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2025-12-09T14:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/helm%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/helm%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2025-12-09T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/ingress%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/ingress%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2025-12-09T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA/</loc>
     <lastmod>2025-12-09T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5sop/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5sop/</loc>
     <lastmod>2025-12-09T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E9%9B%86%E7%BE%A4%E5%8D%87%E7%BA%A7/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E9%9B%86%E7%BE%A4%E5%8D%87%E7%BA%A7/</loc>
     <lastmod>2025-12-09T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/go%E6%A0%87%E5%87%86%E5%BA%93%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/languages/go/go%E6%A0%87%E5%87%86%E5%BA%93%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://localhost:1313/docs/languages/go/go%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/go%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/languages/go/go%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/go%E5%9F%BA%E7%A1%80%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/languages/go/go%E5%9F%BA%E7%A1%80%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/go%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</loc>
+    <loc>http://localhost:1313/docs/languages/go/go%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-hpa%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-hpa%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-rbac%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-rbac%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E5%AD%98%E5%82%A8pvc/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E5%AD%98%E5%82%A8pvc/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E7%BD%91%E7%BB%9C%E4%B8%8Eservice/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E7%BD%91%E7%BB%9C%E4%B8%8Eservice/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/k8s-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/k8s-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%8E%92%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD%E6%8E%92%E6%9F%A5/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/python%E6%93%8D%E4%BD%9Ckubernetes/</loc>
+    <loc>http://localhost:1313/docs/languages/python/python%E6%93%8D%E4%BD%9Ckubernetes/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/python%E5%9F%BA%E7%A1%80%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/languages/python/python%E5%9F%BA%E7%A1%80%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/python%E7%BD%91%E7%BB%9C%E4%B8%8Ehttp/</loc>
+    <loc>http://localhost:1313/docs/languages/python/python%E7%BD%91%E7%BB%9C%E4%B8%8Ehttp/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/python%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/</loc>
+    <loc>http://localhost:1313/docs/languages/python/python%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/python%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC/</loc>
+    <loc>http://localhost:1313/docs/languages/python/python%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/vim%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</loc>
+    <loc>http://localhost:1313/docs/linux/vim%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2025-12-09T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E5%BB%BA%E8%AE%BE/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7%E5%BB%BA%E8%AE%BE/</loc>
     <lastmod>2025-12-08T15:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/argocd-gitops%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/argocd-gitops%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2025-12-08T14:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/karpenter-%E5%BC%B9%E6%80%A7%E8%8A%82%E7%82%B9/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/karpenter-%E5%BC%B9%E6%80%A7%E8%8A%82%E7%82%B9/</loc>
     <lastmod>2025-12-08T13:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/kubectl-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/kubectl-%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-08T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/github-actions-%E5%AE%9E%E6%88%98/</loc>
+    <loc>http://localhost:1313/docs/cicd/github-actions-%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2025-12-08T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/kubernetes-%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/kubernetes-%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2025-12-08T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/shell/shell-%E8%BF%90%E7%BB%B4%E9%80%9F%E6%9F%A5/</loc>
+    <loc>http://localhost:1313/docs/languages/shell/shell-%E8%BF%90%E7%BB%B4%E9%80%9F%E6%9F%A5/</loc>
     <lastmod>2025-12-08T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/devops-interview-questions/</loc>
+    <loc>http://localhost:1313/posts/devops-interview-questions/</loc>
     <lastmod>2025-12-07T13:07:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/aliyun-sdk-ops/</loc>
+    <loc>http://localhost:1313/posts/aliyun-sdk-ops/</loc>
     <lastmod>2025-12-04T12:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/authors/</loc>
+    <loc>http://localhost:1313/posts/authors/</loc>
     <lastmod>2025-12-03T23:09:20+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/docker/docker%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>http://localhost:1313/docs/docker/docker%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2025-12-03T22:57:03+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/linux%E5%91%BD%E4%BB%A4/%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/</loc>
+    <loc>http://localhost:1313/docs/linux/linux%E5%91%BD%E4%BB%A4/%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2025-12-03T22:53:28+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/docker/docker%E5%AD%98%E5%82%A8%E5%8F%8A%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/</loc>
+    <loc>http://localhost:1313/docs/docker/docker%E5%AD%98%E5%82%A8%E5%8F%8A%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/</loc>
     <lastmod>2025-12-03T22:26:23+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/docker/docker%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://localhost:1313/docs/docker/docker%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2025-12-03T22:26:23+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/docker/docker%E7%AE%80%E4%BB%8B/</loc>
+    <loc>http://localhost:1313/docs/docker/docker%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2025-12-03T22:26:23+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/cicd/</loc>
+    <loc>http://localhost:1313/docs/cicd/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/docker/</loc>
+    <loc>http://localhost:1313/docs/docker/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/go/</loc>
+    <loc>http://localhost:1313/docs/languages/go/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/kubernetes/</loc>
+    <loc>http://localhost:1313/docs/kubernetes/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/linux/</loc>
+    <loc>http://localhost:1313/docs/linux/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/python/</loc>
+    <loc>http://localhost:1313/docs/languages/python/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/resources/</loc>
+    <loc>http://localhost:1313/resources/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/shell/</loc>
+    <loc>http://localhost:1313/docs/languages/shell/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/languages/</loc>
+    <loc>http://localhost:1313/docs/languages/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/resources/website/</loc>
+    <loc>http://localhost:1313/resources/website/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
     <lastmod>2025-12-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E4%BB%A3%E7%A0%81/</loc>
+    <loc>http://localhost:1313/posts/%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%8D%B3%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2025-11-30T09:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E7%BD%91%E7%BB%9C%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>http://localhost:1313/posts/%E9%9B%B6%E4%BF%A1%E4%BB%BB%E7%BD%91%E7%BB%9C%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2025-11-22T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E5%91%8A%E8%AD%A6%E4%BD%93%E7%B3%BB%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>http://localhost:1313/posts/%E5%91%8A%E8%AD%A6%E4%BD%93%E7%B3%BB%E8%AE%BE%E8%AE%A1/</loc>
     <lastmod>2025-11-18T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/llm-core-concepts/</loc>
+    <loc>http://localhost:1313/posts/llm-core-concepts/</loc>
     <lastmod>2025-11-17T11:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/rag-system-design-practice/</loc>
+    <loc>http://localhost:1313/posts/rag-system-design-practice/</loc>
     <lastmod>2025-11-11T11:41:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/milvus-vector-database-practice/</loc>
+    <loc>http://localhost:1313/posts/milvus-vector-database-practice/</loc>
     <lastmod>2025-11-06T09:52:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-gpu-scheduling/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-gpu-scheduling/</loc>
     <lastmod>2025-11-05T14:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/python-elasticsearch-client/</loc>
+    <loc>http://localhost:1313/posts/python-elasticsearch-client/</loc>
     <lastmod>2025-11-04T12:27:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/python-scheduled-tasks/</loc>
+    <loc>http://localhost:1313/posts/python-scheduled-tasks/</loc>
     <lastmod>2025-11-01T11:26:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/coredns-troubleshooting-guide/</loc>
+    <loc>http://localhost:1313/posts/coredns-troubleshooting-guide/</loc>
     <lastmod>2025-10-29T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/k6-load-testing-practice/</loc>
+    <loc>http://localhost:1313/posts/k6-load-testing-practice/</loc>
     <lastmod>2025-10-21T12:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/tcp-network-troubleshooting/</loc>
+    <loc>http://localhost:1313/posts/tcp-network-troubleshooting/</loc>
     <lastmod>2025-10-21T11:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/vector-log-pipeline/</loc>
+    <loc>http://localhost:1313/posts/vector-log-pipeline/</loc>
     <lastmod>2025-10-14T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/filebeat-logstash-pipeline/</loc>
+    <loc>http://localhost:1313/posts/filebeat-logstash-pipeline/</loc>
     <lastmod>2025-10-10T10:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elk-prometheus-monitoring/</loc>
+    <loc>http://localhost:1313/posts/elk-prometheus-monitoring/</loc>
     <lastmod>2025-10-08T11:33:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elasticsearch-backup-restore/</loc>
+    <loc>http://localhost:1313/posts/elasticsearch-backup-restore/</loc>
     <lastmod>2025-10-03T12:06:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elasticsearch-dsl-query/</loc>
+    <loc>http://localhost:1313/posts/elasticsearch-dsl-query/</loc>
     <lastmod>2025-10-01T09:17:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elasticsearch-index-optimization/</loc>
+    <loc>http://localhost:1313/posts/elasticsearch-index-optimization/</loc>
     <lastmod>2025-09-24T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elasticsearch-cluster-deployment/</loc>
+    <loc>http://localhost:1313/posts/elasticsearch-cluster-deployment/</loc>
     <lastmod>2025-09-19T13:03:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/ebpf-observability/</loc>
+    <loc>http://localhost:1313/posts/ebpf-observability/</loc>
     <lastmod>2025-09-17T12:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/chaos-mesh-practice/</loc>
+    <loc>http://localhost:1313/posts/chaos-mesh-practice/</loc>
     <lastmod>2025-09-13T09:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/backstage-developer-portal/</loc>
+    <loc>http://localhost:1313/posts/backstage-developer-portal/</loc>
     <lastmod>2025-09-12T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/opa-kyverno-admission-control/</loc>
+    <loc>http://localhost:1313/posts/opa-kyverno-admission-control/</loc>
     <lastmod>2025-09-11T13:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/trivy-cosign-supply-chain/</loc>
+    <loc>http://localhost:1313/posts/trivy-cosign-supply-chain/</loc>
     <lastmod>2025-09-06T13:50:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/go-kubernetes-client-tools/</loc>
+    <loc>http://localhost:1313/posts/go-kubernetes-client-tools/</loc>
     <lastmod>2025-08-25T09:08:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/aws-eks-best-practices/</loc>
+    <loc>http://localhost:1313/posts/aws-eks-best-practices/</loc>
     <lastmod>2025-08-22T12:51:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/devsecops-practice/</loc>
+    <loc>http://localhost:1313/posts/devsecops-practice/</loc>
     <lastmod>2025-08-20T10:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/k8s-%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98/</loc>
+    <loc>http://localhost:1313/posts/k8s-%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98/</loc>
     <lastmod>2025-08-18T13:07:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E4%BA%91%E5%8E%9F%E7%94%9F%E8%BD%AC%E5%9E%8B%E7%BB%8F%E9%AA%8C/</loc>
+    <loc>http://localhost:1313/posts/%E4%BA%91%E5%8E%9F%E7%94%9F%E8%BD%AC%E5%9E%8B%E7%BB%8F%E9%AA%8C/</loc>
     <lastmod>2025-08-14T12:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/platform-engineering-practice/</loc>
+    <loc>http://localhost:1313/posts/platform-engineering-practice/</loc>
     <lastmod>2025-08-10T09:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/slo-sli-error-budget-practice/</loc>
+    <loc>http://localhost:1313/posts/slo-sli-error-budget-practice/</loc>
     <lastmod>2025-08-01T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/victoriametrics-prometheus/</loc>
+    <loc>http://localhost:1313/posts/victoriametrics-prometheus/</loc>
     <lastmod>2025-07-28T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/thanos-multi-cluster/</loc>
+    <loc>http://localhost:1313/posts/thanos-multi-cluster/</loc>
     <lastmod>2025-07-26T11:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/opentelemetry-practice/</loc>
+    <loc>http://localhost:1313/posts/opentelemetry-practice/</loc>
     <lastmod>2025-07-20T11:41:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/observability-three-pillars/</loc>
+    <loc>http://localhost:1313/posts/observability-three-pillars/</loc>
     <lastmod>2025-07-14T09:52:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/dora-metrics-platform-engineering/</loc>
+    <loc>http://localhost:1313/posts/dora-metrics-platform-engineering/</loc>
     <lastmod>2025-07-12T12:27:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/distributed-tracing-jaeger-tempo/</loc>
+    <loc>http://localhost:1313/posts/distributed-tracing-jaeger-tempo/</loc>
     <lastmod>2025-07-10T10:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/on-call-engineering-practice/</loc>
+    <loc>http://localhost:1313/posts/on-call-engineering-practice/</loc>
     <lastmod>2025-07-08T11:26:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/sre-incident-management/</loc>
+    <loc>http://localhost:1313/posts/sre-incident-management/</loc>
     <lastmod>2025-07-05T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/crossplane-gitops-cloud/</loc>
+    <loc>http://localhost:1313/posts/crossplane-gitops-cloud/</loc>
     <lastmod>2025-06-26T12:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/sre-concepts-and-principles/</loc>
+    <loc>http://localhost:1313/posts/sre-concepts-and-principles/</loc>
     <lastmod>2025-06-26T11:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/opentofu-terraform-practice/</loc>
+    <loc>http://localhost:1313/posts/opentofu-terraform-practice/</loc>
     <lastmod>2025-06-18T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-network-policy/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-network-policy/</loc>
     <lastmod>2025-06-15T09:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/helm-engineering-practice/</loc>
+    <loc>http://localhost:1313/posts/helm-engineering-practice/</loc>
     <lastmod>2025-06-14T10:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/karpenter-deep-dive/</loc>
+    <loc>http://localhost:1313/posts/karpenter-deep-dive/</loc>
     <lastmod>2025-06-11T11:33:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/istio-service-mesh-practice/</loc>
+    <loc>http://localhost:1313/posts/istio-service-mesh-practice/</loc>
     <lastmod>2025-06-06T12:06:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/gitops-argocd/</loc>
+    <loc>http://localhost:1313/posts/gitops-argocd/</loc>
     <lastmod>2025-06-03T09:17:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/argocd-advanced-patterns/</loc>
+    <loc>http://localhost:1313/posts/argocd-advanced-patterns/</loc>
     <lastmod>2025-05-27T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/multi-cluster-k8s-management/</loc>
+    <loc>http://localhost:1313/posts/multi-cluster-k8s-management/</loc>
     <lastmod>2025-05-21T13:03:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-migration-practice/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-migration-practice/</loc>
     <lastmod>2025-05-19T12:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-upgrade-strategy/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-upgrade-strategy/</loc>
     <lastmod>2025-05-14T09:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-gateway-api/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-gateway-api/</loc>
     <lastmod>2025-05-12T13:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-storage-practice/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-storage-practice/</loc>
     <lastmod>2025-05-06T13:50:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/traefik-vs-nginx-ingress/</loc>
+    <loc>http://localhost:1313/posts/traefik-vs-nginx-ingress/</loc>
     <lastmod>2025-04-27T12:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/rabbitmq-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/rabbitmq-ops-practice/</loc>
     <lastmod>2025-04-22T14:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/celery-async-tasks/</loc>
+    <loc>http://localhost:1313/posts/celery-async-tasks/</loc>
     <lastmod>2025-04-22T09:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/etcd-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/etcd-ops-practice/</loc>
     <lastmod>2025-04-13T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/database-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/database-ops-practice/</loc>
     <lastmod>2025-04-08T13:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kafka-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/kafka-ops-practice/</loc>
     <lastmod>2025-04-07T11:37:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/mongodb-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/mongodb-ops-practice/</loc>
     <lastmod>2025-03-31T11:41:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/alertmanager-webhook-api/</loc>
+    <loc>http://localhost:1313/posts/alertmanager-webhook-api/</loc>
     <lastmod>2025-03-25T09:52:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/alertmanager-routing-config/</loc>
+    <loc>http://localhost:1313/posts/alertmanager-routing-config/</loc>
     <lastmod>2025-03-22T12:27:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/grafana-api-automation/</loc>
+    <loc>http://localhost:1313/posts/grafana-api-automation/</loc>
     <lastmod>2025-03-18T11:26:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/postgresql-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/postgresql-ops-practice/</loc>
     <lastmod>2025-03-18T10:15:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prometheus-service-discovery/</loc>
+    <loc>http://localhost:1313/posts/prometheus-service-discovery/</loc>
     <lastmod>2025-03-15T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/elastic-agent-fleet/</loc>
+    <loc>http://localhost:1313/posts/elastic-agent-fleet/</loc>
     <lastmod>2025-03-06T11:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/efk-logging-practice/</loc>
+    <loc>http://localhost:1313/posts/efk-logging-practice/</loc>
     <lastmod>2025-03-05T12:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/zookeeper-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/zookeeper-ops-practice/</loc>
     <lastmod>2025-03-05T11:00:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/k8s-logging-solution/</loc>
+    <loc>http://localhost:1313/posts/k8s-logging-solution/</loc>
     <lastmod>2025-02-25T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/vault-external-secrets/</loc>
+    <loc>http://localhost:1313/posts/vault-external-secrets/</loc>
     <lastmod>2025-02-20T10:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/consul-service-discovery/</loc>
+    <loc>http://localhost:1313/posts/consul-service-discovery/</loc>
     <lastmod>2025-02-18T11:33:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/harbor-registry-ops/</loc>
+    <loc>http://localhost:1313/posts/harbor-registry-ops/</loc>
     <lastmod>2025-02-18T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/ansible-ops-automation/</loc>
+    <loc>http://localhost:1313/posts/ansible-ops-automation/</loc>
     <lastmod>2025-02-12T12:06:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/cicd-pipeline-design/</loc>
+    <loc>http://localhost:1313/posts/cicd-pipeline-design/</loc>
     <lastmod>2025-02-09T09:17:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/gitlab-ci-kubernetes/</loc>
+    <loc>http://localhost:1313/posts/gitlab-ci-kubernetes/</loc>
     <lastmod>2025-02-01T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/jenkins-kubernetes-cicd/</loc>
+    <loc>http://localhost:1313/posts/jenkins-kubernetes-cicd/</loc>
     <lastmod>2025-01-26T13:03:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-rbac-security/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-rbac-security/</loc>
     <lastmod>2025-01-24T12:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-yaml-patterns/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-yaml-patterns/</loc>
     <lastmod>2025-01-19T09:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-resource-management/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-resource-management/</loc>
     <lastmod>2025-01-16T13:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-networking-deep-dive/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-networking-deep-dive/</loc>
     <lastmod>2025-01-10T13:50:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/devops-career-growth/</loc>
+    <loc>http://localhost:1313/posts/devops-career-growth/</loc>
     <lastmod>2024-12-22T09:52:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
+    <loc>http://localhost:1313/posts/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5%E6%96%B9%E6%B3%95%E8%AE%BA/</loc>
     <lastmod>2024-12-17T12:27:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/sre%E5%AE%9E%E8%B7%B5%E5%BF%83%E5%BE%97/</loc>
+    <loc>http://localhost:1313/posts/sre%E5%AE%9E%E8%B7%B5%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2024-12-11T11:26:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/prometheus-grafana/</loc>
+    <loc>http://localhost:1313/posts/prometheus-grafana/</loc>
     <lastmod>2024-12-06T09:30:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/python-prometheus-monitoring/</loc>
+    <loc>http://localhost:1313/posts/python-prometheus-monitoring/</loc>
     <lastmod>2024-11-25T11:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/python-async-programming/</loc>
+    <loc>http://localhost:1313/posts/python-async-programming/</loc>
     <lastmod>2024-11-22T12:44:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/python-devops-automation/</loc>
+    <loc>http://localhost:1313/posts/python-devops-automation/</loc>
     <lastmod>2024-11-12T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/redis-ops-practice/</loc>
+    <loc>http://localhost:1313/posts/redis-ops-practice/</loc>
     <lastmod>2024-11-06T10:20:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/mysql-backup-restore/</loc>
+    <loc>http://localhost:1313/posts/mysql-backup-restore/</loc>
     <lastmod>2024-11-01T11:33:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/nginx-ops-complete/</loc>
+    <loc>http://localhost:1313/posts/nginx-ops-complete/</loc>
     <lastmod>2024-10-24T12:06:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/kubernetes-beginner-guide/</loc>
+    <loc>http://localhost:1313/posts/kubernetes-beginner-guide/</loc>
     <lastmod>2024-10-20T09:17:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/git-workflow-practice/</loc>
+    <loc>http://localhost:1313/posts/git-workflow-practice/</loc>
     <lastmod>2024-10-10T11:01:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/shell-script-automation/</loc>
+    <loc>http://localhost:1313/posts/shell-script-automation/</loc>
     <lastmod>2024-10-02T13:03:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/docker-compose-dev-workflow/</loc>
+    <loc>http://localhost:1313/posts/docker-compose-dev-workflow/</loc>
     <lastmod>2024-09-27T12:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/docker-best-practices/</loc>
+    <loc>http://localhost:1313/posts/docker-best-practices/</loc>
     <lastmod>2024-09-21T09:56:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/linux-system-admin-devops/</loc>
+    <loc>http://localhost:1313/posts/linux-system-admin-devops/</loc>
     <lastmod>2024-09-16T13:36:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/posts/linux-performance-tuning/</loc>
+    <loc>http://localhost:1313/posts/linux-performance-tuning/</loc>
     <lastmod>2024-09-08T13:50:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/changelog/</loc>
+    <loc>http://localhost:1313/changelog/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/books/</loc>
+    <loc>http://localhost:1313/books/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/roadmap/</loc>
+    <loc>http://localhost:1313/roadmap/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://socake.github.io/sponsor-diy/</loc>
+    <loc>http://localhost:1313/sponsor-diy/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
