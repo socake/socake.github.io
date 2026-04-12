@@ -14,9 +14,20 @@ params:
   reading_time: true
 ---
 
-GitHub Copilot在2024年发布了一系列更新，从最初的代码补全工具演变成了包含Chat、CLI、代码Review的完整AI开发体验。很多工程师还停在"装了个能Tab的插件"的认知，没用到它的一半功能。
+GitHub Copilot在2025-2026年发布了一系列更新，从最初的代码补全工具演变成了包含Chat、CLI、代码Review的完整AI开发体验。很多工程师还停在"装了个能Tab的插件"的认知，没用到它的一半功能。
 
 这篇文章面向DevOps/运维工程师，重点讲Copilot在基础设施代码（Terraform、K8s、Dockerfile）和自动化脚本场景的实际用法。
+
+---
+
+## 定价与计划（2026年）
+
+GitHub Copilot目前有两个主力付费计划：
+
+- **Pro（$10/月）**：GPT-5.4作为默认模型，支持Claude Sonnet 4.6、Gemini 2.5 Pro可选，覆盖日常开发需求
+- **Pro+（$39/月）**：在Pro基础上解锁Claude Opus 4、o3等高端模型，适合需要处理复杂推理任务的场景
+
+对DevOps工程师来说，Pro计划足够。需要频繁处理大型重构或复杂架构决策时再考虑Pro+。
 
 ---
 
@@ -420,6 +431,10 @@ GitHub Copilot有"Duplication Detection"功能，可以在设置里启用，让C
 **Q：Copilot会把我的代码发给GitHub/微软吗？**
 
 默认情况下，Copilot会发送代码片段用于改善模型。Business和Enterprise版本可以关闭这个选项（"Code Snippets - User"在Organization设置里）。
+
+**Q：Copilot默认用的是什么模型？**
+
+2026年Pro计划的默认模型是GPT-5.4。你也可以在Chat窗口切换到Claude Sonnet 4.6或Gemini 2.5 Pro。Pro+计划额外解锁Claude Opus 4和o3。不同模型在代码补全和Chat里都可选择。
 
 **Q：为什么有时候补全质量突然变差？**
 

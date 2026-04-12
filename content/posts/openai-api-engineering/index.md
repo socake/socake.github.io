@@ -9,7 +9,7 @@ summary: "OpenAI API 是大多数 LLM 应用开发者的起点，但从 Hello Wo
 toc: true
 math: false
 diagram: false
-keywords: ["OpenAI API", "Function Calling", "Structured Output", "Batch API", "Embeddings", "Chat Completions", "GPT-4o", "成本优化"]
+keywords: ["OpenAI API", "Function Calling", "Structured Output", "Batch API", "Embeddings", "Chat Completions", "GPT-5.4", "成本优化"]
 params:
   reading_time: true
 ---
@@ -55,7 +55,7 @@ client = OpenAI(
 
 ```python
 response = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
     messages=[
         {"role": "system", "content": "你是一个代码助手"},
         {"role": "user", "content": "写一个快速排序"},
@@ -83,7 +83,7 @@ print(f"usage: {response.usage}")
 assistant = client.beta.assistants.create(
     name="代码审查助手",
     instructions="你是专业的代码审查工程师...",
-    model="gpt-4o",
+    model="gpt-5.4",
     tools=[{"type": "code_interpreter"}],  # 内置代码执行
 )
 
@@ -119,7 +119,7 @@ if run.status == "completed":
 - 延迟比 Chat Completions 高
 - 对话历史无法精确控制
 
-**结论**：除非你需要 Code Interpreter 或内置 File Search，否则一律用 Chat Completions，自己管理状态。
+**结论**：除非你需要 Code Interpreter 或内置 File Search，否则一律用 Chat Completions，自己管理状态。新项目如需有状态对话管理，建议评估 **Responses API**（OpenAI 新一代接口，取代部分 Assistants API 场景，延迟更低、状态管理更灵活）。
 
 ---
 
@@ -209,7 +209,7 @@ def run_with_tools(user_message: str) -> str:
     
     while True:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-5.4",
             messages=messages,
             tools=tools,
             tool_choice="auto",
@@ -248,7 +248,7 @@ print(result)
 
 ### Parallel Tool Calls
 
-gpt-4o 支持同时调用多个工具，可以并行执行：
+gpt-5.4 支持同时调用多个工具，可以并行执行：
 
 ```python
 import asyncio
@@ -307,7 +307,7 @@ class CodeReviewResult(BaseModel):
     approved: bool
 
 response = client.beta.chat.completions.parse(
-    model="gpt-4o-2024-08-06",  # 需要这个版本以上才支持 Structured Output
+    model="gpt-5.4",  # gpt-5.4 及以上支持 Structured Output
     messages=[
         {"role": "system", "content": "你是代码审查专家，按照要求的格式输出审查结果。"},
         {"role": "user", "content": f"审查以下代码：\n\n```python\n{code_to_review}\n```"}
@@ -328,7 +328,7 @@ for bug in result.bugs:
 
 ```python
 response = client.beta.chat.completions.parse(
-    model="gpt-4o-2024-08-06",
+    model="gpt-5.4",
     messages=[...],
     response_format=MySchema,
 )
@@ -427,7 +427,7 @@ for idx, text in enumerate(documents_to_summarize):
         "method": "POST",
         "url": "/v1/chat/completions",
         "body": {
-            "model": "gpt-4o-mini",
+            "model": "gpt-5.4-mini",
             "max_tokens": 200,
             "messages": [
                 {"role": "system", "content": "用一句话总结以下文本"},
@@ -498,7 +498,7 @@ results = wait_for_batch(batch.id)
 ```python
 # 同步流式
 with client.chat.completions.stream(
-    model="gpt-4o-mini",
+    model="gpt-5.4-mini",
     messages=[{"role": "user", "content": "写一篇关于云原生的文章"}],
 ) as stream:
     for text in stream.text_stream:
@@ -522,7 +522,7 @@ app = FastAPI()
 async def chat_stream(message: str):
     async def generate():
         async with async_client.chat.completions.stream(
-            model="gpt-4o-mini",
+            model="gpt-5.4-mini",
             messages=[{"role": "user", "content": message}],
         ) as stream:
             async for text in stream.text_stream:
@@ -561,7 +561,7 @@ class OpenAIClient:
     def chat(
         self,
         messages: list[dict],
-        model: str = "gpt-4o-mini",
+        model: str = "gpt-5.4-mini",
         max_retries: int = 5,
         **kwargs
     ) -> str:
@@ -622,13 +622,14 @@ class OpenAIClient:
 
 ```python
 # 根据任务复杂度自动选择模型
+# 注意：GPT-4o 已于 2026 年 2 月 13 日退役，请使用 gpt-5.4 系列
 MODEL_ROUTING = {
-    "classification": "gpt-4o-mini",    # $0.15/1M input
-    "extraction": "gpt-4o-mini",
-    "summarization": "gpt-4o-mini",
-    "code_generation": "gpt-4o",        # $2.5/1M input
-    "complex_reasoning": "o1-mini",     # $3/1M input
-    "analysis": "gpt-4o",
+    "classification": "gpt-5.4-nano",   # 最轻量，适合简单分类
+    "extraction": "gpt-5.4-mini",
+    "summarization": "gpt-5.4-mini",
+    "code_generation": "gpt-5.4",       # 旗舰，参考官方最新定价
+    "complex_reasoning": "o4-mini",     # 推理模型，取代旧版 o1-mini
+    "analysis": "gpt-5.4",
 }
 ```
 
@@ -637,7 +638,7 @@ MODEL_ROUTING = {
 ```python
 import tiktoken
 
-def count_tokens(text: str, model: str = "gpt-4o") -> int:
+def count_tokens(text: str, model: str = "gpt-5.4") -> int:
     encoder = tiktoken.encoding_for_model(model)
     return len(encoder.encode(text))
 
@@ -695,11 +696,14 @@ from collections import defaultdict
 class UsageTracker:
     model_usage: dict = field(default_factory=lambda: defaultdict(lambda: {"input": 0, "output": 0}))
     
-    # 2025年价格（$/1M tokens）
+    # 价格以官方最新定价为准（https://openai.com/pricing）
+    # GPT-4o 已于 2026 年 2 月 13 日退役
     PRICES = {
-        "gpt-4o": {"input": 2.5, "output": 10.0},
-        "gpt-4o-mini": {"input": 0.15, "output": 0.60},
-        "o1-mini": {"input": 3.0, "output": 12.0},
+        "gpt-5.4": {"input": 0, "output": 0},        # 参考官方最新定价
+        "gpt-5.4-mini": {"input": 0, "output": 0},   # 参考官方最新定价
+        "gpt-5.4-nano": {"input": 0, "output": 0},   # 参考官方最新定价
+        "o3": {"input": 0, "output": 0},              # 参考官方最新定价
+        "o4-mini": {"input": 0, "output": 0},         # 参考官方最新定价
         "text-embedding-3-small": {"input": 0.02, "output": 0},
     }
     
@@ -777,7 +781,7 @@ class DocumentQA:
         
         # 调用 Chat Completions
         response = self.client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-5.4-mini",
             temperature=0,
             max_tokens=500,
             messages=[

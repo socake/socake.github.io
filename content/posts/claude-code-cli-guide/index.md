@@ -14,7 +14,9 @@ params:
   reading_time: true
 ---
 
-Claude Code的设计思路和Cursor、Copilot不同：它不是编辑器插件，而是终端里的AI代理。它可以读文件、写文件、执行Shell命令，完成的是"帮你干活"而不是"给你建议"。
+Claude Code的定位是**terminal-native autonomous agent**——不是编辑器插件，不是Chat补全，而是可以在终端里独立完成整个任务的自主代理。它能读文件、写文件、执行Shell命令，还能直接对接GitHub/GitLab API：读Issue、提PR、跑CI，全程无需手动介入。
+
+2026年它是工程师处理"重型任务"使用最多的工具，常见组合是：Cursor负责日常代码编辑，Claude Code负责复杂的跨文件重构、自动化运维、以及需要完整任务闭环的场景。
 
 这篇文章从工程师视角介绍Claude Code的实际用法，重点放在DevOps场景。
 
@@ -366,6 +368,24 @@ Claude Code会先查询受影响的资源，展示列表，等你确认后再执
 
 Claude Code会创建完整的Terraform module，包括`main.tf`、`variables.tf`、`outputs.tf`。
 
+### 场景6：GitHub/GitLab Issue驱动开发
+
+Claude Code可以直接调用GitHub/GitLab API，实现从Issue到PR的完整自动化：
+
+```
+> 读一下 GitHub Issue #234，按需求描述实现这个功能，
+> 写完代码后跑测试，测试通过了提一个PR，关联这个Issue
+```
+
+Claude Code会：
+1. 调用GitHub API读取Issue内容和评论
+2. 理解需求，规划实现方案
+3. 编写代码，修改相关文件
+4. 执行测试命令，验证通过
+5. 提交代码，创建PR并关联Issue
+
+这是它与Cursor最大的差异点：Claude Code完成的是有明确起止点的完整任务，而不只是编辑器里的辅助操作。
+
 ---
 
 ## 与Cursor的对比
@@ -374,19 +394,16 @@ Claude Code会创建完整的Terraform module，包括`main.tf`、`variables.tf`
 
 | 维度 | Claude Code | Cursor |
 |------|------------|--------|
-| 使用环境 | 终端 | 编辑器（VSCode-based） |
-| 最适合 | 脚本、运维任务、代码库理解 | 应用开发、多文件重构 |
+| 使用环境 | 终端 | 编辑器（VSCode / JetBrains） |
+| 最适合 | 自主完成复杂任务、运维、Issue驱动开发 | 日常代码编辑、多文件重构 |
 | 上下文加载 | 自动探索，也可以指定 | @符号显式引用 |
 | 代码补全 | 无（不是IDE） | 强，实时Tab补全 |
-| 命令执行 | 原生支持 | Agent模式支持 |
-| 模型 | Claude系列 | 可选Claude/GPT/自定义 |
-| 适合场景 | 服务器上、SSH环境、CI/CD | 本地开发环境 |
+| 命令执行 | 原生支持 | Agent/computer use支持 |
+| GitHub集成 | 原生（读Issue、提PR） | 无 |
+| 模型 | Claude系列 | 可选Claude Sonnet 4.6/GPT-5.4/Gemini 2.5 Pro |
+| 适合场景 | 重型任务、服务器、CI/CD、自动化闭环 | 本地日常开发 |
 
-实际工作里两个工具互补使用：
-- 在服务器上排查问题 → Claude Code
-- 本地写新功能 → Cursor
-- 写脚本、分析日志 → Claude Code
-- 重构应用代码 → Cursor
+**2026年推荐组合**：Cursor处理日常代码编辑和快速功能迭代，Claude Code处理复杂任务——大型重构、跨服务修改、Issue驱动的完整功能实现、运维自动化。两者各司其职，不是替代关系。
 
 ---
 
@@ -437,10 +454,12 @@ claude --resume <session-id>
 
 ## 注意事项
 
+**定价**：Claude Code按使用量计费，月费约$20-200，取决于使用频率和任务复杂度。日常轻度使用一般在$20-50区间，重度自主任务（大型重构、频繁Issue驱动开发）可能到$100+。建议初期设置用量提醒，了解自己的使用模式后再决定是否需要控制。
+
 **成本控制**：Claude Code每次对话都会调用API，费用按token计算。复杂的代码库分析任务单次可能消耗大量token。建议：
-- 用`--model claude-3-haiku`处理简单任务，降低成本
 - 避免让它反复读取大文件
 - 明确任务边界，避免开放式探索
+- 对简单查询，用普通Chat而非Claude Code
 
 **安全意识**：Claude Code有写文件和执行命令的能力，这意味着操作失误的代价比纯对话工具更高。规则：
 - 在生产服务器上谨慎使用，或只用只读模式

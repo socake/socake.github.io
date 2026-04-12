@@ -14,23 +14,25 @@ params:
   reading_time: true
 ---
 
-多模态模型在 2024 年后进入了实用阶段——不是偶尔能用，而是在很多任务上可以替代专门的计算机视觉管道。本文从工程角度讲怎么用，以及在运维场景里能做什么。
+多模态模型在 2025-2026 年进入了全面实用阶段——不是偶尔能用，而是在很多任务上可以替代专门的计算机视觉管道。本文从工程角度讲怎么用，以及在运维场景里能做什么。
 
-## 主流多模态模型对比
+## 主流多模态模型对比（2026年）
 
-| 模型 | 图像理解 | OCR | 图表分析 | 视频 | 推理成本 | 部署方式 |
-|------|---------|-----|---------|------|---------|---------|
-| **GPT-4o** | 极强 | 强 | 强 | 支持 | 高 | API |
-| **Claude 3.5 Sonnet** | 极强 | 极强 | 极强 | 不支持 | 高 | API |
-| **Gemini 1.5 Pro** | 强 | 强 | 强 | 原生支持 | 中 | API |
-| **Qwen2.5-VL-72B** | 强 | 强 | 较强 | 支持 | 中 | 自部署/API |
-| **InternVL2-26B** | 较强 | 强 | 较强 | 不支持 | 中 | 自部署 |
-| **LLaVA-1.6** | 中等 | 一般 | 一般 | 不支持 | 低 | 自部署 |
+| 模型 | 图像理解 | OCR | 图表分析 | 视频 | 图像生成 | 推理成本 | 部署方式 |
+|------|---------|-----|---------|------|---------|---------|---------|
+| **GPT-5.4** | 极强 | 强 | 强 | 支持 | 支持 | 高 | API |
+| **Claude Sonnet 4.6** | 极强 | 极强 | 极强 | 不支持 | 支持（2026年3月起） | 高 | API |
+| **Gemini 2.5 Pro** | 强 | 强 | 强 | 原生支持 | 支持 | 中 | API |
+| **Qwen2.5-VL-72B** | 强 | 强 | 较强 | 支持 | 不支持 | 中 | 自部署/API |
+| **Llama 4 Maverick** | 强 | 较强 | 较强 | 不支持 | 不支持 | 中 | 自部署 |
+| **InternVL2-26B** | 较强 | 强 | 较强 | 不支持 | 不支持 | 中 | 自部署 |
+
+> 注：GPT-4o 已于 2026 年 2 月退役，由 GPT-5.4 接替其多模态主力位置。
 
 **实际选型建议**：
-- 预算优先/数据不出境：Qwen2.5-VL-7B 自部署（小任务）或 72B（高精度）
-- 精度优先：Claude 3.5 Sonnet（OCR和文档理解特别强）或 GPT-4o
-- 视频理解：Gemini 1.5 Pro（支持 1 小时以上视频）
+- 预算优先/数据不出境：Qwen2.5-VL-7B 自部署（小任务）或 72B（高精度）；Llama 4 Maverick 是2026年最强开源多模态选项
+- 精度优先：Claude Sonnet 4.6（OCR和文档理解特别强，2026年3月起支持图像生成）或 GPT-5.4
+- 视频理解：Gemini 2.5 Pro（支持 1 小时以上视频，视频/图像/音频全模态）
 - 本地轻量：Qwen2.5-VL-3B，8GB 显存可跑
 
 ---
@@ -46,7 +48,7 @@ client = OpenAI()
 
 def analyze_image_from_url(image_url: str, question: str) -> str:
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.4",
         messages=[
             {
                 "role": "user",
@@ -86,7 +88,7 @@ def encode_image(image_path: str) -> str:
     with open(image_path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
-def analyze_local_image(image_path: str, question: str, model: str = "gpt-4o") -> str:
+def analyze_local_image(image_path: str, question: str, model: str = "gpt-5.4") -> str:
     # 检测文件格式
     suffix = Path(image_path).suffix.lower()
     media_type_map = {
@@ -143,7 +145,7 @@ def compare_images(image_paths: list[str], comparison_question: str) -> str:
     content.append({"type": "text", "text": comparison_question})
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.4",
         messages=[{"role": "user", "content": content}],
         max_tokens=2048
     )
@@ -351,7 +353,7 @@ def analyze_grafana_alert(
 }}"""
 
     response = anthropic_client.messages.create(
-        model="claude-3-5-sonnet-20241022",
+        model="claude-sonnet-4-6",
         max_tokens=1024,
         messages=[
             {
@@ -425,11 +427,11 @@ def handle_grafana_alert(alert_webhook: dict):
 
 ## 视频理解进展
 
-视频理解在 2024-2025 年进步明显，主要方案：
+视频理解在 2025-2026 年已成熟，主要方案：
 
-**Gemini 1.5 Pro**：原生支持最长约 1 小时视频，直接上传视频文件分析，适合长视频摘要、会议记录等。
+**Gemini 2.5 Pro**：当前最强视频理解模型，原生支持最长约 1 小时视频，直接上传视频文件分析，适合长视频摘要、会议记录、操作录屏分析等。同时支持图像和音频，是真正的全模态模型。
 
-**GPT-4o with Vision**：支持逐帧分析，通过抽取关键帧来"理解"视频：
+**GPT-5.4 with Vision**：支持逐帧分析，通过抽取关键帧来"理解"视频：
 
 ```python
 import cv2
@@ -468,11 +470,23 @@ def analyze_video(video_path: str, question: str) -> str:
     content.append({"type": "text", "text": question})
 
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.4",
         messages=[{"role": "user", "content": content}],
         max_tokens=2048
     )
     return response.choices[0].message.content
+
+# Gemini 2.5 Pro 原生视频上传示例（适合长视频）
+def analyze_video_gemini(video_path: str, question: str) -> str:
+    """使用 Gemini 2.5 Pro 直接分析视频文件"""
+    import google.generativeai as genai
+
+    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    model = genai.GenerativeModel("gemini-2.5-pro")
+
+    video_file = genai.upload_file(path=video_path)
+    response = model.generate_content([video_file, question])
+    return response.text
 ```
 
 ---
@@ -481,9 +495,9 @@ def analyze_video(video_path: str, question: str) -> str:
 
 多模态调用的主要成本在图像 token：
 
-- GPT-4o `detail=low`：固定 85 tokens/图，精度低
-- GPT-4o `detail=high`：根据分辨率计算，1000×1000 图约 770 tokens
-- Claude 3.5 Sonnet：约 1600 tokens/张标准截图
+- GPT-5.4 `detail=low`：固定 85 tokens/图，精度低
+- GPT-5.4 `detail=high`：根据分辨率计算，1000×1000 图约 770 tokens
+- Claude Sonnet 4.6：约 1600 tokens/张标准截图
 
 **节省成本的方法**：
 1. 截图前压缩分辨率到任务所需的最小尺寸
