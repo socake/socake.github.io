@@ -57,6 +57,40 @@ POSTS = [
     ("ebpf-observability",         "eBPF",             "🔬", [(10,30,50),  (20,100,180)]),
     ("kubernetes-gateway-api",     "Gateway API",      "🌐", [(20,40,30),  (60,150,90)]),
     ("crossplane-gitops-cloud",    "Crossplane",       "☁",  [(30,20,50),  (100,60,180)]),
+    # Wave 3 - K8s Deep Dive
+    ("helm-engineering-practice",  "Helm",             "⛵", [(20,30,50),  (40,100,180)]),
+    ("istio-service-mesh-practice","Istio",            "🕸",  [(30,10,50),  (110,30,180)]),
+    ("kubernetes-rbac-security",   "K8s RBAC",         "🔑", [(40,10,20),  (160,30,80)]),
+    ("kubernetes-storage-practice","K8s Storage",      "💾", [(20,30,40),  (50,110,160)]),
+    ("slo-sli-error-budget-practice","SLO/Error Budget","📐", [(10,40,30),  (20,160,90)]),
+    # Wave 3 - Ops Advanced
+    ("chaos-mesh-practice",        "Chaos Mesh",       "🌪",  [(50,10,20),  (200,30,70)]),
+    ("opa-kyverno-admission-control","OPA/Kyverno",    "🛂", [(30,20,40),  (110,60,160)]),
+    ("go-kubernetes-client-tools", "Go + K8s",         "🐹", [(10,40,30),  (20,160,100)]),
+    ("k6-load-testing-practice",   "k6 Load Test",     "📈", [(40,20,10),  (170,70,20)]),
+    ("coredns-troubleshooting-guide","CoreDNS",        "🌐", [(20,30,50),  (50,100,200)]),
+    ("tcp-network-troubleshooting","TCP/IP",           "🔌", [(10,20,50),  (20,60,200)]),
+    # Wave 3 - AI Foundation
+    ("llm-landscape-2025",         "LLM 2026",         "🧠", [(20,10,50),  (80,30,200)]),
+    ("prompt-engineering-guide",   "Prompt Eng.",      "✍",  [(30,20,50),  (120,60,200)]),
+    ("rag-system-design-practice", "RAG",              "🔍", [(10,30,50),  (30,110,190)]),
+    ("langchain-practical-guide",  "LangChain",        "⛓",  [(20,30,40),  (60,120,170)]),
+    ("claude-api-development-guide","Claude API",      "🤖", [(20,10,40),  (80,30,170)]),
+    ("openai-api-engineering",     "OpenAI API",       "⚡",  [(10,20,50),  (30,70,210)]),
+    # Wave 3 - AI Tools
+    ("cursor-ai-editor-guide",     "Cursor",           "🖱",  [(30,20,50),  (110,60,200)]),
+    ("github-copilot-engineering", "Copilot",          "🐙", [(10,20,40),  (30,70,180)]),
+    ("claude-code-cli-guide",      "Claude Code",      "💻", [(20,10,50),  (80,30,200)]),
+    ("dify-self-hosted-rag-practice","Dify",           "🧩", [(10,40,30),  (30,170,110)]),
+    ("fastgpt-knowledge-base-practice","FastGPT",      "⚡",  [(30,10,50),  (120,30,200)]),
+    ("ai-agent-design-patterns",   "AI Agent",         "🤖", [(10,30,50),  (30,110,200)]),
+    # Wave 3 - AI Frontier
+    ("milvus-vector-database-practice","Milvus",       "🗃",  [(20,30,50),  (60,110,200)]),
+    ("langfuse-llm-observability", "Langfuse",         "📊", [(30,20,50),  (110,60,200)]),
+    ("llm-finetuning-lora-practice","LoRA Fine-tune",  "🎯", [(40,10,30),  (170,30,110)]),
+    ("multimodal-llm-vision-practice","Multimodal",    "👁",  [(10,30,50),  (30,110,200)]),
+    ("comfyui-stable-diffusion-workflow","ComfyUI/SD", "🎨", [(40,10,40),  (170,30,170)]),
+    ("langgraph-workflow-orchestration","LangGraph",   "🔄", [(20,30,50),  (60,110,200)]),
 ]
 
 W, H = 1200, 630
