@@ -768,3 +768,274 @@ button[title="Copy"] {
   vertical-align: middle;
   line-height: 1.6;
 }
+
+/* ================================================================
+   LIGHT MODE OVERRIDES
+   全面覆盖 custom.css 中为 dark 模式硬编码的颜色/阴影/背景
+   策略：html:not(.dark) 覆盖所有 dark-specific 的值
+   ================================================================ */
+
+/* ---- Body & Background ---- */
+html:not(.dark) body {
+  background-color: #f7f8fc;
+  color: #1e2030;
+}
+
+/* ---- Scrollbar (light) ---- */
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+}
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
+}
+
+/* ---- Header (light glass) ---- */
+html:not(.dark) header {
+  background: rgba(247, 248, 252, 0.85);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 1px 12px rgba(99, 102, 241, 0.06);
+}
+
+/* ---- Profile Name Gradient (light — darker for contrast) ---- */
+html:not(.dark) article header h1 {
+  background: linear-gradient(135deg, #4f46e5 0%, #0891b2 60%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Avatar Ring (light) ---- */
+html:not(.dark) article header img.rounded-full {
+  box-shadow:
+    0 0 0 3px rgba(79, 70, 229, 0.2),
+    0 0 0 6px rgba(8, 145, 178, 0.08),
+    0 6px 24px rgba(79, 70, 229, 0.15);
+}
+html:not(.dark) article header img.rounded-full:hover {
+  box-shadow:
+    0 0 0 4px rgba(79, 70, 229, 0.35),
+    0 0 0 8px rgba(8, 145, 178, 0.12),
+    0 10px 32px rgba(79, 70, 229, 0.25);
+}
+
+/* ---- Article Cards (light hover) ---- */
+html:not(.dark) .article-grid .article:hover,
+html:not(.dark) article.relative:hover {
+  box-shadow:
+    0 8px 32px rgba(99, 102, 241, 0.12),
+    0 0 0 1px rgba(99, 102, 241, 0.12),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+html:not(.dark) .recent-article-card:hover,
+html:not(.dark) .card-link:hover {
+  box-shadow:
+    0 6px 24px rgba(99, 102, 241, 0.12),
+    0 0 0 1px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* ---- Prose: Headings ---- */
+html:not(.dark) .prose h2 {
+  border-left-color: rgba(79, 70, 229, 0.6);
+  color: #1e2030;
+}
+html:not(.dark) .prose h3 {
+  border-left-color: rgba(8, 145, 178, 0.5);
+  color: #2d3142;
+}
+
+/* ---- Prose: Blockquote ---- */
+html:not(.dark) .prose blockquote {
+  background: rgba(99, 102, 241, 0.04);
+  color: #4b5280 !important;
+}
+
+/* ---- Prose: Inline Code ---- */
+html:not(.dark) .prose code:not(pre code) {
+  background: rgba(99, 102, 241, 0.07) !important;
+  color: #4338ca !important;
+  border-color: rgba(99, 102, 241, 0.15);
+}
+
+/* ---- Prose: Strong ---- */
+html:not(.dark) .prose strong {
+  color: #1e2030;
+}
+
+/* ---- Code Blocks ---- */
+html:not(.dark) .highlight {
+  border-color: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Tables ---- */
+html:not(.dark) .prose table {
+  border-color: rgba(99, 102, 241, 0.12);
+}
+html:not(.dark) .prose thead th {
+  background: rgba(99, 102, 241, 0.06);
+  color: #1e2030;
+}
+html:not(.dark) .prose tbody tr:hover {
+  background: rgba(99, 102, 241, 0.03);
+}
+
+/* ---- TOC ---- */
+html:not(.dark) #TableOfContents a:hover {
+  background: rgba(99, 102, 241, 0.06);
+  color: #4338ca !important;
+}
+
+/* ---- Footer ---- */
+html:not(.dark) footer {
+  border-top-color: rgba(99, 102, 241, 0.08);
+  background: rgba(247, 248, 252, 0.9);
+}
+
+/* ---- Hero Section Overlay (light — softer) ---- */
+html:not(.dark) .hero-image-container::after,
+html:not(.dark) [class*="hero"] .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 32, 48, 0.05) 0%,
+    rgba(30, 32, 48, 0.45) 100%
+  ) !important;
+}
+
+html:not(.dark) .thumbAndBackground-meta,
+html:not(.dark) .article-meta-overlay {
+  background: rgba(30, 32, 48, 0.5) !important;
+}
+
+/* ---- Mobile Menu ---- */
+html:not(.dark) #menu-wrapper {
+  background: rgba(247, 248, 252, 0.95) !important;
+}
+
+/* ---- Scroll To Top ---- */
+html:not(.dark) #scroll-to-top:hover {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ---- Selection ---- */
+html:not(.dark) ::selection {
+  background: rgba(99, 102, 241, 0.2);
+  color: #1e2030;
+}
+
+/* ---- Filter Bar (light) ---- */
+html:not(.dark) .filter-bar {
+  border-bottom-color: rgba(99, 102, 241, 0.1);
+}
+html:not(.dark) .filter-btn {
+  color: #4b5563;
+  border-color: rgba(99, 102, 241, 0.2);
+  background: #ffffff;
+}
+html:not(.dark) .filter-btn:hover {
+  border-color: rgba(79, 70, 229, 0.45);
+  color: #4338ca;
+  background: rgba(99, 102, 241, 0.05);
+}
+html:not(.dark) .filter-btn.active {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(79, 70, 229, 0.5);
+  color: #4338ca;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.12);
+}
+html:not(.dark) .filter-count {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4338ca;
+}
+
+/* ---- Year Label ---- */
+html:not(.dark) .year-label {
+  color: #6b7280;
+  border-bottom-color: rgba(99, 102, 241, 0.08);
+}
+
+/* ---- Post Cards (light) ---- */
+html:not(.dark) .post-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+html:not(.dark) .post-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 28px rgba(99, 102, 241, 0.1),
+    0 0 0 1px rgba(99, 102, 241, 0.15) !important;
+  border-color: rgba(99, 102, 241, 0.2) !important;
+}
+html:not(.dark) .post-card-img-overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(30, 32, 48, 0.4) 100%
+  );
+}
+html:not(.dark) .post-card-title {
+  color: #1e2030;
+}
+html:not(.dark) .post-card:hover .post-card-title {
+  color: #4338ca;
+}
+html:not(.dark) .post-card-summary {
+  color: #6b7280;
+}
+html:not(.dark) .post-card-meta {
+  color: #9ca3af;
+}
+
+/* ---- Category Badge on Card (light) ---- */
+html:not(.dark) .post-card-cat {
+  background: rgba(99, 102, 241, 0.08);
+  color: #4338ca;
+  border-color: rgba(99, 102, 241, 0.2);
+}
+html:not(.dark) .post-card-cat:hover {
+  background: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* ---- Mini Cards (light) ---- */
+html:not(.dark) .mini-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.07);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+html:not(.dark) .mini-card:hover {
+  border-color: rgba(79, 70, 229, 0.25);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.12);
+}
+html:not(.dark) .mini-card-title {
+  color: #1e2030;
+}
+html:not(.dark) .mini-card:hover .mini-card-title {
+  color: #4338ca;
+}
+html:not(.dark) .mini-card-meta {
+  color: #9ca3af;
+}
+html:not(.dark) .card-cat-badge {
+  background: rgba(99, 102, 241, 0.08);
+  color: #4338ca;
+  border-color: rgba(99, 102, 241, 0.18);
+}
+
+/* ---- Featured Card (light) ---- */
+html:not(.dark) .featured-card {
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+html:not(.dark) .featured-card:hover {
+  border-color: rgba(79, 70, 229, 0.2);
+  box-shadow: 0 12px 36px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.15);
+}
+html:not(.dark) .featured-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 22, 40, 0.65) 0%,
+    rgba(20, 22, 40, 0.25) 50%,
+    rgba(20, 22, 40, 0.55) 100%
+  );
+}
