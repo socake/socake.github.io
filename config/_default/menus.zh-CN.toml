@@ -54,6 +54,31 @@
   pageRef = "docs/languages/shell"
   weight = 33
 
+# AI 模块
+[[main]]
+  name = "大模型"
+  parent = "AI"
+  pageRef = "categories/大模型"
+  weight = 51
+
+[[main]]
+  name = "AI 工具"
+  parent = "AI"
+  pageRef = "categories/ai工具"
+  weight = 52
+
+[[main]]
+  name = "AI 应用"
+  parent = "AI"
+  pageRef = "categories/ai应用"
+  weight = 53
+
+[[main]]
+  name = "AIOPS"
+  parent = "AI"
+  pageRef = "categories/aiops"
+  weight = 54
+
 # 资源
 [[main]]
   name = "网站导航"
