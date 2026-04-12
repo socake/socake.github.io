@@ -769,273 +769,269 @@ button[title="Copy"] {
   line-height: 1.6;
 }
 
+
 /* ================================================================
-   LIGHT MODE OVERRIDES
-   全面覆盖 custom.css 中为 dark 模式硬编码的颜色/阴影/背景
-   策略：html:not(.dark) 覆盖所有 dark-specific 的值
+   LIGHT MODE — 全面重设计
+   设计语言：浅蓝灰底 + 白色卡片 + Indigo 强调色
+   核心修复：
+   1. Hero 渐变从白色改为深色（消除路线图白色大块）
+   2. Body 用 #eef1f8 而非纯白，有层次感
+   3. 卡片白色 + 精细阴影，在灰底上浮起
+   4. 所有文字颜色适配深色文字
    ================================================================ */
 
-/* ---- Body & Background ---- */
+/* ── 1. Body & Base ── */
 html:not(.dark) body {
-  background-color: #f7f8fc;
-  color: #1e2030;
+  background-color: #eef1f8;
+  color: #1a1d2e;
 }
 
-/* ---- Scrollbar (light) ---- */
+/* ── 2. 修复 Hero 背景渐变白块（thumbAndBackground）── */
+/* Blowfish 在 light 模式用 from-neutral（白色）铺满 hero 底部 */
+html:not(.dark) .single_hero_background > div:nth-child(2) {
+  background-image: linear-gradient(
+    to top,
+    rgba(15, 18, 40, 0.80) 0%,
+    rgba(15, 18, 40, 0.2) 50%,
+    transparent 100%
+  ) !important;
+}
+html:not(.dark) .single_hero_background > div:nth-child(3) {
+  background-image: none !important;
+  opacity: 0.15 !important;
+  background-color: rgba(15, 18, 40, 0.1) !important;
+}
+
+/* ── 3. Header ── */
+html:not(.dark) header {
+  background: rgba(238, 241, 248, 0.88);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+  box-shadow: 0 1px 10px rgba(79, 70, 229, 0.05);
+}
+
+/* ── 4. Scrollbar ── */
 html:not(.dark) ::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.25);
+  background: rgba(79, 70, 229, 0.2);
 }
 html:not(.dark) ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.5);
+  background: rgba(79, 70, 229, 0.4);
 }
 
-/* ---- Header (light glass) ---- */
-html:not(.dark) header {
-  background: rgba(247, 248, 252, 0.85);
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
-  box-shadow: 0 1px 12px rgba(99, 102, 241, 0.06);
-}
-
-/* ---- Profile Name Gradient (light — darker for contrast) ---- */
+/* ── 5. Profile 首页 ── */
 html:not(.dark) article header h1 {
-  background: linear-gradient(135deg, #4f46e5 0%, #0891b2 60%, #7c3aed 100%);
+  background: linear-gradient(135deg, #3730a3 0%, #0369a1 55%, #6d28d9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-/* ---- Avatar Ring (light) ---- */
 html:not(.dark) article header img.rounded-full {
   box-shadow:
-    0 0 0 3px rgba(79, 70, 229, 0.2),
-    0 0 0 6px rgba(8, 145, 178, 0.08),
-    0 6px 24px rgba(79, 70, 229, 0.15);
+    0 0 0 3px rgba(79, 70, 229, 0.18),
+    0 0 0 6px rgba(7, 89, 133, 0.06),
+    0 6px 20px rgba(79, 70, 229, 0.12);
 }
 html:not(.dark) article header img.rounded-full:hover {
   box-shadow:
-    0 0 0 4px rgba(79, 70, 229, 0.35),
-    0 0 0 8px rgba(8, 145, 178, 0.12),
-    0 10px 32px rgba(79, 70, 229, 0.25);
+    0 0 0 4px rgba(79, 70, 229, 0.3),
+    0 0 0 8px rgba(7, 89, 133, 0.1),
+    0 10px 28px rgba(79, 70, 229, 0.2);
 }
 
-/* ---- Article Cards (light hover) ---- */
+/* ── 6. Article/Prose 内容区 ── */
+html:not(.dark) .prose {
+  color: #1a1d2e;
+}
+html:not(.dark) .prose h1,
+html:not(.dark) .prose h2,
+html:not(.dark) .prose h3,
+html:not(.dark) .prose h4 {
+  color: #111827;
+}
+html:not(.dark) .prose h2 {
+  border-left-color: rgba(79, 70, 229, 0.55);
+}
+html:not(.dark) .prose h3 {
+  border-left-color: rgba(7, 89, 133, 0.45);
+}
+html:not(.dark) .prose strong {
+  color: #111827;
+}
+html:not(.dark) .prose a:not([class]) {
+  background-image: linear-gradient(90deg, #4338ca, #0284c7);
+  color: #4338ca;
+}
+html:not(.dark) .prose a:not([class]):hover {
+  color: #3730a3;
+}
+html:not(.dark) .prose blockquote {
+  background: rgba(79, 70, 229, 0.04);
+  color: #374151 !important;
+}
+html:not(.dark) .prose code:not(pre code) {
+  background: rgba(79, 70, 229, 0.07) !important;
+  color: #3730a3 !important;
+  border-color: rgba(79, 70, 229, 0.15);
+}
+html:not(.dark) .prose table {
+  border-color: rgba(79, 70, 229, 0.1);
+}
+html:not(.dark) .prose thead th {
+  background: rgba(79, 70, 229, 0.06);
+  color: #111827;
+}
+html:not(.dark) .prose tbody tr:hover {
+  background: rgba(79, 70, 229, 0.03);
+}
+
+/* ── 7. Code Blocks ── */
+html:not(.dark) .highlight {
+  border-color: rgba(79, 70, 229, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* ── 8. Article Cards (list页) ── */
 html:not(.dark) .article-grid .article:hover,
 html:not(.dark) article.relative:hover {
   box-shadow:
-    0 8px 32px rgba(99, 102, 241, 0.12),
-    0 0 0 1px rgba(99, 102, 241, 0.12),
-    0 2px 8px rgba(0, 0, 0, 0.05);
+    0 6px 24px rgba(79, 70, 229, 0.1),
+    0 0 0 1px rgba(79, 70, 229, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.04);
 }
-
 html:not(.dark) .recent-article-card:hover,
 html:not(.dark) .card-link:hover {
   box-shadow:
-    0 6px 24px rgba(99, 102, 241, 0.12),
-    0 0 0 1px rgba(99, 102, 241, 0.1) !important;
+    0 4px 20px rgba(79, 70, 229, 0.1),
+    0 0 0 1px rgba(79, 70, 229, 0.08) !important;
 }
 
-/* ---- Prose: Headings ---- */
-html:not(.dark) .prose h2 {
-  border-left-color: rgba(79, 70, 229, 0.6);
-  color: #1e2030;
-}
-html:not(.dark) .prose h3 {
-  border-left-color: rgba(8, 145, 178, 0.5);
-  color: #2d3142;
-}
-
-/* ---- Prose: Blockquote ---- */
-html:not(.dark) .prose blockquote {
-  background: rgba(99, 102, 241, 0.04);
-  color: #4b5280 !important;
-}
-
-/* ---- Prose: Inline Code ---- */
-html:not(.dark) .prose code:not(pre code) {
-  background: rgba(99, 102, 241, 0.07) !important;
-  color: #4338ca !important;
-  border-color: rgba(99, 102, 241, 0.15);
-}
-
-/* ---- Prose: Strong ---- */
-html:not(.dark) .prose strong {
-  color: #1e2030;
-}
-
-/* ---- Code Blocks ---- */
-html:not(.dark) .highlight {
-  border-color: rgba(99, 102, 241, 0.1);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* ---- Tables ---- */
-html:not(.dark) .prose table {
-  border-color: rgba(99, 102, 241, 0.12);
-}
-html:not(.dark) .prose thead th {
-  background: rgba(99, 102, 241, 0.06);
-  color: #1e2030;
-}
-html:not(.dark) .prose tbody tr:hover {
-  background: rgba(99, 102, 241, 0.03);
-}
-
-/* ---- TOC ---- */
-html:not(.dark) #TableOfContents a:hover {
-  background: rgba(99, 102, 241, 0.06);
-  color: #4338ca !important;
-}
-
-/* ---- Footer ---- */
-html:not(.dark) footer {
-  border-top-color: rgba(99, 102, 241, 0.08);
-  background: rgba(247, 248, 252, 0.9);
-}
-
-/* ---- Hero Section Overlay (light — softer) ---- */
-html:not(.dark) .hero-image-container::after,
-html:not(.dark) [class*="hero"] .overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(30, 32, 48, 0.05) 0%,
-    rgba(30, 32, 48, 0.45) 100%
-  ) !important;
-}
-
-html:not(.dark) .thumbAndBackground-meta,
-html:not(.dark) .article-meta-overlay {
-  background: rgba(30, 32, 48, 0.5) !important;
-}
-
-/* ---- Mobile Menu ---- */
-html:not(.dark) #menu-wrapper {
-  background: rgba(247, 248, 252, 0.95) !important;
-}
-
-/* ---- Scroll To Top ---- */
-html:not(.dark) #scroll-to-top:hover {
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3) !important;
-}
-
-/* ---- Selection ---- */
-html:not(.dark) ::selection {
-  background: rgba(99, 102, 241, 0.2);
-  color: #1e2030;
-}
-
-/* ---- Filter Bar (light) ---- */
-html:not(.dark) .filter-bar {
-  border-bottom-color: rgba(99, 102, 241, 0.1);
-}
-html:not(.dark) .filter-btn {
-  color: #4b5563;
-  border-color: rgba(99, 102, 241, 0.2);
-  background: #ffffff;
-}
-html:not(.dark) .filter-btn:hover {
-  border-color: rgba(79, 70, 229, 0.45);
-  color: #4338ca;
-  background: rgba(99, 102, 241, 0.05);
-}
-html:not(.dark) .filter-btn.active {
-  background: rgba(99, 102, 241, 0.1);
-  border-color: rgba(79, 70, 229, 0.5);
-  color: #4338ca;
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.12);
-}
-html:not(.dark) .filter-count {
-  background: rgba(99, 102, 241, 0.12);
-  color: #4338ca;
-}
-
-/* ---- Year Label ---- */
-html:not(.dark) .year-label {
-  color: #6b7280;
-  border-bottom-color: rgba(99, 102, 241, 0.08);
-}
-
-/* ---- Post Cards (light) ---- */
+/* ── 9. Post Cards ── */
 html:not(.dark) .post-card {
   background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.06) !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 2px 8px rgba(79,70,229,0.04);
 }
 html:not(.dark) .post-card:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 8px 28px rgba(99, 102, 241, 0.1),
-    0 0 0 1px rgba(99, 102, 241, 0.15) !important;
-  border-color: rgba(99, 102, 241, 0.2) !important;
+    0 8px 28px rgba(79, 70, 229, 0.1),
+    0 0 0 1px rgba(79, 70, 229, 0.14) !important;
+  border-color: rgba(79, 70, 229, 0.18) !important;
 }
 html:not(.dark) .post-card-img-overlay {
-  background: linear-gradient(
-    to bottom,
-    transparent 40%,
-    rgba(30, 32, 48, 0.4) 100%
-  );
+  background: linear-gradient(to bottom, transparent 40%, rgba(15, 18, 40, 0.38) 100%);
 }
-html:not(.dark) .post-card-title {
-  color: #1e2030;
-}
-html:not(.dark) .post-card:hover .post-card-title {
-  color: #4338ca;
-}
-html:not(.dark) .post-card-summary {
-  color: #6b7280;
-}
-html:not(.dark) .post-card-meta {
-  color: #9ca3af;
-}
-
-/* ---- Category Badge on Card (light) ---- */
+html:not(.dark) .post-card-title { color: #111827; }
+html:not(.dark) .post-card:hover .post-card-title { color: #3730a3; }
+html:not(.dark) .post-card-summary { color: #6b7280; }
+html:not(.dark) .post-card-meta { color: #9ca3af; }
 html:not(.dark) .post-card-cat {
-  background: rgba(99, 102, 241, 0.08);
-  color: #4338ca;
-  border-color: rgba(99, 102, 241, 0.2);
+  background: rgba(79, 70, 229, 0.07);
+  color: #3730a3;
+  border-color: rgba(79, 70, 229, 0.18);
 }
 html:not(.dark) .post-card-cat:hover {
-  background: rgba(99, 102, 241, 0.15) !important;
+  background: rgba(79, 70, 229, 0.14) !important;
 }
 
-/* ---- Mini Cards (light) ---- */
+/* ── 10. Mini Cards ── */
 html:not(.dark) .mini-card {
   background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 2px 8px rgba(79,70,229,0.03);
 }
 html:not(.dark) .mini-card:hover {
-  border-color: rgba(79, 70, 229, 0.25);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.12);
+  border-color: rgba(79, 70, 229, 0.22);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.1), 0 0 0 1px rgba(79, 70, 229, 0.1);
 }
-html:not(.dark) .mini-card-title {
-  color: #1e2030;
-}
-html:not(.dark) .mini-card:hover .mini-card-title {
-  color: #4338ca;
-}
-html:not(.dark) .mini-card-meta {
-  color: #9ca3af;
-}
+html:not(.dark) .mini-card-title { color: #111827; }
+html:not(.dark) .mini-card:hover .mini-card-title { color: #3730a3; }
+html:not(.dark) .mini-card-meta { color: #9ca3af; }
 html:not(.dark) .card-cat-badge {
-  background: rgba(99, 102, 241, 0.08);
-  color: #4338ca;
-  border-color: rgba(99, 102, 241, 0.18);
+  background: rgba(79, 70, 229, 0.07);
+  color: #3730a3;
+  border-color: rgba(79, 70, 229, 0.15);
 }
 
-/* ---- Featured Card (light) ---- */
+/* ── 11. Featured Card ── */
 html:not(.dark) .featured-card {
-  border-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 html:not(.dark) .featured-card:hover {
-  border-color: rgba(79, 70, 229, 0.2);
-  box-shadow: 0 12px 36px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.15);
+  border-color: rgba(79, 70, 229, 0.18);
+  box-shadow: 0 10px 32px rgba(79, 70, 229, 0.1), 0 0 0 1px rgba(79, 70, 229, 0.12);
 }
 html:not(.dark) .featured-overlay {
   background: linear-gradient(
     135deg,
-    rgba(20, 22, 40, 0.65) 0%,
-    rgba(20, 22, 40, 0.25) 50%,
-    rgba(20, 22, 40, 0.55) 100%
+    rgba(12, 14, 30, 0.7) 0%,
+    rgba(12, 14, 30, 0.2) 50%,
+    rgba(12, 14, 30, 0.55) 100%
   );
+}
+
+/* ── 12. Filter Bar ── */
+html:not(.dark) .filter-bar {
+  border-bottom-color: rgba(79, 70, 229, 0.08);
+}
+html:not(.dark) .filter-btn {
+  color: #4b5563;
+  border-color: rgba(79, 70, 229, 0.18);
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+html:not(.dark) .filter-btn:hover {
+  border-color: rgba(67, 56, 202, 0.4);
+  color: #3730a3;
+  background: rgba(79, 70, 229, 0.04);
+}
+html:not(.dark) .filter-btn.active {
+  background: rgba(79, 70, 229, 0.09);
+  border-color: rgba(67, 56, 202, 0.45);
+  color: #3730a3;
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.1);
+}
+html:not(.dark) .filter-count {
+  background: rgba(79, 70, 229, 0.1);
+  color: #3730a3;
+}
+
+/* ── 13. Year Label ── */
+html:not(.dark) .year-label {
+  color: #6b7280;
+  border-bottom-color: rgba(79, 70, 229, 0.07);
+}
+
+/* ── 14. TOC ── */
+html:not(.dark) #TableOfContents a:hover {
+  background: rgba(79, 70, 229, 0.05);
+  color: #3730a3 !important;
+}
+
+/* ── 15. Footer ── */
+html:not(.dark) footer {
+  border-top-color: rgba(79, 70, 229, 0.08);
+  background: rgba(238, 241, 248, 0.9);
+}
+
+/* ── 16. Mobile Menu ── */
+html:not(.dark) #menu-wrapper {
+  background: rgba(238, 241, 248, 0.96) !important;
+}
+
+/* ── 17. Scroll to Top ── */
+html:not(.dark) #scroll-to-top:hover {
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25) !important;
+}
+
+/* ── 18. Article Meta Overlay (hero 下方元数据条) ── */
+html:not(.dark) .thumbAndBackground-meta,
+html:not(.dark) .article-meta-overlay {
+  background: rgba(12, 14, 30, 0.55) !important;
+}
+
+/* ── 19. Selection ── */
+html:not(.dark) ::selection {
+  background: rgba(79, 70, 229, 0.18);
+  color: #111827;
 }
