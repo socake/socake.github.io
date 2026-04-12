@@ -1,6 +1,6 @@
 ---
 title: "LangChain 从入门到实战：构建 LLM 应用的工程框架"
-date: 2026-04-12T12:00:00+08:00
+date: 2026-02-09T11:01:00+08:00
 draft: false
 tags: ["LangChain", "大模型", "LLM", "Agent", "LangGraph", "RAG", "FastAPI"]
 categories: ["大模型"]

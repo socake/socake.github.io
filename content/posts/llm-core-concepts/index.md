@@ -1,6 +1,6 @@
 ---
 title: "大模型核心概念：工程师需要理解的 LLM 基础"
-date: 2026-04-12T14:00:00+08:00
+date: 2025-11-17T11:37:00+08:00
 draft: false
 tags: ["LLM", "大模型", "Token", "Embedding", "Prompt Engineering", "AI工程化"]
 categories: ["大模型"]

@@ -1,6 +1,6 @@
 ---
 title: "基于 Error Budget 的 Prometheus 告警设计——燃烧率告警实战"
-date: 2026-04-12T12:00:00+08:00
+date: 2025-12-25T10:40:00+08:00
 draft: false
 tags: ["Prometheus", "SLO", "Error Budget", "告警", "PromQL", "SRE"]
 categories: ["监控告警"]

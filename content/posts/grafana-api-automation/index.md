@@ -1,6 +1,6 @@
 ---
 title: "Grafana API 自动化：用代码管理 Dashboard、数据源和告警"
-date: 2026-04-11T13:00:00+08:00
+date: 2025-03-18T11:26:00+08:00
 draft: false
 tags: ["Grafana", "API", "自动化", "可观测性", "运维"]
 categories: ["可观测性"]

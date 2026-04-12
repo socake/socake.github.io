@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 集群升级策略：零停机升级的完整实践指南"
-date: 2026-04-12T10:00:00+08:00
+date: 2025-05-14T09:56:00+08:00
 draft: false
 tags: ["Kubernetes", "集群升级", "EKS", "运维", "零停机", "SRE"]
 categories: ["Kubernetes"]

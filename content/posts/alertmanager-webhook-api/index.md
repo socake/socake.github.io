@@ -1,6 +1,6 @@
 ---
 title: "Alertmanager Webhook 开发：自定义告警处理与 API 集成"
-date: 2026-04-11T09:00:00+08:00
+date: 2025-03-25T09:52:00+08:00
 draft: false
 tags: ["Alertmanager", "Webhook", "Prometheus", "Python", "告警"]
 categories: ["可观测性"]

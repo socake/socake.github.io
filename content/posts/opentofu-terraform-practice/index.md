@@ -1,6 +1,6 @@
 ---
 title: "OpenTofu 实战：开源 Terraform 管理 AWS 和阿里云基础设施"
-date: 2026-04-11T13:00:00+08:00
+date: 2025-06-18T11:01:00+08:00
 draft: false
 tags: ["OpenTofu", "Terraform", "IaC", "AWS", "阿里云", "DevOps"]
 categories: ["基础设施"]

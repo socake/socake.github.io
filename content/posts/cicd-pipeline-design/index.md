@@ -1,6 +1,6 @@
 ---
 title: "CI/CD 流水线设计：从代码提交到自动部署的工程化实践"
-date: 2026-04-09T14:00:00+08:00
+date: 2025-02-09T09:17:00+08:00
 draft: false
 tags: ["CI/CD", "DevOps", "自动化", "部署", "GitOps"]
 categories: ["DevOps"]

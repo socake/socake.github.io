@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 存储体系生产实践：PV/PVC/StorageClass 全解"
-date: 2026-04-12T12:00:00+08:00
+date: 2025-05-06T13:50:00+08:00
 draft: false
 tags: ["Kubernetes", "存储", "PV", "PVC", "StorageClass", "AWS EBS", "EFS"]
 categories: ["Kubernetes"]

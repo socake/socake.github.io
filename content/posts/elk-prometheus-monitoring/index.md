@@ -1,6 +1,6 @@
 ---
 title: "ELK 集群监控：用 Prometheus + Grafana 监控 Elasticsearch 健康"
-date: 2026-04-11T11:30:00+08:00
+date: 2025-10-08T11:33:00+08:00
 draft: false
 tags: ["Elasticsearch", "Prometheus", "监控", "ELK", "Grafana"]
 categories: ["ELK Stack"]

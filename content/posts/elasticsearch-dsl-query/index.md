@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch 查询实战：从 URI Search 到 DSL 复杂聚合"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-10-01T09:17:00+08:00
 draft: false
 tags: ["Elasticsearch", "ELK", "查询", "DSL", "运维"]
 categories: ["ELK Stack"]

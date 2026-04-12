@@ -1,6 +1,6 @@
 ---
 title: "Cursor AI 编程助手深度使用指南"
-date: 2026-04-12T15:00:00+08:00
+date: 2026-03-25T13:07:00+08:00
 draft: false
 tags: ["Cursor", "AI编程", "IDE", "效率工具", "代码补全"]
 categories: ["AI工具"]

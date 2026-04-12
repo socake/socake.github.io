@@ -1,6 +1,6 @@
 ---
 title: "Embedding 模型选型与优化实战：从 BGE 到 OpenAI Embedding"
-date: 2026-04-12T10:00:00+08:00
+date: 2026-02-21T09:30:00+08:00
 draft: false
 tags: ["AI", "Embedding", "RAG", "向量检索", "NLP", "大模型"]
 categories: ["AI/机器学习"]

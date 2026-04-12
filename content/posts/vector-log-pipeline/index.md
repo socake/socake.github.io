@@ -1,6 +1,6 @@
 ---
 title: "Vector 日志处理管道：高性能日志采集与转换实践"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-10-14T11:01:00+08:00
 draft: false
 tags: ["Vector", "日志", "ELK", "运维", "Rust"]
 categories: ["ELK Stack"]

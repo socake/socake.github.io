@@ -1,6 +1,6 @@
 ---
 title: "2026 大模型全景：主力模型横评与选型指南"
-date: 2026-04-12T09:00:00+08:00
+date: 2026-01-09T13:50:00+08:00
 draft: false
 tags: ["大模型", "LLM", "GPT", "Claude", "Gemini", "Llama", "DeepSeek", "推理模型", "Agent"]
 categories: ["大模型"]

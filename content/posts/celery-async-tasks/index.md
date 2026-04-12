@@ -1,6 +1,6 @@
 ---
 title: "Celery 异步任务详解：任务队列、重试策略与分布式部署"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-04-22T09:44:00+08:00
 draft: false
 tags: ["Celery", "Python", "异步", "消息队列", "运维"]
 categories: ["编程"]

@@ -1,6 +1,6 @@
 ---
 title: "零信任网络改造：从公网暴露到 Headscale VPN"
-date: 2025-12-09T19:00:00+08:00
+date: 2025-11-22T13:37:00+08:00
 draft: false
 tags: ["安全", "网络", "Headscale", "零信任", "运维"]
 categories: ["Kubernetes"]

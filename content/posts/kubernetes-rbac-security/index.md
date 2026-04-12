@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes RBAC 安全加固实战：最小权限到 NetworkPolicy"
-date: 2026-04-12T11:00:00+08:00
+date: 2025-01-24T12:36:00+08:00
 draft: false
 tags: ["Kubernetes", "RBAC", "安全", "NetworkPolicy", "ServiceAccount"]
 categories: ["Kubernetes"]

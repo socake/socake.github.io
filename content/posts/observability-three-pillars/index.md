@@ -1,6 +1,6 @@
 ---
 title: "可观测性三支柱实战：Metrics/Logs/Traces 联动"
-date: 2026-04-12T12:00:00+08:00
+date: 2025-07-14T09:52:00+08:00
 draft: false
 tags: ["可观测性", "Prometheus", "Loki", "Jaeger", "OpenTelemetry", "Grafana"]
 categories: ["可观测性"]

@@ -1,6 +1,6 @@
 ---
 title: "Crossplane：用 GitOps 方式管理云资源（AWS/阿里云）"
-date: 2026-04-11T15:00:00+08:00
+date: 2025-06-26T12:44:00+08:00
 draft: false
 tags: ["Crossplane", "GitOps", "AWS", "云原生", "基础设施即代码", "2026"]
 categories: ["云原生"]

@@ -1,6 +1,6 @@
 ---
 title: "Thanos 实战：多 K8s 集群 Prometheus 统一监控与长期存储"
-date: 2026-04-11T14:00:00+08:00
+date: 2025-07-26T11:37:00+08:00
 draft: false
 tags: ["Thanos", "Prometheus", "Kubernetes", "可观测性", "多集群"]
 categories: ["可观测性"]

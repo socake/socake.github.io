@@ -1,6 +1,6 @@
 ---
 title: "阿里云 SDK 运维自动化：ECS/ACK/RDS 资源管理与巡检脚本"
-date: 2026-04-11T15:00:00+08:00
+date: 2025-12-04T12:56:00+08:00
 draft: false
 tags: ["阿里云", "Python", "SDK", "自动化", "运维"]
 categories: ["编程"]

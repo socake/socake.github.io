@@ -1,6 +1,6 @@
 ---
 title: "高级运维/DevOps 工程师面试题精选：系统设计与深度考察"
-date: 2026-04-11T17:00:00+08:00
+date: 2025-12-11T12:51:00+08:00
 draft: false
 tags: ["面试", "DevOps", "SRE", "Kubernetes", "系统设计", "职业发展"]
 categories: ["职业发展"]

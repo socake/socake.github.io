@@ -1,6 +1,6 @@
 ---
 title: 'LLM 应用安全：Prompt Injection 防御与 AI Guardrails 实战'
-date: 2026-04-12T10:30:00+08:00
+date: 2026-01-23T11:01:00+08:00
 draft: false
 tags: ["AI", "安全", "Prompt Injection", "Guardrails", "LLM", "大模型安全"]
 categories: ["AI/机器学习"]

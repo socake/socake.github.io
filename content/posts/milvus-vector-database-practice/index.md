@@ -1,6 +1,6 @@
 ---
 title: "Milvus 向量数据库实战：从部署到生产应用"
-date: 2026-04-12T09:30:00+08:00
+date: 2025-11-06T09:52:00+08:00
 draft: false
 tags: ["Milvus", "向量数据库", "RAG", "语义搜索", "Python"]
 categories: ["大模型"]

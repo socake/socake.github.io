@@ -1,6 +1,6 @@
 ---
 title: "业务上云实战：传统应用容器化迁移的踩坑与经验"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-05-19T12:36:00+08:00
 draft: false
 tags: ["Kubernetes", "迁移", "容器化", "DevOps", "云原生"]
 categories: ["Kubernetes"]

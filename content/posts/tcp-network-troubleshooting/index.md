@@ -1,6 +1,6 @@
 ---
 title: "TCP/IP 网络排障：抓包与连接问题诊断"
-date: 2026-04-12T19:00:00+08:00
+date: 2025-10-21T11:44:00+08:00
 draft: false
 tags: ["tcp", "tcpdump", "network", "troubleshooting", "linux", "kubernetes"]
 categories: ["Linux"]

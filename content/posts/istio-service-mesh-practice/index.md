@@ -1,6 +1,6 @@
 ---
 title: "Istio Service Mesh 落地实战：从 Sidecar 注入到灰度发布"
-date: 2026-04-12T10:00:00+08:00
+date: 2025-06-06T12:06:00+08:00
 draft: false
 tags: ["Istio", "Service Mesh", "Kubernetes", "灰度发布", "mTLS"]
 categories: ["Kubernetes"]

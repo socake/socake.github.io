@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch 备份与恢复：快照管理与跨集群迁移实践"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-10-03T12:06:00+08:00
 draft: false
 tags: ["Elasticsearch", "ELK", "备份", "运维", "S3"]
 categories: ["ELK Stack"]

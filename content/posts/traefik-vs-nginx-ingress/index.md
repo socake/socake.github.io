@@ -1,6 +1,6 @@
 ---
 title: "从 Nginx Ingress 迁移到 Traefik：为什么换，怎么换"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-04-27T12:56:00+08:00
 draft: false
 tags: ["Traefik", "Kubernetes", "Ingress", "网络", "DevOps"]
 categories: ["Kubernetes"]

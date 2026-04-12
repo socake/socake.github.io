@@ -1,6 +1,6 @@
 ---
 title: "数据库运维实践：MySQL 高可用与 PostgreSQL 调优经验"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-04-08T13:37:00+08:00
 draft: false
 tags: ["MySQL", "PostgreSQL", "数据库", "运维", "高可用"]
 categories: ["数据库"]

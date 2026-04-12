@@ -1,6 +1,6 @@
 ---
 title: "Filebeat + Logstash 日志采集管道：大规模日志处理实战"
-date: 2026-04-11T07:00:00+08:00
+date: 2025-10-10T10:20:00+08:00
 draft: false
 tags: ["Filebeat", "Logstash", "ELK", "日志", "运维"]
 categories: ["ELK Stack"]

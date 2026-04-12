@@ -1,6 +1,6 @@
 ---
 title: "Consul 服务注册与发现：从入门到生产级健康检查"
-date: 2026-04-11T09:30:00+08:00
+date: 2025-02-18T11:33:00+08:00
 draft: false
 tags: ["Consul", "服务发现", "微服务", "运维", "HashiCorp"]
 categories: ["基础设施"]

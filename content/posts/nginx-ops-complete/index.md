@@ -1,6 +1,6 @@
 ---
 title: "Nginx 运维完全指南：反向代理、负载均衡、HTTPS 与限流"
-date: 2026-04-11T15:00:00+08:00
+date: 2024-10-24T12:06:00+08:00
 draft: false
 tags: ["Nginx", "运维", "反向代理", "负载均衡", "HTTPS", "Linux"]
 categories: ["Linux"]

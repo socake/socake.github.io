@@ -1,6 +1,6 @@
 ---
 title: "GitOps 落地实战：ArgoCD + Kustomize 多环境管理"
-date: 2026-04-06T10:00:00+08:00
+date: 2025-06-03T09:17:00+08:00
 draft: false
 tags: ["GitOps", "ArgoCD", "Kustomize", "DevOps", "Kubernetes"]
 categories: ["Kubernetes"]

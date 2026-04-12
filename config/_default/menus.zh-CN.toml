@@ -24,7 +24,7 @@
 [[main]]
   name = "Linux"
   parent = "运维"
-  pageRef = "categories/linux"
+  pageRef = "docs/Linux"
   weight = 21
 
 [[main]]

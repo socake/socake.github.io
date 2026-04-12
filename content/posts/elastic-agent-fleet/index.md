@@ -1,6 +1,6 @@
 ---
 title: "Elastic Agent + Fleet：下一代统一日志采集管理实践"
-date: 2026-04-11T13:00:00+08:00
+date: 2025-03-06T11:44:00+08:00
 draft: false
 tags: ["Elastic Agent", "Fleet", "ELK", "日志", "K8s"]
 categories: ["ELK Stack"]

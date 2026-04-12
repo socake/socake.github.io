@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 网络深度解析——CNI、kube-proxy、NetworkPolicy 完全指南"
-date: 2026-04-12T12:00:00+08:00
+date: 2025-01-10T13:50:00+08:00
 draft: false
 tags: ["Kubernetes", "网络", "CNI", "NetworkPolicy", "Cilium", "kube-proxy"]
 categories: ["Kubernetes"]

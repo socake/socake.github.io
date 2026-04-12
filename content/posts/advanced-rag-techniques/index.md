@@ -1,6 +1,6 @@
 ---
 title: "Advanced RAG：超越 Naive RAG 的高级检索增强技术"
-date: 2026-04-12T11:00:00+08:00
+date: 2026-02-04T11:33:00+08:00
 draft: false
 tags: ["RAG", "向量检索", "AI", "LangChain", "大模型", "知识库"]
 categories: ["AI/机器学习"]

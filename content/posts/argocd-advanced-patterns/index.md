@@ -1,6 +1,6 @@
 ---
 title: "ArgoCD 高级模式：ApplicationSet、Sync Waves 与 GitOps 企业级实践"
-date: 2026-04-12T10:00:00+08:00
+date: 2025-05-27T11:01:00+08:00
 draft: false
 tags: ["ArgoCD", "GitOps", "Kubernetes", "ApplicationSet", "平台工程", "CI/CD"]
 categories: ["DevOps"]

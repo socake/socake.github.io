@@ -1,6 +1,6 @@
 ---
 title: "RAG 系统设计与实战：检索增强生成完全指南"
-date: 2026-04-12T11:00:00+08:00
+date: 2025-11-11T11:41:00+08:00
 draft: false
 tags: ["RAG", "大模型", "向量数据库", "Embedding", "LangChain", "检索增强生成"]
 categories: ["大模型"]

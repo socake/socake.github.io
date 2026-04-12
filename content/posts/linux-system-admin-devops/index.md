@@ -1,6 +1,6 @@
 ---
 title: "Linux 系统管理精要——DevOps 工程师必知的系统层知识"
-date: 2026-04-12T10:00:00+08:00
+date: 2024-09-16T13:36:00+08:00
 draft: false
 tags: ["Linux", "DevOps", "系统管理", "systemd", "运维"]
 categories: ["Linux"]

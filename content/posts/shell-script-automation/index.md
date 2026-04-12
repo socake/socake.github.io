@@ -1,6 +1,6 @@
 ---
 title: "Shell 脚本实战：Bash 自动化运维从入门到工程化"
-date: 2026-04-12T08:00:00+08:00
+date: 2024-10-02T13:03:00+08:00
 draft: false
 tags: ["Shell", "Bash", "自动化", "Linux", "运维"]
 categories: ["Linux"]

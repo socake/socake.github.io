@@ -1,6 +1,6 @@
 ---
 title: "可观测性建设：从 Prometheus 采集到 Grafana 告警联动"
-date: 2026-04-07T10:00:00+08:00
+date: 2024-12-06T09:30:00+08:00
 draft: false
 tags: ["可观测性", "Prometheus", "Grafana", "SRE", "监控"]
 categories: ["可观测性"]

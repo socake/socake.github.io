@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 资源管理实战——QoS、ResourceQuota、VPA 体系化实践"
-date: 2026-04-12T11:00:00+08:00
+date: 2025-01-16T13:36:00+08:00
 draft: false
 tags: ["Kubernetes", "资源管理", "QoS", "HPA", "VPA", "性能"]
 categories: ["Kubernetes"]

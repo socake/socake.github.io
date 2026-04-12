@@ -1,6 +1,6 @@
 ---
 title: "DevOps/运维工程师面试题精选：K8s、Linux、网络高频考点"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-12-07T13:07:00+08:00
 draft: false
 tags: ["面试", "Kubernetes", "Linux", "网络", "运维", "DevOps"]
 categories: ["职业发展"]

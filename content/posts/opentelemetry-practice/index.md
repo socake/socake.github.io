@@ -1,6 +1,6 @@
 ---
 title: "OpenTelemetry 落地实践：统一采集 Traces、Metrics、Logs"
-date: 2026-04-11T14:00:00+08:00
+date: 2025-07-20T11:41:00+08:00
 draft: false
 tags: ["OpenTelemetry", "可观测性", "Traces", "Grafana", "Tempo", "Loki"]
 categories: ["可观测性"]

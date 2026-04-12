@@ -1,6 +1,6 @@
 ---
 title: "CoreDNS 深度排障：K8s DNS 问题完全指南"
-date: 2026-04-12T18:00:00+08:00
+date: 2025-10-29T09:30:00+08:00
 draft: false
 tags: ["coredns", "kubernetes", "dns", "troubleshooting", "networking"]
 categories: ["Kubernetes"]

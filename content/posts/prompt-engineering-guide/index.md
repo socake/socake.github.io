@@ -1,6 +1,6 @@
 ---
 title: "Prompt Engineering 完全指南：从入门到工程化"
-date: 2026-04-12T10:00:00+08:00
+date: 2026-03-09T11:37:00+08:00
 draft: false
 tags: ["Prompt Engineering", "大模型", "LLM", "Chain-of-Thought", "Few-shot", "结构化输出"]
 categories: ["大模型"]

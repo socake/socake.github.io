@@ -1,6 +1,6 @@
 ---
 title: "K8s Gateway API：告别 Ingress，拥抱下一代流量路由"
-date: 2026-04-11T13:00:00+08:00
+date: 2025-05-12T13:36:00+08:00
 draft: false
 tags: ["Kubernetes", "Gateway API", "Ingress", "网络", "云原生", "2026"]
 categories: ["Kubernetes"]

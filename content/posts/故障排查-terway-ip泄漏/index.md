@@ -1,6 +1,6 @@
 ---
 title: "故障排查实录：Terway CRD IPAM IP 泄漏导致 Pod 无法调度"
-date: 2025-12-08T20:00:00+08:00
+date: 2026-04-07T09:54:00+08:00
 draft: false
 tags: ["故障排查", "Kubernetes", "Terway", "网络", "阿里云", "IPAM"]
 categories: ["Kubernetes"]

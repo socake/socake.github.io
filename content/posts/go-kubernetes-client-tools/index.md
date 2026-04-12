@@ -1,6 +1,6 @@
 ---
 title: "用 Go 写 K8s 运维工具：client-go 实战"
-date: 2026-04-12T16:00:00+08:00
+date: 2025-08-25T09:08:00+08:00
 draft: false
 tags: ["golang", "kubernetes", "client-go", "devops-tools", "informer"]
 categories: ["编程"]

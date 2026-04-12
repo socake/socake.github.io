@@ -1,6 +1,6 @@
 ---
 title: "Python 对接 Prometheus：查询监控数据与告警状态自动化"
-date: 2026-04-11T09:00:00+08:00
+date: 2024-11-25T11:44:00+08:00
 draft: false
 tags: ["Python", "Prometheus", "监控", "自动化", "运维"]
 categories: ["编程"]

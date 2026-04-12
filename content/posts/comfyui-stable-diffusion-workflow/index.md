@@ -1,6 +1,6 @@
 ---
 title: "ComfyUI + Stable Diffusion：工作流自动化图像生成"
-date: 2026-04-12T13:30:00+08:00
+date: 2026-03-23T12:56:00+08:00
 draft: false
 tags: ["ComfyUI", "Stable Diffusion", "FLUX", "图像生成", "工作流"]
 categories: ["AI工具"]

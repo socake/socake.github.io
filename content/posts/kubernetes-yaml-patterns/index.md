@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes YAML 工程化：常用资源模板与生产最佳实践"
-date: 2026-04-11T08:00:00+08:00
+date: 2025-01-19T09:56:00+08:00
 draft: false
 tags: ["Kubernetes", "YAML", "DevOps", "运维", "云原生"]
 categories: ["Kubernetes"]

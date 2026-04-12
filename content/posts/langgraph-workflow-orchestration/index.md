@@ -1,6 +1,6 @@
 ---
 title: "LangGraph 工作流编排：构建有状态的 AI 应用"
-date: 2026-04-12T14:30:00+08:00
+date: 2026-02-15T12:44:00+08:00
 draft: false
 tags: ["LangGraph", "工作流", "状态机", "AI Agent", "LangChain"]
 categories: ["大模型"]

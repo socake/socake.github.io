@@ -1,6 +1,6 @@
 ---
 title: "Prometheus 服务发现深度解析：kubernetes_sd_configs 实战"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-03-15T09:30:00+08:00
 draft: false
 tags: ["Prometheus", "服务发现", "Kubernetes", "可观测性", "运维"]
 categories: ["可观测性"]

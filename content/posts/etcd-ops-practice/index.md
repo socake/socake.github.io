@@ -1,6 +1,6 @@
 ---
 title: "ETCD 运维实战：部署、备份恢复与 K8s 集群数据管理"
-date: 2026-04-11T08:00:00+08:00
+date: 2025-04-13T13:37:00+08:00
 draft: false
 tags: ["ETCD", "Kubernetes", "运维", "分布式", "备份"]
 categories: ["Kubernetes"]

@@ -1,6 +1,6 @@
 ---
 title: "Prometheus 进程监控：process-exporter 实战与告警配置"
-date: 2026-04-11T07:00:00+08:00
+date: 2025-12-18T11:20:00+08:00
 draft: false
 tags: ["Prometheus", "process-exporter", "监控", "运维", "可观测性"]
 categories: ["可观测性"]

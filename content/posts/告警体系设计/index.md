@@ -1,6 +1,6 @@
 ---
 title: "如何设计一个好的告警体系"
-date: 2025-12-09T18:00:00+08:00
+date: 2025-11-18T13:37:00+08:00
 draft: false
 tags: ["可观测性", "告警", "SRE", "运维"]
 categories: ["Kubernetes"]

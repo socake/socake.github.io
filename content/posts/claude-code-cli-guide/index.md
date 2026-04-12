@@ -1,6 +1,6 @@
 ---
 title: "Claude Code CLI 使用指南：AI 驱动的终端编程助手"
-date: 2026-04-12T17:00:00+08:00
+date: 2026-02-26T12:27:00+08:00
 draft: false
 tags: ["Claude Code", "CLI", "AI编程", "终端", "DevOps自动化"]
 categories: ["AI工具"]

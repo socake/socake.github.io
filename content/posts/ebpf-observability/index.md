@@ -1,6 +1,6 @@
 ---
 title: "eBPF 可观测性实践：Cilium 网络监控与 Tetragon 安全审计"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-09-17T12:36:00+08:00
 draft: false
 tags: ["eBPF", "Cilium", "Tetragon", "可观测性", "Kubernetes", "安全"]
 categories: ["云原生"]

@@ -1,6 +1,6 @@
 ---
 title: "OpenAI API 工程化实践：从 Hello World 到生产"
-date: 2026-04-12T14:00:00+08:00
+date: 2026-03-03T11:41:00+08:00
 draft: false
 tags: ["OpenAI", "大模型", "API开发", "Function Calling", "Structured Output", "Batch API", "Embeddings"]
 categories: ["大模型"]

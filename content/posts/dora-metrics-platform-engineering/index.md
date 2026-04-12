@@ -1,6 +1,6 @@
 ---
 title: "DORA 指标与平台工程效能度量：用数据驱动 DevOps 改进"
-date: 2026-04-12T10:00:00+08:00
+date: 2025-07-12T12:27:00+08:00
 draft: false
 tags: ["DevOps", "DORA", "平台工程", "工程效能", "度量", "SRE"]
 categories: ["DevOps"]

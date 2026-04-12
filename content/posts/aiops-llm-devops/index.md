@@ -1,6 +1,6 @@
 ---
 title: "大模型赋能运维：LLM 在故障排查和自动化中的实际应用"
-date: 2026-04-11T14:00:00+08:00
+date: 2026-01-31T12:06:00+08:00
 draft: false
 tags: ["AI", "大模型", "LLM", "运维", "AIOPS", "Claude"]
 categories: ["AIOPS"]

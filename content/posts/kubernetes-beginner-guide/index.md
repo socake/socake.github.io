@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 从零开始：工程师视角的入门指南"
-date: 2026-04-12T10:00:00+08:00
+date: 2024-10-20T09:17:00+08:00
 draft: false
 tags: ["Kubernetes", "容器", "云原生", "Docker", "入门"]
 categories: ["Kubernetes"]

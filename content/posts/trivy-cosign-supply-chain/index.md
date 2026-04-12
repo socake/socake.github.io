@@ -1,6 +1,6 @@
 ---
 title: "供应链安全：Trivy 镜像扫描 + Cosign 签名验证实践"
-date: 2026-04-11T09:00:00+08:00
+date: 2025-09-06T13:50:00+08:00
 draft: false
 tags: ["Trivy", "Cosign", "安全", "镜像", "Kubernetes", "SLSA"]
 categories: ["安全"]

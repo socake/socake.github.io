@@ -1,6 +1,6 @@
 ---
 title: "Jenkins + Kubernetes：动态 Agent 构建与流水线最佳实践"
-date: 2026-04-11T09:30:00+08:00
+date: 2025-01-26T13:03:00+08:00
 draft: false
 tags: ["Jenkins", "CI/CD", "Kubernetes", "DevOps", "Pipeline"]
 categories: ["CI/CD"]

@@ -1,6 +1,6 @@
 ---
 title: "GitHub Copilot 工程化使用：不只是代码补全"
-date: 2026-04-12T16:00:00+08:00
+date: 2026-03-28T12:51:00+08:00
 draft: false
 tags: ["GitHub Copilot", "AI编程", "DevOps", "Terraform", "Kubernetes"]
 categories: ["AI工具"]

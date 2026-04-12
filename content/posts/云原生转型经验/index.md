@@ -1,6 +1,6 @@
 ---
 title: "云原生转型实践：从传统运维到 K8s 的迁移经验"
-date: 2025-12-09T21:00:00+08:00
+date: 2025-08-14T12:56:00+08:00
 draft: false
 tags: ["Kubernetes", "云原生", "运维", "DevOps", "职业发展"]
 categories: ["博客"]

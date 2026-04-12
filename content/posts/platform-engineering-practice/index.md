@@ -1,6 +1,6 @@
 ---
 title: "平台工程实践：构建 Internal Developer Platform"
-date: 2026-04-12T13:00:00+08:00
+date: 2025-08-10T09:44:00+08:00
 draft: false
 tags: ["Platform Engineering", "IDP", "Backstage", "Kubernetes", "DevOps", "Golden Path"]
 categories: ["Kubernetes"]

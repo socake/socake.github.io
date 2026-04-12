@@ -1,6 +1,6 @@
 ---
 title: "Secret 管理实战：HashiCorp Vault + External Secrets Operator"
-date: 2026-04-11T07:00:00+08:00
+date: 2025-02-20T10:20:00+08:00
 draft: false
 tags: ["Vault", "Secret", "Kubernetes", "安全", "运维"]
 categories: ["安全"]

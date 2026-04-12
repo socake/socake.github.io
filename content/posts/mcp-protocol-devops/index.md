@@ -1,6 +1,6 @@
 ---
 title: "MCP 协议实战：给 AI Agent 接上运维工具"
-date: 2026-04-11T09:00:00+08:00
+date: 2026-02-27T09:52:00+08:00
 draft: false
 tags: ["MCP", "AI Agent", "Claude", "运维", "自动化", "2026"]
 categories: ["AIOPS"]

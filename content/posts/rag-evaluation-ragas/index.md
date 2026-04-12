@@ -1,6 +1,6 @@
 ---
 title: "RAG 评估体系：RAGAS 指标与幻觉检测实践"
-date: 2026-04-12T16:00:00+08:00
+date: 2026-02-05T10:20:00+08:00
 draft: false
 tags: ["RAG", "RAGAS", "大模型评估", "幻觉检测", "AI工程化", "向量数据库"]
 categories: ["大模型"]

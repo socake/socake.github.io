@@ -1,6 +1,6 @@
 ---
 title: "Python 定时任务工程化：APScheduler 与 Celery Beat 实战对比"
-date: 2026-04-11T08:00:00+08:00
+date: 2025-11-01T11:26:00+08:00
 draft: false
 tags: ["Python", "APScheduler", "Celery", "自动化", "运维"]
 categories: ["编程"]

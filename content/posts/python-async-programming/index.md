@@ -1,6 +1,6 @@
 ---
 title: "Python 异步编程实战：asyncio 在 AI 应用中的使用"
-date: 2026-04-12T15:00:00+08:00
+date: 2024-11-22T12:44:00+08:00
 draft: false
 tags: ["Python", "asyncio", "异步编程", "FastAPI", "AI工程化", "LLM"]
 categories: ["编程"]

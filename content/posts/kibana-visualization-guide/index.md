@@ -1,6 +1,6 @@
 ---
 title: "Kibana 实战：从日志查询到 Dashboard 可视化的完整指南"
-date: 2026-04-11T08:30:00+08:00
+date: 2025-12-13T09:08:00+08:00
 draft: false
 tags: ["Kibana", "ELK", "可视化", "日志", "KQL"]
 categories: ["ELK Stack"]

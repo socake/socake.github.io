@@ -1,6 +1,6 @@
 ---
 title: "多集群 Kubernetes 运维：跨集群管理与统一可观测"
-date: 2026-04-12T17:00:00+08:00
+date: 2025-05-21T13:03:00+08:00
 draft: false
 tags: ["Kubernetes", "多集群", "ArgoCD", "Thanos", "Loki", "Victoria Metrics", "SRE"]
 categories: ["Kubernetes"]

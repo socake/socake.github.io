@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 成本优化实战：系统性降本的四条路径"
-date: 2025-12-08T16:00:00+08:00
+date: 2025-08-18T13:07:00+08:00
 draft: false
 tags: ["Kubernetes", "Karpenter", "成本优化", "FinOps", "运维"]
 categories: ["Kubernetes"]

@@ -1,6 +1,6 @@
 ---
 title: "基础设施即代码：Terraform 入门与实践"
-date: 2025-12-09T20:00:00+08:00
+date: 2025-11-30T09:44:00+08:00
 draft: false
 tags: ["Terraform", "IaC", "AWS", "DevOps"]
 categories: ["CI/CD"]

@@ -1,6 +1,6 @@
 ---
 title: 'LLM 生产服务化：vLLM 部署与 GPU 推理优化实战'
-date: 2026-04-12T10:00:00+08:00
+date: 2026-01-13T13:36:00+08:00
 draft: false
 tags: ["AI", "vLLM", "LLM", "GPU", "推理", "Kubernetes", "MLOps"]
 categories: ["AI/机器学习"]

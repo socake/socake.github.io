@@ -1,6 +1,6 @@
 ---
 title: "EFK 日志系统实战：Fluent Bit + Fluentd + Elasticsearch 完整部署"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-03-05T12:44:00+08:00
 draft: false
 tags: ["EFK", "Elasticsearch", "Fluent Bit", "Fluentd", "日志", "Kubernetes"]
 categories: ["可观测性"]

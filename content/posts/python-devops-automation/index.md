@@ -1,6 +1,6 @@
 ---
 title: "Python 自动化运维：从脚本到完整工具的工程化实践"
-date: 2026-04-10T10:00:00+08:00
+date: 2024-11-12T11:01:00+08:00
 draft: false
 tags: ["Python", "自动化", "运维", "DevOps", "CLI"]
 categories: ["编程"]

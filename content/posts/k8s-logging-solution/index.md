@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 日志采集方案选型：从技术对比到生产落地"
-date: 2026-04-11T10:00:00+08:00
+date: 2025-02-25T11:01:00+08:00
 draft: false
 tags: ["Kubernetes", "日志", "EFK", "Loki", "可观测性", "运维"]
 categories: ["Kubernetes"]

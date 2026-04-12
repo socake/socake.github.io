@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch 索引策略：ILM 生命周期管理与写入性能优化"
-date: 2026-04-11T09:00:00+08:00
+date: 2025-09-24T11:01:00+08:00
 draft: false
 tags: ["Elasticsearch", "ELK", "索引", "性能优化", "运维"]
 categories: ["ELK Stack"]

@@ -1,6 +1,6 @@
 ---
 title: "运维工程师的 AI 工具实践"
-date: 2025-12-09T20:00:00+08:00
+date: 2026-04-03T11:20:00+08:00
 draft: false
 tags: ["AI", "效率", "运维", "Claude", "ChatGPT"]
 categories: ["博客"]

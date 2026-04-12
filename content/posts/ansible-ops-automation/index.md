@@ -1,6 +1,6 @@
 ---
 title: "Ansible 批量运维自动化：从临时命令到 Role 工程化"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-02-12T12:06:00+08:00
 draft: false
 tags: ["Ansible", "自动化", "运维", "配置管理", "DevOps"]
 categories: ["Linux"]

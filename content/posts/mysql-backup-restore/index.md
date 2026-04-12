@@ -1,6 +1,6 @@
 ---
 title: "MySQL 备份与恢复实战：从 mysqldump 到 XtraBackup 的完整方案"
-date: 2026-04-11T14:00:00+08:00
+date: 2024-11-01T11:33:00+08:00
 draft: false
 tags: ["MySQL", "数据库", "备份", "运维", "高可用"]
 categories: ["数据库"]

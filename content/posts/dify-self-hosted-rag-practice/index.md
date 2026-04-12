@@ -1,6 +1,6 @@
 ---
 title: "Dify 私有化部署与 RAG 应用构建实战"
-date: 2026-04-12T18:00:00+08:00
+date: 2026-03-12T13:37:00+08:00
 draft: false
 tags: ["Dify", "RAG", "私有化部署", "知识库", "LLM应用"]
 categories: ["AI应用"]

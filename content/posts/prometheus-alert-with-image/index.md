@@ -1,6 +1,6 @@
 ---
 title: "告警带图实战：Grafana Render + 钉钉推送趋势图"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-12-23T09:54:00+08:00
 draft: false
 tags: ["Grafana", "Prometheus", "告警", "钉钉", "可观测性"]
 categories: ["可观测性"]

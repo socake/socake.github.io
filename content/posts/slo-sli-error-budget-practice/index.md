@@ -1,6 +1,6 @@
 ---
 title: "SLO/SLI/Error Budget 从理论到落地：SRE 可靠性工程实战"
-date: 2026-04-12T13:00:00+08:00
+date: 2025-08-01T13:37:00+08:00
 draft: false
 tags: ["SRE", "SLO", "SLI", "Error Budget", "Prometheus", "Grafana", "可观测性"]
 categories: ["Kubernetes"]

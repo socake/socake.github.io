@@ -1,6 +1,6 @@
 ---
 title: "VictoriaMetrics：比 Prometheus 更省资源的监控存储方案"
-date: 2026-04-11T11:00:00+08:00
+date: 2025-07-28T13:37:00+08:00
 draft: false
 tags: ["VictoriaMetrics", "Prometheus", "监控", "可观测性", "运维", "2026"]
 categories: ["可观测性"]

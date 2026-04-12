@@ -1,6 +1,6 @@
 ---
 title: "Helm 工程化实践：从 Chart 设计到多环境管理"
-date: 2026-04-12T09:00:00+08:00
+date: 2025-06-14T10:20:00+08:00
 draft: false
 tags: ["Helm", "Kubernetes", "Chart", "DevOps", "GitOps"]
 categories: ["Kubernetes"]

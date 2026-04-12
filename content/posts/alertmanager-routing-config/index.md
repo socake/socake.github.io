@@ -1,6 +1,6 @@
 ---
 title: "Alertmanager 完全指南：路由、抑制、静默与多渠道通知"
-date: 2026-04-11T13:00:00+08:00
+date: 2025-03-22T12:27:00+08:00
 draft: false
 tags: ["Alertmanager", "Prometheus", "告警", "SRE", "运维"]
 categories: ["可观测性"]

@@ -1,6 +1,6 @@
 ---
 title: "LLM 微调入门：LoRA 让大模型适配私有场景"
-date: 2026-04-12T11:30:00+08:00
+date: 2026-01-14T09:56:00+08:00
 draft: false
 tags: ["LoRA", "微调", "QLoRA", "Unsloth", "TRL"]
 categories: ["大模型"]

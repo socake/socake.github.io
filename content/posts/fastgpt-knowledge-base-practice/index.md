@@ -1,6 +1,6 @@
 ---
 title: "FastGPT 知识库问答系统：从部署到应用"
-date: 2026-04-12T19:00:00+08:00
+date: 2026-03-20T09:44:00+08:00
 draft: false
 tags: ["FastGPT", "知识库", "RAG", "问答系统", "私有化部署"]
 categories: ["AI应用"]

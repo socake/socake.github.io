@@ -1,6 +1,6 @@
 ---
 title: "OPA/Kyverno：K8s 准入控制策略实战"
-date: 2026-04-12T15:00:00+08:00
+date: 2025-09-11T13:36:00+08:00
 draft: false
 tags: ["kyverno", "opa", "kubernetes", "policy", "security", "admission-control"]
 categories: ["Kubernetes"]

@@ -1,6 +1,6 @@
 ---
 title: "Ollama 在 K8s 上跑大模型：本地 LLM 的运维实践"
-date: 2026-04-11T07:00:00+08:00
+date: 2026-03-30T09:08:00+08:00
 draft: false
 tags: ["Ollama", "LLM", "Kubernetes", "AI", "GPU", "运维"]
 categories: ["AIOPS"]

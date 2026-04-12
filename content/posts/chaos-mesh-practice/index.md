@@ -1,6 +1,6 @@
 ---
 title: "混沌工程实战：Chaos Mesh 在 K8s 中注入故障"
-date: 2026-04-12T14:00:00+08:00
+date: 2025-09-13T09:56:00+08:00
 draft: false
 tags: ["chaos-engineering", "chaos-mesh", "kubernetes", "resilience", "SRE"]
 categories: ["Kubernetes"]

@@ -1,6 +1,6 @@
 ---
 title: "Python 操作 Elasticsearch：从索引管理到复杂聚合查询"
-date: 2026-04-11T07:00:00+08:00
+date: 2025-11-04T12:27:00+08:00
 draft: false
 tags: ["Python", "Elasticsearch", "ELK", "运维", "自动化"]
 categories: ["编程"]

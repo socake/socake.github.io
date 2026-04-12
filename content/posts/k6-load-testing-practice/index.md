@@ -1,6 +1,6 @@
 ---
 title: "k6 压测实战：从脚本编写到性能分析"
-date: 2026-04-12T17:00:00+08:00
+date: 2025-10-21T12:44:00+08:00
 draft: false
 tags: ["k6", "load-testing", "performance", "prometheus", "grafana"]
 categories: ["运维工具"]

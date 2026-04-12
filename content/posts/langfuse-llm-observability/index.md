@@ -1,6 +1,6 @@
 ---
 title: "Langfuse：LLM 应用可观测性平台实战"
-date: 2026-04-12T10:30:00+08:00
+date: 2026-02-14T11:44:00+08:00
 draft: false
 tags: ["Langfuse", "可观测性", "LLM", "LangChain", "Prompt管理"]
 categories: ["大模型"]

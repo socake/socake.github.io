@@ -1,6 +1,6 @@
 ---
 title: "Elasticsearch 集群部署实战：ECK 在 K8s 上的生产级配置"
-date: 2026-04-11T08:00:00+08:00
+date: 2025-09-19T13:03:00+08:00
 draft: false
 tags: ["Elasticsearch", "ELK", "Kubernetes", "ECK", "运维"]
 categories: ["ELK Stack"]

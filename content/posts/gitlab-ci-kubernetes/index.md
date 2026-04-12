@@ -1,6 +1,6 @@
 ---
 title: "GitLab CI/CD + Kubernetes：从代码提交到生产部署全流程"
-date: 2026-04-11T08:00:00+08:00
+date: 2025-02-01T11:01:00+08:00
 draft: false
 tags: ["GitLab", "CI/CD", "Kubernetes", "Docker", "DevOps"]
 categories: ["CI/CD"]

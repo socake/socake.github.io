@@ -1,6 +1,6 @@
 ---
 title: "LLM Tool Use 完全指南：Function Calling 设计模式与生产实践"
-date: 2026-04-12T12:00:00+08:00
+date: 2026-01-18T12:36:00+08:00
 draft: false
 tags: ["AI", "Function Calling", "Tool Use", "大模型", "Claude", "OpenAI", "Agent"]
 categories: ["AI/机器学习"]
