@@ -474,7 +474,7 @@ html:not(.dark) #menu-wrapper {
 .dark .filter-btn {
   border-color: rgba(99, 102, 241, 0.35);
   color: rgba(209, 218, 240, 1);
-  background: rgba(9, 14, 36, 0.45);
+  background: rgb(18, 22, 50);
 }
 .filter-btn:hover {
   color: #4338ca;
