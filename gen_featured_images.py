@@ -91,6 +91,17 @@ POSTS = [
     ("multimodal-llm-vision-practice","Multimodal",    "👁",  [(10,30,50),  (30,110,200)]),
     ("comfyui-stable-diffusion-workflow","ComfyUI/SD", "🎨", [(40,10,40),  (170,30,170)]),
     ("langgraph-workflow-orchestration","LangGraph",   "🔄", [(20,30,50),  (60,110,200)]),
+    # Wave 4 - 路线图支撑文章
+    ("shell-script-automation",    "Shell Script",     "🖥",  [(20,40,20),  (50,160,50)]),
+    ("git-workflow-practice",      "Git Workflow",     "🌿", [(10,40,20),  (20,170,70)]),
+    ("kubernetes-beginner-guide",  "K8s 入门",         "☸",  [(10,30,60),  (20,90,220)]),
+    ("sre-concepts-and-principles","SRE 理念",         "🔧", [(30,10,40),  (120,30,170)]),
+    ("observability-three-pillars","三支柱",           "🔭", [(30,20,50),  (110,60,200)]),
+    ("platform-engineering-practice","平台工程",       "🏗", [(20,30,50),  (60,110,200)]),
+    ("llm-core-concepts",          "LLM 基础",         "🧠", [(20,10,50),  (80,30,200)]),
+    ("python-async-programming",   "Python Async",     "⚡",  [(10,40,20),  (20,170,80)]),
+    ("rag-evaluation-ragas",       "RAG 评估",         "📐", [(30,10,50),  (130,30,200)]),
+    ("multi-cluster-k8s-management","多集群运维",      "🌐", [(10,30,60),  (20,100,230)]),
 ]
 
 W, H = 1200, 630
