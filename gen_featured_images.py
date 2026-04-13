@@ -140,6 +140,12 @@ POSTS = [
     ("linux-kernel-network-tuning","网络调优",         "🌐", [(10,20,50),  (20,60,200)]),
     ("kubernetes-v133-features",   "K8s v1.33",        "☸",  [(10,30,60),  (20,100,230)]),
     ("opencost-kubernetes-cost-visibility","OpenCost", "💸", [(20,40,10),  (70,170,40)]),
+    # Wave 7 - 2026-04 深度补强
+    ("clickhouse-ops-practice",      "ClickHouse",       "🗂", [(30,10,30),  (140,30,120)]),
+    ("fluxcd-vs-argocd-migration",   "Flux vs Argo",     "🔀", [(10,30,40),  (20,110,150)]),
+    ("tetragon-runtime-security",    "Tetragon",         "🛡", [(20,20,50),  (80,60,200)]),
+    ("temporal-workflow-engine",     "Temporal",         "⏱", [(30,20,40),  (120,70,170)]),
+    ("flagger-progressive-delivery", "Flagger",          "🚦", [(40,20,10),  (180,90,20)]),
 ]
 
 W, H = 1200, 630
