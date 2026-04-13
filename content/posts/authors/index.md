@@ -1,6 +1,6 @@
 ---
 title: "关于我"
-date: 2025-12-03T23:09:20+08:00
+date: 2024-09-08T13:50:00+08:00
 draft: false
 description: "DevOps / SRE Engineer，专注云原生基础设施、GitOps 工程化与 AI 工具落地"
 showDate: false
@@ -27,7 +27,7 @@ showTableOfContents: true
 | 2021 | 上云，开始管理 AWS EKS | EKS、ECS、IAM、EC2 费用第一次超预算 |
 | 2022 | 引入 GitOps，基础设施开始版本化 | ArgoCD、Kustomize、多环境配置管理 |
 | 2023 | 规模化：双云架构 + 多集群治理 | AWS + 阿里云 ACK、Karpenter 降本 |
-| 2024 | 安全与可观测性补课 | Cilium、gVisor、Loki 跨集群、零信任改造 |
+| 2024 | 安全与可观测性补课，9 月开博客开始系统沉淀 | Cilium、gVisor、Loki 跨集群、零信任改造、Hugo 博客 |
 | 2025 | AI 工具全面融入工作流 | Claude Code CLI、Cursor、LLM 运维自动化 |
 | 2026 | 平台工程 + AI Agent 落地探索 | Platform Engineering、Agent 自动化运维 |
 
@@ -156,7 +156,7 @@ showTableOfContents: true
 
 ## 关于这个博客
 
-两个用途，都是真的：
+建站于 2024 年 9 月，两个用途，都是真的：
 
 1. **技术笔记本** — 把踩过的坑、研究过的方案、写过的脚本沉淀下来。人的记忆是不可靠的，尤其是凌晨两点刚解完故障之后。
 

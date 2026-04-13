@@ -67,9 +67,9 @@ showReadingTime: false
 
 ## 2025-12
 
-**新增 8 篇 · 站点上线**
+**新增 8 篇 · 站点升级**
 
-- 博客正式建站，Hugo + Blowfish 主题、全文搜索、RSS 上线
+- 站点技术栈升级：切换到 Hugo + Blowfish 主题，全文搜索、RSS 上线
 - 网站导航、书单、赞助页上线
 - 阿里云 SDK 运维自动化：ECS/ACK/RDS 资源管理与巡检脚本
 - DevOps/运维工程师面试题精选
@@ -274,7 +274,7 @@ showReadingTime: false
 
 ## 2024-09
 
-**博客建站 · 发布 4 篇**
+**博客建站（2024-09-08）· 发布 4 篇**
 
 - Linux 性能调优实战：CPU、内存、IO 瓶颈的系统排查方法
 - Linux 系统管理精要：DevOps 工程师必知的系统层知识
