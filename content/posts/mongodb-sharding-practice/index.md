@@ -5,7 +5,7 @@ draft: false
 tags: ["MongoDB", "分片", "数据库运维", "分布式"]
 categories: ["数据库"]
 description: "MongoDB 分片集群的真正难点不是搭建，而是 shard key 设计、chunk 均衡和热点治理。这篇笔记覆盖 MongoDB 7.0 LTS 的 shard key 选型策略、hashed vs ranged、refineCollectionShardKey、zone sharding、balancer 调优以及几个真实热点和 jumbo chunk 故障的救火案例。"
-summary: "很多团队把 MongoDB 分片当成"设个 shard key 就完事"，结果上线半年后发现 80% 数据在一个 shard 上、balancer 每天搬几十 GB 却怎么都追不上、某个 collection 出现 jumbo chunk 无法分裂。这篇文章把我在几套 MongoDB 分片集群上的经验整理出来，希望能让你在分片之前少走一些弯路。"
+summary: '很多团队把 MongoDB 分片当成"设个 shard key 就完事"，结果上线半年后发现 80% 数据在一个 shard 上、balancer 每天搬几十 GB 却怎么都追不上、某个 collection 出现 jumbo chunk 无法分裂。这篇文章把我在几套 MongoDB 分片集群上的经验整理出来，希望能让你在分片之前少走一些弯路。'
 toc: true
 math: false
 diagram: false

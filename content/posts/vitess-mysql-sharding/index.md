@@ -4,8 +4,8 @@ date: 2024-12-24T14:00:00+08:00
 draft: false
 tags: ["Vitess", "MySQL", "分布式数据库", "分库分表"]
 categories: ["数据库"]
-description: "Vitess 是 YouTube/Slack/GitHub 都在用的 MySQL 水平扩展方案。这篇笔记从 Vitess 的架构原理讲到 keyspace/shard/vindex 的建模、VReplication 的工作机制、MoveTables 和 Resharding 的实战步骤、Online DDL、以及生产运维的几个核心问题。目标是帮你判断"我们的业务到底需不需要 Vitess"。"
-summary: "当 MySQL 单库扛不住、又不想切 TiDB 或 PG 的时候，Vitess 就成了最后一个选项。它保留了 MySQL 兼容性，用 vtgate 做分片代理，用 VReplication 做在线 resharding。听起来很美，但 Vitess 的学习曲线陡得惊人。这篇文章是我调研 Vitess 几个月、在 staging 跑通一个 4 shard 集群后的全面笔记。"
+description: 'Vitess 是 YouTube/Slack/GitHub 都在用的 MySQL 水平扩展方案。这篇笔记从 Vitess 的架构原理讲到 keyspace/shard/vindex 的建模、VReplication 的工作机制、MoveTables 和 Resharding 的实战步骤、Online DDL、以及生产运维的几个核心问题。目标是帮你判断"我们的业务到底需不需要 Vitess"。'
+summary: '当 MySQL 单库扛不住、又不想切 TiDB 或 PG 的时候，Vitess 就成了最后一个选项。它保留了 MySQL 兼容性，用 vtgate 做分片代理，用 VReplication 做在线 resharding。听起来很美，但 Vitess 的学习曲线陡得惊人。这篇文章是我调研 Vitess 几个月、在 staging 跑通一个 4 shard 集群后的全面笔记。'
 toc: true
 math: false
 diagram: false

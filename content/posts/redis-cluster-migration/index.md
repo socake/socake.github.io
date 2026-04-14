@@ -5,7 +5,7 @@ draft: false
 tags: ["Redis", "Redis Cluster", "数据库运维", "数据迁移"]
 categories: ["数据库"]
 description: "Redis Cluster 上手容易运维难。这篇笔记梳理 Cluster 的 slot 模型、扩缩容流程、SETSLOT 协议细节、客户端重定向踩坑、Redis 7 Sharded Pub/Sub 和 Redis 8.4 的 Atomic Slot Migration 新特性，以及跨机房迁移和 Codis → Cluster 平滑迁移的实战案例。"
-summary: "很多团队把 Redis Cluster 当成"开箱即用"的分布式 Redis，直到要做扩缩容或数据迁移时才发现：SETSLOT 协议里有十几种状态，迁移过程中客户端重定向要么不生效要么风暴，migrate 卡住没法断，big key 直接把迁移拖垮。这篇文章把我在几套千亿级 Cluster 上做过的扩缩容、迁移、救火全过一遍。"
+summary: '很多团队把 Redis Cluster 当成"开箱即用"的分布式 Redis，直到要做扩缩容或数据迁移时才发现：SETSLOT 协议里有十几种状态，迁移过程中客户端重定向要么不生效要么风暴，migrate 卡住没法断，big key 直接把迁移拖垮。这篇文章把我在几套千亿级 Cluster 上做过的扩缩容、迁移、救火全过一遍。'
 toc: true
 math: false
 diagram: false

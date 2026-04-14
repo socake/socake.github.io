@@ -5,7 +5,7 @@ draft: false
 tags: ["TiDB", "分布式数据库", "数据库运维", "TiKV", "HTAP"]
 categories: ["数据库"]
 description: "一份基于 TiDB 7.5/8.5 LTS 的生产落地笔记，覆盖集群拓扑规划、Placement Rules 多机房部署、TiKV RocksDB 与线程池调优、PD 调度参数、热点治理、DM 同步以及真实踩坑案例。面向已经在跑 TiDB、但还没能把资源压榨到极致的运维团队。"
-summary: "把 TiDB 当成"分布式 MySQL"跑起来并不难，真正难的是让 TiKV 在高并发写入下不抖动、让 PD 调度不误伤业务、让跨机房副本在 RPO=0 的前提下活下去。本文把过去两年我在几套 TiDB 集群上踩过的坑、调过的参数和定过的 SOP 都摊开来讲，不是教程，而是一份能直接照抄的作战手册。"
+summary: '把 TiDB 当成"分布式 MySQL"跑起来并不难，真正难的是让 TiKV 在高并发写入下不抖动、让 PD 调度不误伤业务、让跨机房副本在 RPO=0 的前提下活下去。本文把过去两年我在几套 TiDB 集群上踩过的坑、调过的参数和定过的 SOP 都摊开来讲，不是教程，而是一份能直接照抄的作战手册。'
 toc: true
 math: false
 diagram: false

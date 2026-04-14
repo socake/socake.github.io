@@ -5,7 +5,7 @@ draft: false
 tags: ["PostgreSQL", "autovacuum", "膨胀", "数据库运维"]
 categories: ["数据库"]
 description: "深入讲解 PostgreSQL 的 MVCC 膨胀机制、autovacuum 的工作原理、几十个相关参数的含义与调优方法，以及三个真实的生产膨胀故障复盘。基于 PostgreSQL 16/17 版本，覆盖 cost-based throttling、per-table 调参、freeze 风暴规避等进阶话题。"
-summary: "大部分 PostgreSQL DBA 对 autovacuum 的理解停留在"它会自己跑"，但一旦膨胀起来才发现：默认参数对现代硬件完全不够用，几十个 autovacuum_* 参数各管一摊，出了问题根本不知道从哪儿看。这篇文章把我在几套 PG 集群上治理膨胀的经验整理出来，从 MVCC 原理讲到参数调优、从监控到应急处置。"
+summary: '大部分 PostgreSQL DBA 对 autovacuum 的理解停留在"它会自己跑"，但一旦膨胀起来才发现：默认参数对现代硬件完全不够用，几十个 autovacuum_* 参数各管一摊，出了问题根本不知道从哪儿看。这篇文章把我在几套 PG 集群上治理膨胀的经验整理出来，从 MVCC 原理讲到参数调优、从监控到应急处置。'
 toc: true
 math: false
 diagram: false

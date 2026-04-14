@@ -5,7 +5,7 @@ draft: false
 tags: ["Doris", "StarRocks", "OLAP", "数据仓库", "MPP"]
 categories: ["数据库"]
 description: "Apache Doris 和 StarRocks 是当前最火的两个开源实时 OLAP 引擎，也经常被拿来比较。本文从架构、性能、成熟度、运维、生态五个维度做严肃对比，结合我在两套生产集群上的运维经验，给出一份能直接用于选型决策的笔记。覆盖 Doris 3.0 和 StarRocks 3.3 两个较新的稳定版本。"
-summary: "Doris 和 StarRocks 同源、相似、又各有偏好。选哪个不是"谁更好"的问题，而是"谁更适合我们的场景"的问题。这篇文章是我在两套 OLAP 集群（一套 Doris、一套 StarRocks）上运维一年多后写的深度对比，希望能帮你跳过几个月的调研和踩坑。"
+summary: 'Doris 和 StarRocks 同源、相似、又各有偏好。选哪个不是"谁更好"的问题，而是"谁更适合我们的场景"的问题。这篇文章是我在两套 OLAP 集群（一套 Doris、一套 StarRocks）上运维一年多后写的深度对比，希望能帮你跳过几个月的调研和踩坑。'
 toc: true
 math: false
 diagram: false

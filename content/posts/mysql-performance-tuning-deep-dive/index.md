@@ -5,7 +5,7 @@ draft: false
 tags: ["MySQL", "InnoDB", "数据库调优", "性能优化"]
 categories: ["数据库"]
 description: "一份面向 MySQL 8.0/8.4 生产环境的深度调优笔记。覆盖 InnoDB 缓冲池分区、redo log capacity、double write、自适应 hash、锁等待诊断、慢 SQL 治理以及几个真实线上故障的复盘。不是参数速查表，而是一份基于实战总结出来的决策框架。"
-summary: "你有没有过这种体验：按网上教程把 innodb_buffer_pool_size 调到 75%、关了 query cache、打开了 innodb_file_per_table，然后告诉自己"MySQL 调优就这样了"？真正的调优是一个持续观察、假设、验证、回滚的过程。这篇文章把我在过去几年维护的十几套 MySQL 实例上积累的调参经验整理出来，每一条都能追到具体指标和业务效果。"
+summary: '你有没有过这种体验：按网上教程把 innodb_buffer_pool_size 调到 75%、关了 query cache、打开了 innodb_file_per_table，然后告诉自己"MySQL 调优就这样了"？真正的调优是一个持续观察、假设、验证、回滚的过程。这篇文章把我在过去几年维护的十几套 MySQL 实例上积累的调参经验整理出来，每一条都能追到具体指标和业务效果。'
 toc: true
 math: false
 diagram: false

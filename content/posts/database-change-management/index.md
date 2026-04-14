@@ -5,7 +5,7 @@ draft: false
 tags: ["数据库", "DB 变更", "gh-ost", "pt-osc", "Liquibase", "Flyway"]
 categories: ["数据库"]
 description: "数据库变更是所有工程团队的痛点：ALTER 一张大表要锁几小时、线上和预发 schema 对不齐、回滚只能靠备份。这篇笔记从 Online DDL 工具（gh-ost vs pt-osc vs Spirit）讲到版本管理（Flyway vs Liquibase），再到变更流程与回滚策略，给出一套从工具到流程的完整方案。"
-summary: "很多团队把"数据库变更管理"当成几条 SQL + 一个工单，实际上这是工程化程度最低的一块地方。一边是开发随手写 ALTER 把线上锁住，一边是 DBA 手动盯着进度条祈祷不出事。这篇文章把我总结的 DB 变更管理最佳实践分成工具、流程、组织三个层面讲，每一层都有可以直接落地的方案。"
+summary: '很多团队把"数据库变更管理"当成几条 SQL + 一个工单，实际上这是工程化程度最低的一块地方。一边是开发随手写 ALTER 把线上锁住，一边是 DBA 手动盯着进度条祈祷不出事。这篇文章把我总结的 DB 变更管理最佳实践分成工具、流程、组织三个层面讲，每一层都有可以直接落地的方案。'
 toc: true
 math: false
 diagram: false
