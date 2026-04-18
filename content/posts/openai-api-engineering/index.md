@@ -15,9 +15,7 @@ params:
   reading_time: true
 ---
 
-OpenAI API 是目前文档最完善、生态最丰富的 LLM API。但它也是"坑"最多的——从版本兼容问题到速率限制，从成本失控到 Assistants API 的复杂性，不少团队在生产中都踩过。
-
-本文专注工程实践，覆盖从基础调用到生产部署的完整链路。
+用 OpenAI API 做过几个内部工具，从一个 quick & dirty 的 Python 脚本跑到生产，中间遇到的工程问题比想象中多：版本突然废弃、速率限制打脸、账单失控、Assistants API 改了几次规范。把这些整理成一份可复用的笔记。
 
 ---
 

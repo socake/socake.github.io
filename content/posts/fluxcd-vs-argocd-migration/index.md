@@ -16,13 +16,11 @@ params:
 
 ## 写在前面
 
-GitOps 这个词从 2017 年被提出来到现在，几乎成了 Kubernetes 持续交付领域的默认答案。而在所有主流 GitOps 实现里，真正跑进 CNCF Graduated 行列的只有两个：**FluxCD** 和 **ArgoCD**。
+GitOps 阵营里真正跑进 CNCF Graduated 的只有 **FluxCD** 和 **ArgoCD** 两家，但它们走的是两条完全不同的路。Flux 一开始就把"控制器解耦、CRD 即 API"刻进骨子里，没 UI、没单体 server；ArgoCD 上来就是一个重 UI、有状态的 API Server，加一个强耦合的 Application Controller。架构、运维成本、可观测性、扩展能力的分岔都是从这里开始的。
 
-这两个项目走过完全不同的路线。Flux 从一开始就把"控制器解耦、CRD 即 API"刻进了骨子里，不提供 UI，也不维护一个单体的 server；ArgoCD 则从一开始就做了一个重量级的 Web UI、一个有状态的 API Server，和一个强耦合的 Application Controller。两种哲学导致两者在架构、运维成本、可观测性、扩展能力上出现了明显分岔。
+团队第一次选型大多一拍脑袋选 ArgoCD——UI 好看、上手快。但规模一旦拉到几十集群、上百租户、几千应用，或者要把部署能力塞进 Backstage / IDP 的时候，Flux 的"控制器优先"反而更省心。
 
-很多团队在做 GitOps 初次选型时会一拍脑袋选 ArgoCD——因为 UI 漂亮、上手快。但当规模扩大到几十个集群、上百个租户、几千个应用，或者想把部署能力嵌入平台工程的 Backstage / IDP 时，Flux 的"控制器为先"设计反而更省心。
-
-本文不准备写成"各有所长、结合使用"这种和稀泥答案。下面会拆开每一个维度给出结论，然后给出一套可以直接套用的从 ArgoCD 迁到 FluxCD 的迁移手册。全文示例统一使用以下脱敏命名：
+这篇不打算和稀泥。每个维度我都给结论，然后附一份能照搬的 Argo → Flux 迁移手册。全文示例统一用以下脱敏命名：
 
 - 集群名：`platform-cluster`、`edge-cluster-1`、`edge-cluster-2`
 - 域名：`example.com`、`apps.example.com`

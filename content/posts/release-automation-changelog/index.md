@@ -714,27 +714,16 @@ release-please 类似，用 "linked versions" 功能。
 
 ## 结语
 
-自动化发版不是"锦上添花"，是一个 2026 年的基础 CI 能力。手动维护 CHANGELOG 的时代已经过去：工具能做得比人更准（不会漏 commit）、更快（秒级）、更一致（格式稳定）。
-
-选型小结：
+选型简版：
 
 - **OSS 单包** → semantic-release
 - **产品型 app** → release-please
 - **JS Monorepo** → changesets
 - **多语言 Monorepo** → release-please
 
-无论选哪个，前提都是 **团队愿意用 Conventional Commits**。这个习惯养成大概要一两个月的强制（commitlint + PR title 检查），之后就是无感的。
+前提都是团队愿意用 Conventional Commits。这个习惯我们用 commitlint + PR title 检查强推了两个月，之后就无感了，不强推很难成。
 
-再往前看一步：自动化发版和 Renovate（我们上一篇讲的依赖升级机器人）配合起来，效果翻倍：
-
-1. Renovate 每天 PR 升级依赖
-2. PR 自动跑 CI
-3. Patch 更新自动合并
-4. release-please 看到 `fix(deps): update axios to v1.7.3` 累积起来
-5. 每周一合并 Release PR，自动发 1.2.4 版本
-6. 整条链路零人工
-
-这是现代发版工程的终极形态。
+再往前一步：把 Renovate + release-please 串起来，依赖升级 PR → CI → patch 自动合并 → release-please 累积 → 周一合 Release PR 自动发版。我们跑通后确实做到了整条链路零人工，但前面两个月踩过不少 CI 竞态的坑，不要指望一次到位。
 
 Sources:
 - [semantic-release GitHub](https://github.com/semantic-release/semantic-release)

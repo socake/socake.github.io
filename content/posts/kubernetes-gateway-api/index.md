@@ -314,4 +314,4 @@ spec:
 
 **allowedRoutes 配置容易遗漏。** 如果 HTTPRoute 创建后没有生效，大概率是 Gateway 的 `allowedRoutes` 没有包含 Route 所在的 namespace。检查 Gateway 状态和 Route 状态，有明确的 status condition 可以看。
 
-Gateway API 在 2025 年已经 GA，核心资源（Gateway、HTTPRoute）都升到了 v1。社区的态度很明确：Ingress 不会废弃，但 Gateway API 才是未来。对于新项目，完全值得直接上 Gateway API，省去将来迁移的麻烦。
+Gateway API 在 2025 年已经 GA，核心资源（Gateway、HTTPRoute）都升到了 v1。Ingress 不会废弃，但新项目没必要再从 Ingress 起步，直接 Gateway API 省得以后再折腾迁移。

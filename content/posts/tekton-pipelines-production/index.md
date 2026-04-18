@@ -763,15 +763,13 @@ kubectl apply -f https://storage.googleapis.com/tekton-releases/dashboard/latest
 
 ## 结语
 
-Tekton 不是"开箱最爽"的 CI，但它是"最贴近 Kubernetes 生态、最容易集成供应链安全、最可扩展"的 CI。它的 YAML 膨胀问题确实存在，但可以通过三件事缓解：
+Tekton 开箱肯定不如 GitHub Actions 爽，但它是我见过最贴近 K8s 生态、最方便做供应链签名、最可扩展的 CI。YAML 膨胀这事真实存在，但靠三件事能治：
 
-1. **StepAction + Task bundle**：让 Task 真正可复用、可版本化。
-2. **Resolver**：Pipeline 和 Task 定义放 Git/OCI，不再依赖 `kubectl apply`。
-3. **组织级 Task 库**：公司内部维护一套 blessed Task，业务团队直接引用 bundle digest。
+1. **StepAction + Task bundle**：让 Task 可复用、可版本化
+2. **Resolver**：Pipeline/Task 定义放 Git/OCI，不再靠 `kubectl apply`
+3. **组织级 Task 库**：内部维护 blessed Task，业务直接引 bundle digest
 
-把这三件事做好，你的团队写一条新 Pipeline 平均只需要 30-50 行 YAML，而不是动辄几百行。
-
-再配上 Tekton Chains 的 SLSA Provenance 自动化，你能同时拿到 "CI 引擎 + 供应链签名平台" 两个能力，并且都是 CNCF 毕业、K8s Native、GitOps Ready 的。这是 2026 年选 CI 引擎时最值得认真评估的方案。
+我们把这三件事做好后，团队写一条新 Pipeline 平均 30-50 行 YAML 就够，以前动辄几百行。再配上 Chains 的 SLSA Provenance，CI 引擎 + 供应链签名平台一起拿——2026 年选 CI 我会优先推这个。
 
 Sources:
 - [Tekton Pipelines 1.0 announcement](https://tekton.dev/blog/2025/05/23/tekton-pipelines-reaches-1.0-stability-today-innovation-tomorrow/)

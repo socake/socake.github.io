@@ -547,13 +547,9 @@ Earthly 本质是 "本地 / Satellite 上的 BuildKit 封装"。你没法像 Tek
 
 ## 结语
 
-Earthly 是构建系统里一个有趣的位置：**它没有 Bazel 那么严谨，也没有 Makefile 那么原始**。它服务的是"从 Dockerfile 毕业、但还没准备好上 Bazel"的大多数团队，尤其是 50-500 人的 Monorepo 公司。
+Earthly 服务的是"从 Dockerfile 毕业、但还没准备好上 Bazel"的那类团队，50-500 人的 Monorepo 公司最受用。真正让我愿意推它的点不是性能，是它把 Dockerfile 扩成了一个能 target、能 import、能并发、能跨 target 引用的 DSL，配上 Satellites 远端缓存，一个下午就能看出效果。
 
-它的核心贡献不是性能（BuildKit 已经够快），而是**把 Dockerfile 语法升级成一个真正的构建 DSL**：有 target、有 import、有 arg、有并发、有跨 target 引用。这些能力让 Monorepo 的构建逻辑从"一堆 Dockerfile + 胶水脚本" 进化到"一个有机的、可组合的构建图"。
-
-再加上 Satellites 做远端缓存，小团队也能用上接近 Google 内部 Bazel 那种"秒级增量构建"的体验。这在过去只有 Bazel 或者自建 BuildKit 集群才能做到。
-
-如果你的 Monorepo 构建痛点日渐加剧，Earthly 值得花一个下午评估。
+Monorepo 构建痛点开始冒头的时候，它值得一试。
 
 Sources:
 - [Earthly official site](https://earthly.dev/)

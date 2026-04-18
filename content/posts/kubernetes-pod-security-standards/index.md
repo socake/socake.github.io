@@ -18,12 +18,7 @@ params:
 
 Kubernetes 从 1.25 开始彻底移除了 PodSecurityPolicy（PSP）。我接触过的一大批团队直到 1.28 升级时才意识到这件事，然后陷入一段时间的迷茫——PSP 的替代品 Pod Security Admission（PSA）到底该怎么用？Baseline 和 Restricted 的区别具体是什么？遗留业务跑不了 Restricted 怎么办？升级集群后所有 Pod 都被拒绝怎么办？
 
-这篇文章是我给两个生产集群（加起来 150+ namespace）做完 PSP→PSA 迁移之后的沉淀。基于 **Kubernetes 1.29~1.33** 的实际经验。读完你应该能回答：
-
-1. PSA 到底是什么，和 PSP 有什么本质区别
-2. Baseline 和 Restricted 的约束条件具体是什么、怎么影响应用
-3. 怎么给一个现有集群做迁移而不把业务搞挂
-4. PSA 之外还需要哪些工具配合（Kyverno、准入 Webhook 等）
+这篇是我给两个生产集群（加起来 150+ namespace）做完 PSP→PSA 迁移之后的笔记，基于 **Kubernetes 1.29~1.33** 的实际经验。
 
 ## 一、从 PSP 到 PSA：认知升级
 
@@ -553,8 +548,6 @@ kubectl get ns -o json | jq -r '.items[] |
 
 ## 九、结语
 
-Pod Security Standards 是一个看似简单但涉及面很广的话题。它只是两套 profile 定义，真正考验的是**你怎么把它落进一个有几十个 team、几百个服务的真实生产环境里**。迁移过程中你会发现运维、安全、开发的大量协作问题比技术问题更难。
+PSS 规则本身只是两套 profile，真正难的是怎么把它落进一个有几十个 team、几百个服务的真实生产环境——运维、安全、开发之间的协作问题比技术问题要麻烦得多。
 
-从 PSP 到 PSA 的这次换代也给我一个反思：**K8s 的原生安全能力其实是在逐步退缩的**，PSA 比 PSP 简化了很多，剩下的精细化需求交给社区 policy engine（Kyverno/OPA）。这个趋势未来应该会继续——K8s 内核只保留最小必要的安全原语，生态补充上层策略。作为运维，你需要同时理解原生能力的边界和社区工具的定位。
-
-下一篇我会深入讲 Kyverno 的 policy as code 实践，那是上面"二道闸门"的完整玩法。
+另一个观察是 K8s 原生安全能力在逐步收缩：PSA 比 PSP 简化了很多，剩下精细化的需求都丢给了 Kyverno/OPA。所以上线 PSA 之后 Kyverno 这一层得同步搭起来，下一篇专门写这个。

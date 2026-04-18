@@ -17,11 +17,9 @@ params:
 
 ## ETCD 在 Kubernetes 中的位置
 
-如果把 Kubernetes 集群比作一家公司，ETCD 就是那个存放所有档案的保险柜。Pod 的状态、Service 的 ClusterIP、ConfigMap 的内容、RBAC 的权限规则——所有这些都以键值对的形式持久化在 ETCD 里。`kube-apiserver` 是唯一能直接读写 ETCD 的组件，其他控制面组件（scheduler、controller-manager）本质上都是在通过 apiserver 间接操作 ETCD 中的数据。
+K8s 里所有会被你 `kubectl get` 出来的东西——Pod 状态、Service ClusterIP、ConfigMap、RBAC——最终都以 key-value 存在 ETCD 里。唯一直接读写它的是 `kube-apiserver`，scheduler 和 controller-manager 都是通过 apiserver 间接操作。
 
-这意味着一件事：**ETCD 挂了，K8s 集群就废了**。现有的 Pod 还能跑，但你无法创建新资源、无法调度、无法做任何控制面操作。ETCD 数据丢失更糟糕，基本等于集群报废重建。
-
-所以对于任何生产级 K8s 集群，ETCD 的运维能力不是加分项，是基本线。
+所以 ETCD 一挂，集群就瘫：存量 Pod 还在跑，但你做不了任何控制面操作；数据丢了更惨，基本等于重建集群。生产集群的 ETCD 运维不是加分项，是底线。
 
 ## Raft 协议与奇数节点的原因
 

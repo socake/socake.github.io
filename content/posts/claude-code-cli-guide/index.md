@@ -15,11 +15,7 @@ params:
   reading_time: true
 ---
 
-Claude Code的定位是**terminal-native autonomous agent**——不是编辑器插件，不是Chat补全，而是可以在终端里独立完成整个任务的自主代理。它能读文件、写文件、执行Shell命令，还能直接对接GitHub/GitLab API：读Issue、提PR、跑CI，全程无需手动介入。
-
-2026年它是工程师处理"重型任务"使用最多的工具，常见组合是：Cursor负责日常代码编辑，Claude Code负责复杂的跨文件重构、自动化运维、以及需要完整任务闭环的场景。
-
-这篇文章从工程师视角介绍Claude Code的实际用法，重点放在DevOps场景。
+Claude Code 跟 Cursor 那种编辑器插件不是一个东西——它直接跑在终端里，能读文件、改文件、执行命令，还能对接 GitHub/GitLab API 去读 Issue、提 PR、看 CI，整件事不需要人盯着。我现在的分工是 Cursor 写日常代码，重型跨文件重构和自动化运维交给 Claude Code。下面主要从 DevOps 用法说。
 
 ---
 

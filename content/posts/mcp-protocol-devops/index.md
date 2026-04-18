@@ -423,4 +423,4 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
     # ...
 ```
 
-MCP 目前的生态发展很快，2026 年已经有大量开源 MCP Server 覆盖常见工具（GitHub、Jira、PagerDuty、Datadog 等）。对于运维团队来说，把自己的内部工具包装成 MCP Server，是让 AI 真正有用而不只是"聊天机器人"的关键一步。
+2026 年开源 MCP Server 已经覆盖了 GitHub、Jira、PagerDuty、Datadog 这些常见工具。对运维团队来说，把自家内部工具也包一层 MCP，AI 才真正能干活，而不只是贴命令给你。

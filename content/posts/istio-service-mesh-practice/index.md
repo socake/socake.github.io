@@ -15,7 +15,7 @@ params:
   reading_time: true
 ---
 
-Service Mesh 这个概念流行了很多年，但真正在生产环境把 Istio 跑稳的团队并不多。我经历过从"把 Istio 装上就完事"到"真正理解并用好它"的完整过程，这篇文章是对这段经历的系统梳理。
+Service Mesh 讲了好几年，但能把 Istio 在生产里跑稳的团队其实不多。我自己也是从"装上就算完事"的状态走到"知道每个 CRD 在干什么"，这篇是这段过程的笔记。
 
 ## Sidecar 注入原理
 
@@ -467,11 +467,11 @@ kubectl rollout restart deployment -n my-app
 
 ## 总结
 
-Istio 落地的最大挑战不是技术本身，而是**渐进式引入**和**团队认知对齐**。我的建议：
+Istio 落地最大的难点不在技术本身，在渐进引入和团队认知对齐。我的节奏是：
 
-1. 第一步先只用 Istio 做可观测性（Kiali + Jaeger），不改任何流量规则
-2. 熟悉后再引入 VirtualService 做灰度，一次只改一个服务
-3. mTLS 最后开，且一定要分 namespace 逐步切换
-4. 保持 `istioctl analyze` 在 CI/CD 中运行，提前发现配置错误
+1. 先只用它做可观测性（Kiali + Jaeger），不动任何流量规则
+2. 熟悉了再引入 VirtualService 做灰度，一次只动一个服务
+3. mTLS 最后开，分 namespace 逐步切
+4. `istioctl analyze` 塞进 CI/CD，配置错误在合入前暴露
 
-资源开销是真实成本，引入 Istio 前要评估是否划算——如果团队规模小、服务间调用简单，Istio 可能带来的运维负担大于收益。
+资源开销是真金白银的成本。团队小、服务间调用简单的情况，Istio 带来的运维负担可能大于收益——引入之前先算一遍这本账。

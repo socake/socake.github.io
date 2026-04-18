@@ -620,4 +620,4 @@ spec:
 - 几千 Workload 以上规模时给 Kueue 足够资源 + retention policy；
 - 多集群场景谨慎上 MultiKueue，成熟度还在爬坡。
 
-Kueue 是我这两年最欣赏的 Kubernetes 子项目。它的 API 干净、抽象准确、生态成熟度在快速提升。把 AI 训练塞进 Kubernetes 这件事，终于有一个"官方答案"了。
+Kueue 的 API 比 Volcano 那种"在 K8s 上再造一套 CRD"要干净很多，用下来踩的坑基本都是配置层面的，很少碰到它本身的 bug。把 AI 训练塞进 K8s 这件事，现在算是有了个还算顺手的答案。

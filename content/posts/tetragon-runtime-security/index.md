@@ -16,11 +16,11 @@ params:
 
 ## 一、运行时安全：云原生防御体系里最后一道闸
 
-在容器化、Kubernetes 成为事实标准之后，安全团队逐渐形成了一个三层防御模型：
+我们在 K8s 上做安全是分三层抓的：
 
-1. **Build time（构建期）**：镜像扫描、依赖 SBOM、Dockerfile 最佳实践检查、签名验证。代表工具是 Trivy、Grype、Syft、cosign。
-2. **Admission time（准入期）**：在 Pod 进入集群之前强制执行策略，阻止违规的 workload 创建出来。代表工具是 OPA Gatekeeper、Kyverno。
-3. **Runtime（运行时）**：当容器已经跑起来以后，观测它在做什么、检测异常行为、必要时阻断攻击链。这一层就是 Tetragon、Falco 所属的领域。
+1. **Build time（构建期）**：镜像扫描、SBOM、Dockerfile 检查、签名验证。工具链是 Trivy、Grype、Syft、cosign。
+2. **Admission time（准入期）**：Pod 进集群之前挡住违规 workload。工具是 OPA Gatekeeper、Kyverno。
+3. **Runtime（运行时）**：容器跑起来之后盯着它干什么、异常就阻断。这层是 Tetragon 和 Falco 的主场。
 
 前两层是**静态**的：它们看的是 manifest 和镜像，看不到“容器启动以后把 /etc/shadow 读走了”这种动态行为。某个应用可能镜像干干净净、Kyverno 规则全过，结果跑起来在容器里反弹 shell、挖矿、连 C2、从 ServiceAccount token 里偷 JWT，传统的漏洞扫描器、EDR 对 Kubernetes 内部基本是盲的。
 

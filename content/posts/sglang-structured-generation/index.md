@@ -609,4 +609,4 @@ print(state["final"])
 [ ] 压测覆盖多轮对话、结构化输出、streaming 三种模式
 ```
 
-SGLang 是一个被低估的框架。它的核心武器 RadixAttention 不是一个"优化"——它是一种对 LLM 工作负载模式的**重新建模**。如果你的业务确实有大量共享前缀，上 SGLang 的边际收益会比你预期的大很多。
+SGLang 被严重低估。RadixAttention 不是一般的"优化"——它改写了 LLM 服务的工作模式假设。如果你业务有大量共享前缀（Agent、多轮、长 system prompt），切过去的收益会大得超预期。我们那条线 P95 从 800ms 压到 250ms 就是实打实的证据。

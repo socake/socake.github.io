@@ -15,7 +15,7 @@ params:
   reading_time: true
 ---
 
-Tool Use（也叫 Function Calling）是让 LLM 从"能聊天"进化到"能干活"的关键技术。有了它，LLM 可以查数据库、调 API、执行代码，真正成为可以完成实际任务的 AI 助手。这篇文章从工程师视角，把 Tool Use 从 Schema 设计到生产部署的完整流程梳理清楚。
+Tool Use（Function Calling）本质上就是让 LLM 调你暴露出来的函数——查库、调 API、执行脚本都行。这篇从工程师视角把 Schema 设计、并发、错误恢复、生产部署这几块捋一遍。
 
 ## Tool Use 工作原理
 
@@ -664,4 +664,4 @@ def logged_tool_call(tool_name: str, tool_args: dict, result: dict, session_id: 
     }))
 ```
 
-Tool Use 是构建 AI Agent 的基础，掌握这些模式之后，无论是用 OpenAI 还是 Claude，无论是构建 RAG 系统还是自动化运维工具，都能把 LLM 的能力真正落地到具体任务上。
+Tool Use 是构建 Agent 的基础。上面这些模式在 OpenAI 和 Claude 上都通用，RAG 或自动化运维工具里都是一样的套路。

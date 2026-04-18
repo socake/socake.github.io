@@ -15,9 +15,7 @@ params:
   reading_time: true
 ---
 
-用 Claude API 的时间越长，越能感受到它和 OpenAI API 在设计理念上的差别：Claude 更强调"遵循指令"，在代码和长文本任务上更稳定，同时它的 Prompt Caching 机制是目前主流 API 里最成熟的成本优化工具之一。
-
-本文从工程实践角度覆盖 Claude API 的完整用法，重点放在 Python 示例和生产踩坑。
+用 Claude 一段时间之后，能明显感到它跟 OpenAI 的风格不太一样：更愿意照着指令干活，代码和长文本这类任务跑起来更稳；Prompt Caching 也是主流 API 里做得最到位的。下面以 Python 为主，把日常写业务时用到的东西和生产踩的坑记一下。
 
 ---
 

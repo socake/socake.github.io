@@ -377,9 +377,7 @@ Kiali 通过 `SelfSubjectAccessReview` 检查当前登录用户的 K8s 权限，
 
 ## 十四、小结
 
-在 Istio 生产环境里，Kiali 不是可选项。没有它你要么自己用 PromQL 手写拓扑图，要么 SSH 进 pod 里翻 Envoy config，效率低得离谱。Kiali 的价值在于「专为 Istio 语义做过深度集成」，它懂 VirtualService 的 weight、懂 Sidecar 的 egress、懂 PeerAuthentication 的冲突。这份懂，是任何通用监控工具替代不了的。
-
-把这篇读完之后，你应该能把 Kiali 从「装完没人用」的状态升级到「团队日常排障第一个打开的 UI」。这就是它应该呆的位置。
+在 Istio 生产环境里，Kiali 不是可选项。没有它你要么自己用 PromQL 手写拓扑图，要么 SSH 进 pod 里翻 Envoy config，效率低得离谱。Kiali 的价值在于「专为 Istio 语义做过深度集成」，它懂 VirtualService 的 weight、懂 Sidecar 的 egress、懂 PeerAuthentication 的冲突——这是任何通用监控工具替代不了的。
 
 ## 参考资料
 

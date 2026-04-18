@@ -17,16 +17,12 @@ params:
 
 ## 为什么需要 NetworkPolicy
 
-Kubernetes 默认的网络模型是**完全开放**的：集群内所有 Pod 可以互相通信，不需要任何授权。这在开发环境很便利，但在生产环境是一个严重的安全隐患。
+Kubernetes 默认的网络模型是**完全开放**的：集群内所有 Pod 可以互相通信，不需要任何授权。开发环境很便利，生产环境就是一道大口子：某个前端 Pod 被 SSRF 或 RCE 打穿后，攻击者可以直接从这个 Pod 访问数据库、内部 API、消息队列、其他 namespace 的服务，没有任何网络层面的阻拦。
 
-设想一下：如果某个前端 Pod 被攻陷（例如 SSRF、RCE 漏洞），攻击者可以直接从这个 Pod 访问数据库、内部 API、消息队列，甚至其他命名空间的服务。没有任何网络层面的阻拦。
-
-NetworkPolicy 是 Kubernetes 原生的网络访问控制机制，它允许你精确定义：
+NetworkPolicy 就是 Kubernetes 原生解决这件事的工具，能精确定义：
 
 - **哪些 Pod 可以访问这个 Pod**（Ingress 规则）
 - **这个 Pod 可以访问哪些目标**（Egress 规则）
-
-本文从工作原理到生产实战，给出完整的 NetworkPolicy 使用指南。
 
 ---
 

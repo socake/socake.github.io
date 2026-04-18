@@ -14,9 +14,7 @@ params:
   reading_time: true
 ---
 
-Kubernetes v1.33 预计于 2025 年 4 月正式发布，此版本将多个历经多个迭代打磨的特性晋升为 GA（Generally Available）。对于生产环境的运维工程师来说，这批特性不是概念层面的演示——它们是可以直接落地、解决真实运维痛点的能力。
-
-本文逐一拆解核心特性，每个特性给出：背景、使用场景、完整配置示例以及需要特别注意的陷阱。
+Kubernetes v1.33 在 2025 年 4 月发布，这一版把几个磨了好几代的特性升到了 GA。挑几个我觉得做运维会直接用到的拆开说说。
 
 ---
 
@@ -577,11 +575,4 @@ v1.33 中以下 Feature Gate 已锁定为 `true`（无法关闭）：
 
 ## 总结
 
-v1.33 的核心主题是"精细化控制"：
-
-- **资源管理**：In-Place Scaling 消除垂直扩容的重启代价
-- **工作负载生命周期**：原生 Sidecar 解决了长达数年的 Job + sidecar 问题
-- **安全加固**：KMS v2 和 Structured AuthZ 将加密和授权提升到生产级可靠性
-- **调度灵活性**：Scheduling Gates 为平台团队提供了编排调度时序的原语
-
-对于生产集群，建议优先评估 Sidecar Containers（改造 Job 中的服务网格注入）和 In-Place Pod Vertical Scaling（配合 VPA 减少 Pod 替换）。这两个特性对稳定性和运维体验的提升最为直接。
+v1.33 里我觉得生产最值得先用的两个：Sidecar Containers（专治 Job + sidecar 那种永远退不掉的问题）和 In-Place Pod Vertical Scaling（配合 VPA 不用再滚 Pod）。KMS v2 和 Structured AuthZ 可以在安全集群配套跟进，Scheduling Gates 目前主要是平台团队会用到。

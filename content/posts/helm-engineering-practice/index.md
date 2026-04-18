@@ -510,12 +510,12 @@ helmfile -e prod diff
 
 ## 总结
 
-Helm 工程化的核心是**一致性**和**可预期性**：
+一圈下来，真正让 Helm 省事的就几条：
 
-1. 统一 Chart 目录结构和命名规范，降低新人上手成本
-2. `_helpers.tpl` 集中管理公共模板函数，避免重复定义
-3. 多环境 values 文件只写差异，主 values.yaml 保持完整默认值并充当文档
-4. 生产部署必用 `--atomic`，配合 `helm diff` 做变更预览
-5. 私有 Harbor 仓库配合 CI/CD 自动推送，版本号与 Git tag 对齐
+1. Chart 目录结构和命名要统一，新人上手快
+2. `_helpers.tpl` 集中放公共模板函数，别每个 Chart 抄一遍
+3. 多环境 values 只写差异，主 values.yaml 保持完整默认值充当文档
+4. 生产必 `--atomic`，上线前 `helm diff` 预览变更
+5. 私有 Harbor 仓库 + CI/CD 自动推送，版本号对齐 Git tag
 
-踩过的最深的坑是 `toYaml` 缩进和 `range` 作用域问题，这两个问题在调试时不会报错，只会产生结构错误的 YAML，排查起来很费时间。建议在本地用 `helm template` 先渲染输出检查一遍，再执行 `helm upgrade`。
+我踩过最深的坑是 `toYaml` 缩进和 `range` 作用域——这两个不会报错，只会悄悄产出错 YAML，定位起来很费时间。养成 `helm template` 先本地渲染一遍再 upgrade 的习惯能省不少麻烦。

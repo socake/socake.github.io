@@ -589,15 +589,9 @@ Pulumi 的团队协作工具不如 Terraform 丰富，但 Pulumi Cloud 本身足
 
 **OpenTofu**。Pulumi 和 Terraform 都支持多云，但 OpenTofu 的 provider 生态最全、社区最稳定，适合那种"同时在 AWS、阿里云、GCP、本地 OpenStack 上跑"的企业。
 
-## 结语
+## 最后怎么选
 
-2026 年的 IaC 世界比 2022 年复杂，也更健康。不再是 Terraform 一家独大，而是：
-
-- **OpenTofu** 承载"Terraform 的开源未来"
-- **Terraform** 继续作为 HashiCorp 的企业产品
-- **Pulumi** 坚持代码式 IaC 的独特路线
-
-这三个工具都不会消失，选型不是"哪个好"，而是"哪个最适合你的团队"。判断标准按优先级：
+Terraform 一家独大的时代过去了。OpenTofu 接住了开源那部分，Terraform 继续做 HashiCorp 的商业产品，Pulumi 始终是代码式 IaC 的小众但坚挺的路线。三个都不会消失，选型没有"哪个最好"，只有"哪个最适合你团队"。我一般按这个顺序判断：
 
 1. **团队已有技能栈** → 有 Terraform 经验继续用 Terraform/OpenTofu，有强编程能力选 Pulumi
 2. **许可证要求** → 严格开源必须 OpenTofu

@@ -16,18 +16,16 @@ params:
 
 ## 为什么镜像签名是供应链安全的基石
 
-2021 年 SolarWinds 事件之后，"软件供应链安全"从学术概念变成了各家公司的合规硬需求。NIST SP 800-218、CISA Secure Software Development Framework、EU Cyber Resilience Act，再到国内的《关键信息基础设施安全保护条例》，都在要求"制品可追溯、可验证"。而在容器生态里，回答"这个镜像是不是我们 CI 流水线构建的"这个问题的答案，就是**镜像签名**。
+镜像签名要回答的问题只有一个：**部署的这个镜像到底是不是我们自己 CI 构建出来的？** 有签名你能防住四类事：
 
-镜像签名的目标非常简单：**部署时能够验证镜像确实由可信的构建者生成，且未被篡改**。做到这一点，你可以防住几类威胁：
+1. Registry 被入侵，latest tag 被替换 manifest
+2. 离职员工偷凭据 push 后门镜像
+3. 私有 registry 链路中间人插入
+4. 基础镜像被污染，签名链帮你追溯
 
-1. **Registry 被入侵**：攻击者替换了 latest tag 指向的 manifest，签名验证失败即阻断。
-2. **内部恶意**：某个离职员工偷用凭据 push 了一个后门镜像，没有签名无法通过准入。
-3. **中间人**：私有 registry 上传链路被中间人插入，签名校验失败。
-4. **供应链上游**：基础镜像被污染，签名链可以追溯到原始构建者。
+老的 Docker Content Trust（Notary v1）早废了，key 难管 + 没透明度日志。Sigstore 2021 年登场彻底把这事做成了事实标准——keyless 签名、Rekor 不可篡改日志、CI/CD 一键对接。Kubernetes、CNCF、Chainguard、RHEL UBI 都在用。
 
-传统的 Docker Content Trust（Notary v1）早就被弃用，原因是 key 管理复杂、生态不完善、没有透明度日志。**Sigstore** 从 2021 年登场，彻底改变了这个游戏——它解决了 key 管理（keyless 签名）、透明度（Rekor 不可篡改日志）、集成（CI/CD 一键对接），现在已经是事实标准。Kubernetes、CNCF 项目、Chainguard、RedHat UBI、几乎所有主流开源镜像都在用 Sigstore 签名。
-
-这篇文章我会完整走一遍生产落地的过程，基于 **Cosign 2.4+**、**Fulcio v1.6+**、**Rekor v1.4+**，以及 **Policy Controller 0.12+**（从 2024 年开始已经是 Sigstore 官方推荐的 admission 方案）。
+这篇讲我们生产落地的完整过程，基于 **Cosign 2.4+**、**Fulcio v1.6+**、**Rekor v1.4+** 和 **Policy Controller 0.12+**。
 
 ## 一、Sigstore 三件套：Cosign、Fulcio、Rekor
 
@@ -601,8 +599,8 @@ jobs:
 
 ## 九、结语
 
-两三年前签名还是一个可选项，今天已经变成合规硬性要求。Sigstore 的 keyless 签名让这件事的技术门槛降到了"CI 里加几行"，但真正把它落到生产上依然需要处理私有部署、策略治理、失败降级这些工程细节。
+keyless 签名把技术门槛压到了"CI 里加几行"，真正的坑在私有部署、策略治理、降级这些工程细节上。
 
-我的经验是：**先跑起来，再调细节**。不要一开始就追求完美的私有 Sigstore + SPIRE + 多签名策略，那样半年都上不了线。先用公共实例+简单策略把流水线打通，看到真实的签名数据后再考虑升级。每一步都有可验证的价值，团队才会持续投入。
+我们的经验：**先跑起来再调细节**。一上来就追求私有 Sigstore + SPIRE + 多签名策略，半年都上不了线。先公共实例 + 简单策略把流水线打通，有真实签名数据再升级。每一步都要能看到价值，团队才会持续投入。
 
-下一篇我会写 SBOM 生成和 Dependency-Track 管理，那是"签名之后"最重要的一块——知道你的镜像里到底有什么。
+下一篇写 SBOM 和 Dependency-Track，那是签名之后的关键一步——知道镜像里到底有什么。

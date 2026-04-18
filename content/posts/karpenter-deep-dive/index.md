@@ -365,4 +365,4 @@ karpenter_nodes_total_pod_requests
 
 ## 小结
 
-Karpenter 的核心价值在于「按需选择实例」和「主动 Consolidation」，这两点是 Cluster Autoscaler 做不到的。配置上，NodePool 的 requirements 要留足够的实例类型选择空间（不要限制太死），Disruption Budget 和 PDB 必须配好，否则 Consolidation 会造成业务抖动。多 NodePool 的隔离策略是管理不同工作负载特性的关键。
+Karpenter 比 Cluster Autoscaler 强的地方其实就两点：按需选实例、主动 Consolidation——这两点 CA 做不到。配置上，NodePool 的 requirements 别锁太死，实例类型选择空间要够宽；Disruption Budget 和 PDB 务必配好，不然 Consolidation 一跑业务就抖。多 NodePool 隔离是管理不同工作负载特性的关键抓手。

@@ -765,10 +765,10 @@ grpc.ClientConn.GetState() // IDLE/CONNECTING/READY/TRANSIENT_FAILURE/SHUTDOWN
 
 ## 总结
 
-在 Kubernetes 内部微服务场景，gRPC 的协议效率和强类型优势显著，但需要额外关注：
+gRPC 在 K8s 内部微服务的效率和类型收益都很真实，但落地时这几件事容易翻车：
 
-1. **Protobuf 设计时就要考虑向后兼容**，reserved 保护废弃字段
-2. **负载均衡是最容易忽视的陷阱**：ClusterIP Service + gRPC 长连接 = 负载不均，用 headless + round_robin 或 Istio L7
-3. **拦截器链统一处理横切关注点**，顺序很重要（tracing 要最先执行）
-4. **Keepalive 参数要与基础设施 idle timeout 匹配**，避免偶发连接重置
-5. **grpc-gateway 是渐进迁移的好工具**，存量 REST 客户端无需改造
+1. Protobuf 设计时就按向后兼容做，reserved 保护废弃字段
+2. 负载均衡是最容易被忽视的陷阱：ClusterIP Service + gRPC 长连接 = 负载不均，要么 headless + round_robin，要么 Istio L7
+3. 拦截器链统一处理横切关注点，注意顺序，tracing 要最先执行
+4. Keepalive 要对齐基础设施的 idle timeout，否则偶发断连排查半天
+5. grpc-gateway 做渐进迁移很顺，存量 REST 客户端不用动

@@ -585,16 +585,14 @@ Mimir 的 `runbook` 仓库里有一份 mixin，可以直接用。我在生产上
 
 ## 十六、写在最后
 
-Mimir 是目前为止最成熟的 Prometheus 长期存储方案。它的复杂度不小，但相比 Cortex / Thanos，它把运维心智负担降下来了，3.x 的 ingest storage 更是解决了 classic 架构里最痛的扩缩容问题。
+Mimir 不算简单，但和 Cortex / Thanos 比，它把运维心智负担降下来了一档，3.x 的 ingest storage 更是把 classic 架构最痛的扩缩容问题直接解掉。
 
-如果你正在纠结选型，简单几个判断标准：
+纠结选型的话我给几个快速判断：
 
 - **series < 1 亿，团队精力有限** → Grafana Cloud 或者 VictoriaMetrics；
 - **series 1~10 亿，有 K8s 运维能力** → Mimir classic；
 - **series > 10 亿 或 对扩缩容弹性要求高** → Mimir ingest storage（准备 Kafka）；
 - **需要 PromQL 完全兼容 + 多租户** → Mimir 不用犹豫。
-
-希望这篇笔记能帮到你少踩几个坑。指标这条路，选对地基才能把告警、SLO、成本分摊这些事一步步堆起来。
 
 ## 参考资料
 

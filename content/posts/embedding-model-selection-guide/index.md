@@ -368,4 +368,4 @@ def embed_large_corpus(texts: list[str]) -> list[list[float]]:
 
 ## 小结
 
-选 Embedding 模型没有银弹，核心原则是：**在你自己的数据上跑评测，不要只看 MTEB 总分**。中文场景无脑选 BGE-M3，预算有限就用 Dense 模式，有余力再加 Sparse 做混合检索。纯英文且不想自托管，text-embedding-3-large 是目前 API 方案的最优解。无论选哪个，Embedding 缓存是必做的工程优化，它能把重复知识库构建的成本降低 80% 以上。
+选型只有一条必须遵守的：在自己的数据上跑评测，别只看 MTEB 总分。中文 BGE-M3 基本没悬念，预算紧就 Dense，有余力再加 Sparse 做混合。纯英文不想自托管，text-embedding-3-large 还是最顺手的 API。另外不管选哪个，Embedding 缓存一定要做，重复构建知识库的成本能砍掉八成以上。
