@@ -6,6 +6,11 @@
   weight = 10
 
 [[main]]
+  name = "实战手册"
+  pageRef = "playbook"
+  weight = 15
+
+[[main]]
   name = "路线图"
   pageRef = "roadmap"
   weight = 20
