@@ -872,13 +872,13 @@ Playbook：中等规模公司的完整 DevOps 流程——从代码提交到生�
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>s3</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>s3</span><span class=p>:</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>region</span><span class=p>:</span><span class=w> </span><span class=l>ap-southeast-1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>bucketnames</span><span class=p>:</span><span class=w> </span><span class=l>goalfy-loki-merged</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>bucketnames</span><span class=p>:</span><span class=w> </span><span class=l>example-loki-merged</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>s3forcepathstyle</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>storage_config</span><span class=p>:</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>aws</span><span class=p>:</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>bucketnames</span><span class=p>:</span><span class=w> </span><span class=l>goalfy-loki-merged</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>bucketnames</span><span class=p>:</span><span class=w> </span><span class=l>example-loki-merged</span><span class=w>
 </span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>region</span><span class=p>:</span><span class=w> </span><span class=l>ap-southeast-1</span><span class=w>
-</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>s3</span><span class=p>:</span><span class=w> </span><span class=l>s3://ap-southeast-1/goalfy-loki-merged</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>s3</span><span class=p>:</span><span class=w> </span><span class=l>s3://ap-southeast-1/example-loki-merged</span><span class=w>
 </span></span></span></code></pre></div><p><strong>操作前必跑的存储后端验证脚本</strong>：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/bash
 </span></span></span><span class=line><span class=cl><span class=c1># verify-storage-backend.sh - 操作有状态服务前必须跑</span>
 </span></span><span class=line><span class=cl><span class=nb>set</span> -euo pipefail
